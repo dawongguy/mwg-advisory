@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MW Advisory — Live Service Growth Strategy</title>
+  <meta name="description" content="Live service growth strategy for games and apps. MW Advisory works with studios and founders on user acquisition, web monetization, and live operations.">
+  <meta property="og:title" content="MW Advisory — Live Service Growth Strategy">
+  <meta property="og:description" content="Built by operators. For builders. Senior growth strategy for live games and apps.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mwadvisory.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    /* ── Tokens ── */
+    :root {
+      --midnight:   #0B0D12;
+      --surface:    #14171F;
+      --surface-2:  #1E2230;
+      --amber:      #EF9F27;
+      --amber-dim:  rgba(239,159,39,0.25);
+      --warm-white: #EDEAE2;
+      --slate:      #5A5A6A;
+      --off-white:  #F2F0EB;
+      --white:      #FFFFFF;
+      --rule:       rgba(255,255,255,0.07);
+      --font:       'Space Grotesk', sans-serif;
+      --max:        1100px;
+      --px:         clamp(20px, 5vw, 48px);
+    }
+
+    /* ── Base ── */
+    body {
+      font-family: var(--font);
+      background: var(--midnight);
+      color: var(--warm-white);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--px); }
+
+    /* ── Eyebrow ── */
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--amber);
+    }
+    .eyebrow--muted { color: #8A8A9A; }
+
+    /* ────────────────────────────────────
+       NAV
+    ──────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--midnight);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo__mw {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--warm-white);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    .logo__rule {
+      width: 1.5px;
+      height: 18px;
+      background: var(--amber);
+      flex-shrink: 0;
+    }
+    .logo__advisory {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      color: var(--slate);
+      text-transform: uppercase;
+    }
+    .nav__cta {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--warm-white);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 8px 18px;
+      border-radius: 4px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .nav__cta:hover { border-color: var(--amber); color: var(--amber); }
+
+    /* ────────────────────────────────────
+       HERO
+    ──────────────────────────────────── */
+    .hero {
+      background: var(--midnight);
+      padding: 96px 0 108px;
+    }
+    .hero__eyebrow { margin-bottom: 28px; }
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 62px);
+      font-weight: 700;
+      line-height: 1.03;
+      letter-spacing: -2.5px;
+      color: var(--warm-white);
+      margin-bottom: 24px;
+      max-width: 640px;
+    }
+    .hero__sub {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--warm-white);
+      margin-bottom: 14px;
+      max-width: 500px;
+      line-height: 1.4;
+    }
+    .hero__body {
+      font-size: 15px;
+      color: var(--slate);
+      line-height: 1.85;
+      max-width: 460px;
+      margin-bottom: 40px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--amber);
+      color: var(--midnight);
+      font-size: 14px;
+      font-weight: 500;
+      font-family: var(--font);
+      padding: 14px 28px;
+      border-radius: 4px;
+      transition: opacity 0.2s;
+      cursor: pointer;
+    }
+    .btn:hover { opacity: 0.88; }
+
+    /* ────────────────────────────────────
+       PILLARS
+    ──────────────────────────────────── */
+    .pillars {
+      background: var(--off-white);
+      padding: 80px 0;
+    }
+    .pillars__eyebrow { margin-bottom: 44px; }
+    .pillars__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .pillar {
+      background: var(--white);
+      padding: 32px;
+      border-radius: 6px;
+    }
+    .pillar__label {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 16px;
+    }
+    .pillar h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--midnight);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .pillar p {
+      font-size: 13px;
+      color: #6A6A7A;
+      line-height: 1.8;
+    }
+
+    /* ────────────────────────────────────
+       SERVICES DETAIL
+    ──────────────────────────────────── */
+    .services {
+      background: var(--surface);
+      padding: 80px 0;
+    }
+    .services__eyebrow { margin-bottom: 48px; }
+    .services__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px 72px;
+    }
+    .svc h3 {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .svc__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+    .svc__list li {
+      font-size: 14px;
+      color: var(--warm-white);
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.55;
+    }
+    .svc__list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--slate);
+      font-size: 12px;
+      top: 1px;
+    }
+
+    /* ────────────────────────────────────
+       ABOUT
+    ──────────────────────────────────── */
+    .about {
+      background: var(--midnight);
+      padding: 88px 0;
+    }
+    .about__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .about__eyebrow { margin-bottom: 28px; }
+    .about__lead {
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--warm-white);
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+    .about__body {
+      font-size: 14px;
+      color: var(--slate);
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+    .about__right { padding-top: 40px; }
+    .about__quote {
+      border-left: 2px solid var(--amber);
+      padding-left: 24px;
+      margin-bottom: 36px;
+    }
+    .about__quote p {
+      font-size: 15px;
+      color: var(--warm-white);
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+    .about__quote p:last-child { margin-bottom: 0; }
+    .works__label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 16px;
+    }
+    .works__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .works__list li {
+      font-size: 14px;
+      color: var(--warm-white);
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.55;
+    }
+    .works__list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--amber);
+      font-size: 12px;
+      top: 1px;
+    }
+
+    /* ────────────────────────────────────
+       CONTACT
+    ──────────────────────────────────── */
+    .contact {
+      background: var(--surface);
+      padding: 88px 0;
+    }
+    .contact__eyebrow { margin-bottom: 24px; }
+    .contact h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: var(--warm-white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      max-width: 480px;
+    }
+    .contact__body {
+      font-size: 15px;
+      color: var(--slate);
+      max-width: 440px;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .contact__email {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--amber);
+      border-bottom: 1px solid var(--amber-dim);
+      padding-bottom: 3px;
+      transition: border-color 0.2s;
+    }
+    .contact__email:hover { border-color: var(--amber); }
+
+    /* ────────────────────────────────────
+       FOOTER
+    ──────────────────────────────────── */
+    .footer {
+      background: var(--midnight);
+      border-top: 1px solid var(--rule);
+      padding: 32px 0;
+    }
+    .footer__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer__copy {
+      font-size: 12px;
+      color: var(--slate);
+    }
+
+    /* ────────────────────────────────────
+       RESPONSIVE
+    ──────────────────────────────────── */
+    @media (max-width: 860px) {
+      .pillars__grid { grid-template-columns: 1fr; gap: 14px; }
+      .services__grid { grid-template-columns: 1fr; gap: 36px; }
+      .about__inner { grid-template-columns: 1fr; gap: 40px; }
+      .about__right { padding-top: 0; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 64px 0 72px; }
+      .hero h1 { letter-spacing: -1.5px; }
+      .footer__inner { flex-direction: column; gap: 12px; text-align: center; }
+    }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a href="/" class="logo" aria-label="MW Advisory home">
+        <span class="logo__mw">MW</span>
+        <span class="logo__rule" aria-hidden="true"></span>
+        <span class="logo__advisory">Advisory</span>
+      </a>
+      <a href="mailto:mike@mwadvisory.com" class="nav__cta">Get in touch</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow hero__eyebrow">MW Advisory</p>
+      <h1>Built by operators.<br>For builders.</h1>
+      <p class="hero__sub">Live service growth strategy for games and apps.</p>
+      <p class="hero__body">I work with studios and founders on the growth problems that compound — user acquisition, web monetization, and live operations. Senior strategy. Your team executes.</p>
+      <a href="mailto:mike@mwadvisory.com" class="btn">Get in touch →</a>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="pillars">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--muted pillars__eyebrow">How I work</p>
+      <div class="pillars__grid">
+        <div class="pillar">
+          <p class="pillar__label">Diagnose</p>
+          <h3>What's underperforming and why.</h3>
+          <p>Growth audits, monetization health checks, and live service readiness assessments — delivered as a prioritized opportunity map your team can act on immediately.</p>
+        </div>
+        <div class="pillar">
+          <p class="pillar__label">Design</p>
+          <h3>Strategy your team can build from.</h3>
+          <p>UA architecture, web monetization roadmaps, live ops calendars, reactivation playbooks, and product roadmap advisory. Strategy-only. No implementation overhead.</p>
+        </div>
+        <div class="pillar">
+          <p class="pillar__label">Guide</p>
+          <h3>A senior operator in your corner.</h3>
+          <p>Monthly advisory retainers, fractional growth leadership, and investor advisory for funds and portfolio companies that need a gaming operator at the table.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES DETAIL -->
+  <section class="services">
+    <div class="wrap">
+      <p class="eyebrow services__eyebrow">What I advise on</p>
+      <div class="services__grid">
+        <div class="svc">
+          <h3>Growth &amp; UA</h3>
+          <ul class="svc__list">
+            <li>User acquisition strategy &amp; channel architecture</li>
+            <li>UA financing structuring for capital-efficient growth</li>
+            <li>Creative testing frameworks &amp; measurement setup</li>
+            <li>Growth audit — full-funnel diagnostic</li>
+          </ul>
+        </div>
+        <div class="svc">
+          <h3>Monetization &amp; web</h3>
+          <ul class="svc__list">
+            <li>Web monetization &amp; DTC webshop strategy</li>
+            <li>In-app monetization audit &amp; optimization</li>
+            <li>Direct spend &amp; VIP program design</li>
+            <li>Offer architecture &amp; conversion</li>
+          </ul>
+        </div>
+        <div class="svc">
+          <h3>Live service</h3>
+          <ul class="svc__list">
+            <li>Live ops calendar &amp; event architecture</li>
+            <li>D1–D30 retention diagnostic &amp; playbook</li>
+            <li>Live service readiness assessment</li>
+            <li>Reactivation &amp; win-back strategy</li>
+          </ul>
+        </div>
+        <div class="svc">
+          <h3>Advisory</h3>
+          <ul class="svc__list">
+            <li>Strategic advisory retainer</li>
+            <li>Fractional head of growth</li>
+            <li>Product roadmap advisory</li>
+            <li>Investor &amp; board advisory</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="wrap">
+      <div class="about__inner">
+        <div class="about__left">
+          <p class="eyebrow about__eyebrow">About</p>
+          <p class="about__lead">I'm Michael Wong. For the better part of a decade, I ran growth strategy at Electronic Arts on Star Wars: Galaxy of Heroes.</p>
+          <p class="about__body">That meant operating every lever of the growth stack, simultaneously, at scale: paid acquisition and UA financing, web monetization and DTC webshop infrastructure, live ops design, direct spend programs, and retention across D1 through D30.</p>
+          <p class="about__body">Live service games are not launch-and-forget businesses. They're operating machines. I spent years inside one of the best — learning how growth compounds when you get the strategy right, and how fast it unwinds when you don't.</p>
+        </div>
+        <div class="about__right">
+          <blockquote class="about__quote">
+            <p>MW Advisory is what I do now.</p>
+            <p>I work with game studios and app companies on the growth problems that compound. The ones where the wrong call at the strategy level costs months of execution. I advise on strategy. Your team builds.</p>
+          </blockquote>
+          <p class="works__label">Works best for</p>
+          <ul class="works__list">
+            <li>Studios without VP-level growth leadership who need senior expertise on demand</li>
+            <li>Founders who want a trusted sounding board with deep live service experience</li>
+            <li>Funds performing diligence on gaming or app investments</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <div class="wrap">
+      <p class="eyebrow contact__eyebrow">Get in touch</p>
+      <h2>Ready to talk growth?</h2>
+      <p class="contact__body">Engagements are structured as project-based work, monthly advisory, or investor relationships. Reach out to discuss what fits your goals.</p>
+      <a href="mailto:mike@mwadvisory.com" class="contact__email">mike@mwadvisory.com</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <a href="/" class="logo" aria-label="MW Advisory home">
+        <span class="logo__mw" style="font-size:16px;">MW</span>
+        <span class="logo__rule" style="height:14px;" aria-hidden="true"></span>
+        <span class="logo__advisory" style="font-size:8px;">Advisory</span>
+      </a>
+      <p class="footer__copy">© 2026 MW Advisory</p>
+    </div>
+  </footer>
+
+</body>
+</html>
