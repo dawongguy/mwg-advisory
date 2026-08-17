@@ -25,7 +25,8 @@
       --amber:      #EF9F27;
       --amber-dim:  rgba(239,159,39,0.25);
       --warm-white: #EDEAE2;
-      --slate:      #5A5A6A;
+      --slate:      #9B9BAB;
+      --slate-dim:  #5A5A6A;
       --off-white:  #F2F0EB;
       --white:      #FFFFFF;
       --rule:       rgba(255,255,255,0.07);
@@ -92,7 +93,7 @@
       font-size: 9px;
       font-weight: 400;
       letter-spacing: 5px;
-      color: var(--slate);
+      color: var(--slate-dim);
       text-transform: uppercase;
     }
     .nav__cta {
@@ -231,7 +232,7 @@
       content: '→';
       position: absolute;
       left: 0;
-      color: var(--slate);
+      color: var(--slate-dim);
       font-size: 12px;
       top: 1px;
     }
@@ -359,12 +360,201 @@
       color: var(--slate);
     }
 
+
+    /* ────────────────────────────────────
+       SECTION HEADINGS (shared)
+    ──────────────────────────────────── */
+    .sec__head {
+      font-size: clamp(24px, 3.2vw, 36px);
+      font-weight: 700;
+      letter-spacing: -1.2px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      max-width: 620px;
+    }
+    .sec__intro {
+      font-size: 15px;
+      line-height: 1.8;
+      max-width: 560px;
+      margin-bottom: 48px;
+    }
+
+    /* ────────────────────────────────────
+       SYMPTOMS
+    ──────────────────────────────────── */
+    .symptoms {
+      background: var(--off-white);
+      padding: 80px 0;
+    }
+    .symptoms__eyebrow { margin-bottom: 24px; }
+    .symptoms .eyebrow--muted { color: #6A6A7A; }
+    .symptoms .sec__head { color: var(--midnight); }
+    .symptoms .sec__intro { color: #6A6A7A; }
+    .symptoms__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .sym {
+      background: var(--white);
+      padding: 28px 30px;
+      border-radius: 6px;
+      border-left: 2px solid var(--amber);
+    }
+    .sym__q {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--midnight);
+      line-height: 1.35;
+      letter-spacing: -0.3px;
+      margin-bottom: 14px;
+    }
+    .sym__eng {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 8px;
+    }
+    .sym__d {
+      font-size: 13px;
+      color: #6A6A7A;
+      line-height: 1.75;
+    }
+
+    /* ────────────────────────────────────
+       PRACTICES
+    ──────────────────────────────────── */
+    .practices {
+      background: var(--surface);
+      padding: 80px 0;
+    }
+    .practices__eyebrow { margin-bottom: 24px; }
+    .practices .sec__head { color: var(--warm-white); }
+    .practices .sec__intro { color: var(--slate); }
+    .practices__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px 72px;
+    }
+    .prac__when {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 10px;
+    }
+    .prac__name {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .prac__desc {
+      font-size: 14px;
+      color: var(--warm-white);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .prac__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+    .prac__list li {
+      font-size: 14px;
+      color: var(--warm-white);
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.55;
+    }
+    .prac__list li::before {
+      content: '\2192';
+      position: absolute;
+      left: 0;
+      color: var(--slate-dim);
+      font-size: 12px;
+      top: 1px;
+    }
+    .prac__list b { font-weight: 500; color: var(--white); }
+    .bridge {
+      margin-top: 52px;
+      padding: 28px 32px;
+      background: var(--surface-2);
+      border-left: 2px solid var(--amber);
+      border-radius: 4px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--warm-white);
+      max-width: 780px;
+    }
+    .bridge b { font-weight: 500; color: var(--white); }
+
+    /* ────────────────────────────────────
+       FORMATS
+    ──────────────────────────────────── */
+    .formats {
+      background: var(--midnight);
+      padding: 80px 0;
+    }
+    .formats__eyebrow { margin-bottom: 24px; }
+    .formats .sec__head { color: var(--warm-white); }
+    .formats .sec__intro { color: var(--slate); margin-bottom: 44px; }
+    .formats__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .fmt {
+      background: var(--surface);
+      padding: 32px;
+      border-radius: 6px;
+    }
+    .fmt__name {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 16px;
+    }
+    .fmt h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--warm-white);
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .fmt__terms {
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: var(--slate);
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .fmt p {
+      font-size: 13px;
+      color: var(--slate);
+      line-height: 1.8;
+    }
+
     /* ────────────────────────────────────
        RESPONSIVE
     ──────────────────────────────────── */
     @media (max-width: 860px) {
       .pillars__grid { grid-template-columns: 1fr; gap: 14px; }
       .services__grid { grid-template-columns: 1fr; gap: 36px; }
+      .symptoms__grid { grid-template-columns: 1fr; gap: 14px; }
+      .practices__grid { grid-template-columns: 1fr; gap: 40px; }
+      .formats__grid { grid-template-columns: 1fr; gap: 14px; }
       .about__inner { grid-template-columns: 1fr; gap: 40px; }
       .about__right { padding-top: 0; }
     }
@@ -418,70 +608,120 @@
     </div>
   </section>
 
-  <!-- PILLARS -->
-  <section class="pillars">
+  <!-- SYMPTOMS -->
+  <section class="symptoms">
     <div class="wrap">
-      <p class="eyebrow eyebrow--muted pillars__eyebrow">How I work</p>
-      <div class="pillars__grid">
-        <div class="pillar">
-          <p class="pillar__label">Diagnose</p>
-          <h3>What's underperforming and why.</h3>
-          <p>Growth audits, engagement dropoffs, monetization health checks, and live service readiness assessments — delivered as a prioritized opportunity map your team can act on immediately.</p>
+      <p class="eyebrow eyebrow--muted symptoms__eyebrow">Start here</p>
+      <h2 class="sec__head">Start where it hurts.</h2>
+      <p class="sec__intro">Most teams arrive knowing the symptom, not the cause. Find yours below — every engagement opens with a diagnostic that works out where the gaps actually are.</p>
+      <div class="symptoms__grid">
+
+        <div class="sym">
+          <p class="sym__q">&ldquo;We&rsquo;re paying more and more for the same players.&rdquo;</p>
+          <p class="sym__eng">3-week UA &amp; payback diagnostic</p>
+          <p class="sym__d">Channel-level payback map, ranked spend reallocations, and the reactivation opportunity nobody has sized.</p>
         </div>
-        <div class="pillar">
-          <p class="pillar__label">Design</p>
-          <h3>Strategy your team can build from.</h3>
-          <p>UA architecture, user funnel optimization, monetization offer design, reactivation playbooks, and product roadmap advisory.</p>
+
+        <div class="sym">
+          <p class="sym__q">&ldquo;Players install, play once, and never come back.&rdquo;</p>
+          <p class="sym__eng">3-week retention &amp; onboarding diagnostic</p>
+          <p class="sym__d">Cohort drop-off map and the five interventions worth doing, ranked by effort against impact.</p>
         </div>
-        <div class="pillar">
-          <p class="pillar__label">Guide</p>
-          <h3>A senior operator in your corner.</h3>
-          <p>Monthly advisory retainers, fractional product growth leadership, and investor advisory for funds and portfolio companies that need a gaming operator at the table.</p>
+
+        <div class="sym">
+          <p class="sym__q">&ldquo;DAU is holding but revenue is flat.&rdquo;</p>
+          <p class="sym__eng">3-week monetization &amp; economy diagnostic</p>
+          <p class="sym__d">Payer segment model, offer architecture redesign, and a read on where the economy has drifted since launch.</p>
         </div>
+
+        <div class="sym">
+          <p class="sym__q">&ldquo;The live ops calendar runs us. We&rsquo;re on a treadmill.&rdquo;</p>
+          <p class="sym__eng">4-week live ops operating review</p>
+          <p class="sym__d">A calendar thesis, a real split between run-the-game and change-the-game capacity, and named owners.</p>
+        </div>
+
+        <div class="sym">
+          <p class="sym__q">&ldquo;We ship constantly and nothing moves the metric.&rdquo;</p>
+          <p class="sym__eng">3-week product operating review</p>
+          <p class="sym__d">Decision-rights map, a prioritization mechanism that actually kills work, and the instrumentation gaps behind the arguments.</p>
+        </div>
+
+        <div class="sym">
+          <p class="sym__q">&ldquo;We grew fast and the way we work didn&rsquo;t.&rdquo;</p>
+          <p class="sym__eng">4-week org &amp; operating design</p>
+          <p class="sym__d">Pod and ownership design, PM role definition and leveling, planning cadence, and 90-day sequencing.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- SERVICES DETAIL -->
-  <section class="services">
+  <!-- PRACTICES -->
+  <section class="practices">
     <div class="wrap">
-      <p class="eyebrow services__eyebrow">What I advise on</p>
-      <div class="services__grid">
-        <div class="svc">
-          <h3>Growth &amp; UA</h3>
-          <ul class="svc__list">
-            <li>User acquisition strategy &amp; channel architecture</li>
-            <li>UA financing structuring for capital-efficient growth</li>
-            <li>Creative testing frameworks &amp; measurement setup</li>
-            <li>Growth audit — full-funnel diagnostic</li>
+      <p class="eyebrow practices__eyebrow">What I work on</p>
+      <h2 class="sec__head">Two kinds of gaps. They look identical from the outside.</h2>
+      <p class="sec__intro">A live service business can stall for one of two reasons, and often both at once. There may be gaps in how the product is designed. There may be gaps in how the team operates it. Most advisors are set up to look at one or the other — so that is where they find the answer.</p>
+
+      <div class="practices__grid">
+
+        <div class="prac">
+          <p class="prac__when">If the gaps are in the product</p>
+          <h3 class="prac__name">Growth &amp; live service strategy</h3>
+          <p class="prac__desc">The player funnel and the economics underneath it. What you ship, who it is for, and what it earns.</p>
+          <ul class="prac__list">
+            <li><b>Acquire</b> — channel mix, payback windows, UA financing, creative strategy</li>
+            <li><b>Engage</b> — core loops, onboarding, progression pacing</li>
+            <li><b>Retain</b> — D1&ndash;D30 cohort diagnostics, lifecycle, reactivating the lapsed base</li>
+            <li><b>Monetize</b> — payer segmentation, offer architecture, web and DTC, economy design</li>
+            <li><b>Live ops as a growth lever</b> — calendar thesis, event economics, room to test</li>
           </ul>
         </div>
-        <div class="svc">
-          <h3>Monetization &amp; web</h3>
-          <ul class="svc__list">
-            <li>Web monetization &amp; DTC webshop strategy</li>
-            <li>In-app monetization audit &amp; optimization</li>
-            <li>Direct spend &amp; VIP program design</li>
-            <li>Offer architecture &amp; conversion</li>
+
+        <div class="prac">
+          <p class="prac__when">If the gaps are in how you operate</p>
+          <h3 class="prac__name">Product operating model</h3>
+          <p class="prac__desc">The machine that produces the product. How decisions get made, by whom, on what rhythm.</p>
+          <ul class="prac__list">
+            <li><b>Operating cadence</b> — planning horizons, review rhythm, retros that change something</li>
+            <li><b>Decision rights</b> — who calls it, who is consulted, what escalates</li>
+            <li><b>Prioritization with teeth</b> — a mechanism that actually kills work</li>
+            <li><b>Team &amp; pod design</b> — ownership boundaries, PM roles and leveling</li>
+            <li><b>Instrumentation</b> — whether the team can see what it is doing</li>
+            <li><b>Capacity</b> — separating run-the-game from change-the-game</li>
           </ul>
         </div>
-        <div class="svc">
-          <h3>Live service</h3>
-          <ul class="svc__list">
-            <li>Live ops calendar &amp; event architecture</li>
-            <li>D1–D30 retention diagnostic &amp; playbook</li>
-            <li>Live service readiness assessment</li>
-            <li>Reactivation &amp; win-back strategy</li>
-          </ul>
+
+      </div>
+
+      <p class="bridge">Live service games are not launch-and-forget businesses. <b>They&rsquo;re operating machines.</b> That cuts both ways — a machine can have gaps in how it was designed, and gaps in how it gets run. Flat retention might trace back to a first session that doesn&rsquo;t land. It might equally trace back to a funnel no one owns end to end. Working out which, and how much of each, is worth more than any recommendation I could hand you on day one.</p>
+    </div>
+  </section>
+
+  <!-- FORMATS -->
+  <section class="formats">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--muted formats__eyebrow">How I work</p>
+      <h2 class="sec__head">Three ways in.</h2>
+      <p class="sec__intro">The same three steps whichever problem you have. Most engagements start at the first and stop when the team has what it came for.</p>
+      <div class="formats__grid">
+        <div class="fmt">
+          <p class="fmt__name">Diagnose</p>
+          <h3>What&rsquo;s underperforming and why.</h3>
+          <p class="fmt__terms">2&ndash;4 weeks &middot; fixed fee</p>
+          <p>Findings, a prioritized opportunity map your team can act on immediately, and a straight answer on where the gaps are — and how much of each you are dealing with.</p>
         </div>
-        <div class="svc">
-          <h3>Advisory</h3>
-          <ul class="svc__list">
-            <li>Strategic advisory retainer</li>
-            <li>Fractional head of growth</li>
-            <li>Product roadmap advisory</li>
-            <li>Investor &amp; board advisory</li>
-          </ul>
+        <div class="fmt">
+          <p class="fmt__name">Design</p>
+          <h3>Strategy your team can build from.</h3>
+          <p class="fmt__terms">2&ndash;4 weeks &middot; fixed fee</p>
+          <p>UA architecture, funnel and offer design, reactivation playbooks, or operating and org design — specific enough to assign on Monday.</p>
+        </div>
+        <div class="fmt">
+          <p class="fmt__name">Guide</p>
+          <h3>A senior operator in your corner.</h3>
+          <p class="fmt__terms">retainer &middot; fractional &middot; investor</p>
+          <p>Monthly advisory retainers, fractional product growth leadership, and investor advisory for funds and portfolio companies that need a gaming operator at the table.</p>
         </div>
       </div>
     </div>
@@ -496,7 +736,7 @@
           <p class="eyebrow about__eyebrow">About</p>
           <p class="about__lead">I'm Mike Wong. For the better part of two decades, I supported and led product growth strategy at Electronic Arts — scaling live service games for hundreds of millions of players worldwide across iconic franchises including Star Wars: Galaxy of Heroes.</p>
           <p class="about__body">That meant operating every lever of the growth stack, simultaneously, at scale: paid acquisition and UA financing, web monetization and DTC webshop infrastructure, live ops design, direct spend programs, and retention across D1 through D30.</p>
-          <p class="about__body">Live service games are not launch-and-forget businesses. They're operating machines. I spent years inside one of the best — learning how growth compounds when you get the strategy right, and how fast it unwinds when you don't.</p>
+          <p class="about__body">I spent years inside one of the best of those machines — learning how growth compounds when you get the strategy right, and how fast it unwinds when you don't.</p>
         </div>
         <div class="about__right">
           <blockquote class="about__quote">
