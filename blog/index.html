@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research &amp; Teardowns — MWG Advisory</title>
+  <meta name="description" content="Teardowns and market research from MWG Advisory — outside-in reads on live service products, retention loops, and growth economics, written the way we'd diagnose your product.">
+  <meta property="og:title" content="Research &amp; Teardowns — MWG Advisory">
+  <meta property="og:description" content="Outside-in teardowns and market research from MWG Advisory.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mwgadvisory.com/blog/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    /* ── Tokens ── */
+    :root {
+      --midnight:   #0B0D12;
+      --surface:    #14171F;
+      --surface-2:  #1E2230;
+      --amber:      #EF9F27;
+      --amber-dim:  rgba(239,159,39,0.25);
+      --warm-white: #EDEAE2;
+      --slate:      #9B9BAB;
+      --slate-dim:  #5A5A6A;
+      --off-white:  #F2F0EB;
+      --white:      #FFFFFF;
+      --rule:       rgba(255,255,255,0.07);
+      --font:       'Space Grotesk', sans-serif;
+      --max:        1100px;
+      --px:         clamp(20px, 5vw, 48px);
+    }
+
+    /* ── Base ── */
+    body {
+      font-family: var(--font);
+      background: var(--midnight);
+      color: var(--warm-white);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--px); }
+
+    /* ── Eyebrow ── */
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--amber);
+    }
+    .eyebrow--muted { color: #8A8A9A; }
+
+    /* ────────────────────────────────────
+       NAV
+    ──────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--midnight);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo__mw {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--warm-white);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    .logo__rule {
+      width: 1.5px;
+      height: 18px;
+      background: var(--amber);
+      flex-shrink: 0;
+    }
+    .logo__advisory {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      color: var(--slate-dim);
+      text-transform: uppercase;
+    }
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .nav__link {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--slate);
+      transition: color 0.2s;
+    }
+    .nav__link:hover, .nav__link.is-active { color: var(--amber); }
+    .nav__cta {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--warm-white);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 8px 18px;
+      border-radius: 4px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .nav__cta:hover { border-color: var(--amber); color: var(--amber); }
+
+    /* ────────────────────────────────────
+       SECTION HEADINGS (shared)
+    ──────────────────────────────────── */
+    .sec__head {
+      font-size: clamp(24px, 3.2vw, 36px);
+      font-weight: 700;
+      letter-spacing: -1.2px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      max-width: 620px;
+    }
+    .sec__intro {
+      font-size: 15px;
+      line-height: 1.8;
+      max-width: 560px;
+      margin-bottom: 48px;
+    }
+
+    /* ────────────────────────────────────
+       BLOG HERO
+    ──────────────────────────────────── */
+    .blog-hero {
+      background: var(--midnight);
+      padding: 88px 0 56px;
+    }
+    .blog-hero__eyebrow { margin-bottom: 28px; }
+    .blog-hero h1 {
+      font-size: clamp(36px, 5.5vw, 54px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      color: var(--warm-white);
+      margin-bottom: 20px;
+      max-width: 680px;
+    }
+    .blog-hero__sub {
+      font-size: 15px;
+      color: var(--slate);
+      line-height: 1.85;
+      max-width: 560px;
+    }
+
+    /* ────────────────────────────────────
+       POST LIST
+    ──────────────────────────────────── */
+    .post-list {
+      background: var(--surface);
+      padding: 8px 0 88px;
+    }
+    .post-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .post {
+      display: block;
+      background: var(--surface-2);
+      padding: 36px 40px;
+      border-radius: 6px;
+      border-left: 2px solid var(--amber);
+      transition: background 0.2s;
+    }
+    .post:hover { background: #242939; }
+    .post__meta {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 14px;
+    }
+    .post__meta span + span { color: var(--slate); font-weight: 400; }
+    .post__meta span + span::before { content: '·'; margin: 0 8px; color: var(--slate-dim); }
+    .post h2 {
+      font-size: clamp(20px, 2.6vw, 27px);
+      font-weight: 700;
+      color: var(--warm-white);
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+      max-width: 680px;
+    }
+    .post__dek {
+      font-size: 14px;
+      color: var(--slate);
+      line-height: 1.8;
+      max-width: 640px;
+      margin-bottom: 18px;
+    }
+    .post__read {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--amber);
+    }
+    .post__read::after { content: '\2192'; margin-left: 6px; }
+
+    .post-list__note {
+      margin-top: 44px;
+      font-size: 12.5px;
+      color: var(--slate-dim);
+      line-height: 1.8;
+      max-width: 640px;
+    }
+
+    /* ────────────────────────────────────
+       FOOTER
+    ──────────────────────────────────── */
+    .footer {
+      background: var(--midnight);
+      border-top: 1px solid var(--rule);
+      padding: 32px 0;
+    }
+    .footer__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer__copy {
+      font-size: 12px;
+      color: var(--slate);
+    }
+
+    /* ────────────────────────────────────
+       RESPONSIVE
+    ──────────────────────────────────── */
+    @media (max-width: 600px) {
+      .blog-hero { padding: 64px 0 40px; }
+      .blog-hero h1 { letter-spacing: -1px; }
+      .post { padding: 28px 24px; }
+      .footer__inner { flex-direction: column; gap: 12px; text-align: center; }
+    }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a href="/" class="logo" aria-label="MWG Advisory home">
+        <span class="logo__mw">MWG</span>
+        <span class="logo__rule" aria-hidden="true"></span>
+        <span class="logo__advisory">Advisory</span>
+      </a>
+      <div class="nav__links">
+        <a href="/blog/" class="nav__link is-active">Blog</a>
+        <a href="mailto:mike@mwgadvisory.com" class="nav__cta">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BLOG HERO -->
+  <section class="blog-hero">
+    <div class="wrap">
+      <p class="eyebrow blog-hero__eyebrow">Research &amp; Teardowns</p>
+      <h1>How we diagnose a product, in public.</h1>
+      <p class="blog-hero__sub">Outside-in reviews of live service products and reads on where the market is moving — the same diagnostic we run for clients, applied to products we don't work with. Public information only; no insider access.</p>
+    </div>
+  </section>
+
+  <!-- POST LIST -->
+  <section class="post-list">
+    <div class="wrap">
+      <div class="post-grid">
+
+        <a href="/blog/whoop-teardown.html" class="post">
+          <p class="post__meta"><span>Product Teardown</span><span>September 2026</span></p>
+          <h2>Falling Out and Back In Love With Whoop</h2>
+          <p class="post__dek">Four rival bands now measure you for $99 to $199, with no subscription required. Whoop has already built the coach that should justify the difference — and scores me against a plan too vague to notice whether I followed it.</p>
+          <span class="post__read">Read the teardown</span>
+        </a>
+
+      </div>
+      <p class="post-list__note">These are independent reads built from public use, public data, and public documentation — not client work, and not affiliated with the companies covered.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <a href="/" class="logo" aria-label="MWG Advisory home">
+        <span class="logo__mw" style="font-size:16px;">MWG</span>
+        <span class="logo__rule" style="height:14px;" aria-hidden="true"></span>
+        <span class="logo__advisory" style="font-size:8px;">Advisory</span>
+      </a>
+      <p class="footer__copy">© 2026 MWG Advisory</p>
+    </div>
+  </footer>
+
+</body>
+</html>

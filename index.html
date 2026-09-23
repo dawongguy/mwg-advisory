@@ -96,6 +96,18 @@
       color: var(--slate-dim);
       text-transform: uppercase;
     }
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .nav__link {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--slate);
+      transition: color 0.2s;
+    }
+    .nav__link:hover { color: var(--amber); }
     .nav__cta {
       font-size: 13px;
       font-weight: 400;
@@ -593,7 +605,10 @@
         <span class="logo__rule" aria-hidden="true"></span>
         <span class="logo__advisory">Advisory</span>
       </a>
-      <a href="mailto:mike@mwgadvisory.com" class="nav__cta">Get in touch</a>
+      <div class="nav__links">
+        <a href="/blog/" class="nav__link">Blog</a>
+        <a href="mailto:mike@mwgadvisory.com" class="nav__cta">Get in touch</a>
+      </div>
     </div>
   </header>
 
