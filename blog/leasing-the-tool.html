@@ -1,0 +1,386 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Most Subscription Apps Are Leasing You a Tool — MWG Advisory</title>
+<meta name="description" content="Billing monthly for a feature set is a financing arrangement, not a service. The coaching loop — diagnosis, assignment, verification, progress — and the four joins between its nodes are what turn a tool lease into something worth renewing.">
+<meta property="og:title" content="Most Subscription Apps Are Leasing You a Tool — MWG Advisory">
+<meta property="og:description" content="If I stopped paying tomorrow, what would I lose besides access? For most subscription apps the honest answer is nothing — and that is a product problem before it is a pricing one.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mwgadvisory.com/blog/leasing-the-tool.html">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+
+<style>
+:root{
+  --ground:#F1F2F0;
+  --surface:#FFFFFF;
+  --surface-2:#E9EBE8;
+  --ink:#14181A;
+  --ink-2:#3C4447;
+  --muted:#5F6A6C;
+  --rule:#D5D9D4;
+  --rule-soft:#E3E6E1;
+  --accent:#0E7C66;
+  --accent-soft:#D6E8E2;
+  --sig-red:#B33A2B;
+
+  --s-diag:#3A6EA5;
+  --s-assign:#B25C2E;
+  --s-verify:#6B4E9E;
+  --s-prog:#0E7C66;
+
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --grot:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+
+  --measure:64ch;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1413; --surface:#161C1B; --surface-2:#1E2624;
+    --ink:#E9ECE9; --ink-2:#C3CAC7; --muted:#939E9A;
+    --rule:#2A3331; --rule-soft:#212927;
+    --accent:#45C6A6; --accent-soft:#17322C; --sig-red:#E0705E;
+    --s-diag:#7FAEDD; --s-assign:#E0925F; --s-verify:#A98BD8; --s-prog:#45C6A6;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1413; --surface:#161C1B; --surface-2:#1E2624;
+  --ink:#E9ECE9; --ink-2:#C3CAC7; --muted:#939E9A;
+  --rule:#2A3331; --rule-soft:#212927;
+  --accent:#45C6A6; --accent-soft:#17322C; --sig-red:#E0705E;
+  --s-diag:#7FAEDD; --s-assign:#E0925F; --s-verify:#A98BD8; --s-prog:#45C6A6;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-left:28px;padding-right:28px;padding-block:0 96px}
+
+.mast{border-bottom:2px solid var(--ink);padding-block:44px 22px;margin-bottom:8px}
+.kicker{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 20px}
+h1{font-family:var(--grot);font-weight:700;font-size:clamp(40px,7vw,74px);line-height:.99;letter-spacing:-.032em;margin:0 0 20px;text-wrap:balance;max-width:16ch}
+.dek{font-size:clamp(19px,2.3vw,23px);line-height:1.45;color:var(--ink-2);max-width:50ch;margin:0 0 30px;font-weight:300}
+.byline{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:baseline;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+.byline b{color:var(--ink);font-weight:600}
+.byline a,.foot a{color:inherit;text-decoration-color:var(--accent)}
+
+section{display:grid;grid-template-columns:100px minmax(0,1fr);gap:0 36px;padding-block:52px 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.rail{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;padding-top:9px}
+.rail .num{display:block;font-family:var(--grot);font-weight:700;font-size:26px;letter-spacing:-.02em;color:var(--rule);line-height:1;margin-bottom:8px}
+.body{min-width:0}
+h2{font-family:var(--grot);font-weight:700;font-size:clamp(26px,3.6vw,36px);line-height:1.08;letter-spacing:-.024em;margin:0 0 18px;text-wrap:balance;max-width:22ch}
+h3{font-family:var(--grot);font-weight:600;font-size:18px;letter-spacing:-.012em;margin:32px 0 10px}
+p{margin:0 0 17px;max-width:var(--measure)}
+strong{font-weight:500;color:var(--ink);background:linear-gradient(transparent 62%,var(--accent-soft) 62%)}
+em{font-style:italic}
+.lede{font-size:21px;line-height:1.5;color:var(--ink);max-width:52ch;font-weight:300}
+.pull{margin:32px 0;padding:0 0 0 22px;border-left:3px solid var(--accent);font-family:var(--grot);font-weight:500;font-size:clamp(20px,2.6vw,25px);line-height:1.28;letter-spacing:-.018em;color:var(--ink);max-width:34ch}
+.note{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:14px;max-width:62ch}
+
+figure{margin:30px 0 8px;padding:0}
+figure svg{width:100%;height:auto;display:block;color:var(--ink)}
+figcaption{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:14px;max-width:62ch}
+.figscroll{overflow-x:auto}
+.figscroll svg{min-width:640px}
+
+.dg-box{fill:none;stroke-width:1.5}
+.dg-diag{stroke:var(--s-diag)} .f-diag{fill:var(--s-diag)}
+.dg-assign{stroke:var(--s-assign)} .f-assign{fill:var(--s-assign)}
+.dg-verify{stroke:var(--s-verify)} .f-verify{fill:var(--s-verify)}
+.dg-prog{stroke:var(--s-prog)} .f-prog{fill:var(--s-prog)}
+.dg-break{stroke:var(--sig-red)} .f-break{fill:var(--sig-red)}
+.dg-flow{stroke:var(--muted);stroke-width:1.5;fill:none}
+.f-muted{fill:var(--muted)} .f-track{fill:var(--surface-2)}
+.lbl{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em}
+.nm{font-family:"Archivo",sans-serif;font-size:15px;font-weight:600}
+.sm{font-family:"IBM Plex Mono",monospace;font-size:10.5px}
+.dash{stroke-dasharray:5 4}
+
+.joins{margin:26px 0 8px;border-top:2px solid var(--ink)}
+.join{padding-block:22px;border-bottom:1px solid var(--rule-soft)}
+.jhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:8px}
+.jname{font-family:var(--grot);font-weight:600;font-size:18px;letter-spacing:-.012em}
+.jverdict{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;font-weight:500;padding:3px 8px 2px;border-radius:2px;background:var(--surface-2);color:var(--muted)}
+.jverdict.bad{color:var(--sig-red)}
+.join p{margin:0;font-size:16.5px;line-height:1.55;color:var(--ink-2);max-width:62ch}
+.join p.q{font-style:italic;color:var(--ink);margin-bottom:9px}
+.join p.job{font-family:var(--mono);font-size:11.5px;letter-spacing:.02em;color:var(--sig-red);margin-top:10px}
+
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:28px 0 10px;max-width:var(--measure)}
+.vscell{background:var(--surface-2);padding:20px 22px 22px}
+.vscell .vlab{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.vscell .vq{font-family:var(--grot);font-weight:600;font-size:17px;line-height:1.3;letter-spacing:-.012em;color:var(--ink);margin:0 0 10px}
+.vscell .vn{font-family:var(--mono);font-size:11.5px;line-height:1.55;color:var(--ink-2);margin:0}
+.vscell.good{background:var(--accent-soft);outline:2px solid var(--accent);outline-offset:-2px}
+.vscell.good .vq{color:var(--accent)}
+@media (max-width:620px){.vs{grid-template-columns:1fr}}
+
+.principle{margin:28px 0 10px;padding:22px 26px 24px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.principle .plabel{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+.principle p{color:var(--ink-2);font-size:16.5px;line-height:1.55;max-width:62ch}
+.principle p:last-child{margin-bottom:0}
+.principle strong{background:none;font-weight:500;color:var(--ink)}
+
+.foot{margin-top:52px;padding-top:22px;border-top:2px solid var(--ink);font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.foot b{color:var(--ink);font-weight:600}
+
+@media (max-width:760px){
+  body{font-size:17px}
+  .wrap{padding-left:20px;padding-right:20px;padding-block:0 72px}
+  section{grid-template-columns:minmax(0,1fr);gap:0;padding-block:38px 6px}
+  .rail{display:flex;align-items:baseline;gap:12px;padding:0 0 14px}
+  .rail .num{margin:0;font-size:20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+@media print{
+  body{font-size:11.5pt;line-height:1.5}
+  .wrap{max-width:none;padding:0}
+  section{padding-block:26px 4px}
+  .principle,figure,.join,.vs{break-inside:avoid}
+  h2,.jhead{break-after:avoid}
+  h1{font-size:34pt} h2{font-size:17pt} .dek,.lede{font-size:13pt}
+  .figscroll{overflow:visible} .figscroll svg{min-width:0}
+}
+</style>
+
+<div class="wrap">
+
+  <header class="mast">
+    <p class="kicker">MWG Advisory &middot; Thesis</p>
+    <h1>Most subscription apps are leasing you a tool</h1>
+    <p class="dek">A feature set billed monthly is a tool lease, and it gets re-decided every renewal. A service accrues. The difference is a loop &mdash; and the loop is what nobody finishes building.</p>
+    <div class="byline">
+      <span><b>Michael Wong</b></span>
+      <span>September 2026</span>
+      <span>Worked example: <b>three mobility apps, nine days</b></span>
+    </div>
+  </header>
+
+  <!-- 01 -->
+  <section>
+    <div class="rail"><span class="num">01</span>The thesis</div>
+    <div class="body">
+      <h2>Subscription pricing came from software that holds state</h2>
+
+      <p class="lede">SaaS earned recurring revenue because the software did continuous work on the customer's behalf and held something that got more valuable the longer they stayed. Consumer apps adopted the pricing model and left the state behind.</p>
+
+      <p>What most of them ship is a set of features: a library, a generator, an assessment, a tracker. Good features, often excellent ones. But a feature is a tool, and a tool's value lives in the moment you pick it up. <strong>Billing monthly for a tool isn't a service &mdash; it's a financing arrangement.</strong> You're leasing a thing that would otherwise be a one-time purchase, and the user works out the arithmetic eventually.</p>
+
+      <p>There's a single question that separates the two, and I now ask it first in every teardown:</p>
+
+      <div class="pull">If I stopped paying tomorrow, what would I lose besides access?</div>
+
+      <p>For a tool lease the honest answer is nothing. The videos, the generator, the filters &mdash; they were never mine, and none of them were doing anything while I wasn't looking. For a service the answer is a list: the record of what I've done, the plan that's mid-flight, the position I've accumulated, the thing it knows about me that took months to learn. <strong>That list is the whole difference between churn and renewal</strong>, and it's also the only switching cost these products can build, because it is the one asset a competitor can't ship.</p>
+
+      <h3>Renewal asks a different question of each</h3>
+
+      <p>Renewal isn't a payment. It's a re-purchase decision, and the question the customer asks depends entirely on which of the two they bought.</p>
+
+      <div class="vs">
+        <div class="vscell">
+          <p class="vlab">Tool lease</p>
+          <p class="vq">&ldquo;Did I use it enough to justify the fee?&rdquo;</p>
+          <p class="vn">Answered from the customer's own memory, and it gets harder to answer yes to every month the novelty wears off. Nothing the product holds helps them.</p>
+        </div>
+        <div class="vscell good">
+          <p class="vlab">Service</p>
+          <p class="vq">&ldquo;Is it still working on my behalf?&rdquo;</p>
+          <p class="vn">Answered with evidence the product generated. It can show the target it set, what changed, and what's next &mdash; and the answer improves with tenure instead of decaying.</p>
+        </div>
+      </div>
+
+      <p>Every product I've torn down so far is being renewed against the left-hand question, and none of them had to be.</p>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section>
+    <div class="rail"><span class="num">02</span>The loop</div>
+    <div class="body">
+      <h2>Four nodes, four joins &mdash; but only the nodes get the attention</h2>
+
+      <p class="lede">The loop is what converts a feature set into a service. <strong>Diagnosis</strong> tells me something true I couldn't have known. <strong>Assignment</strong> turns that into a specific instruction with a number on it, which I accept. <strong>Verification</strong> checks whether I did it. <strong>Progress</strong> accumulates what I did into something visible that extends.</p>
+
+      <p>Roadmaps are written in nodes. Nodes are what you can demo, price and put on a feature list. But a node is a capability, and capability is not a service &mdash; what makes a product feel like a coach rather than a library is whether the nodes are wired to each other. That's the join.</p>
+
+      <p>To be fair to these teams, some of the joins do get built. What they don't get is <em>design attention</em>. They arrive late, sit one tab off the main path, or connect to the wrong object &mdash; the shape of something added after the feature it connects, rather than the thing the feature was built to serve.</p>
+
+      <p>And a join is precisely where the product does work the customer doesn't have to. That's why it's the unit that matters commercially: <strong>every broken join hands a job back to the user, and a job the user does is a job they can do somewhere else for free.</strong></p>
+
+      <p>So there are two ways to fail, and the category I've studied is doing both. The nodes are only partially fulfilled, and the joins between them are afterthoughts &mdash; or, in one case, missing entirely.</p>
+
+      <figure>
+        <div class="figscroll">
+          <svg viewBox="0 0 1000 472" role="img" aria-label="The coaching loop drawn as a circuit of four nodes. Diagnosis and assignment are substantially built; verification and progress are only partially filled. Three joins connect the nodes: diagnosis to assignment, assignment to verification, and verification to progress. The fourth join, progress back to diagnosis, is severed, because no retest is ever prompted.">
+            <defs>
+              <marker id="af" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 1 L 10 5 L 0 9 z" class="f-muted"></path>
+              </marker>
+              <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 1 L 10 5 L 0 9 z" class="f-break"></path>
+              </marker>
+            </defs>
+
+            <rect x="170" y="80" width="220" height="92" rx="4" class="dg-box dg-diag"></rect>
+            <text x="280" y="112" class="nm f-diag" text-anchor="middle">Diagnosis</text>
+            <rect x="196" y="128" width="168" height="7" class="f-track"></rect>
+            <rect x="196" y="128" width="138" height="7" class="f-diag"></rect>
+            <text x="280" y="158" class="sm f-muted" text-anchor="middle">a real instrument</text>
+
+            <rect x="610" y="80" width="220" height="92" rx="4" class="dg-box dg-assign"></rect>
+            <text x="720" y="112" class="nm f-assign" text-anchor="middle">Assignment</text>
+            <rect x="636" y="128" width="168" height="7" class="f-track"></rect>
+            <rect x="636" y="128" width="114" height="7" class="f-assign"></rect>
+            <text x="720" y="158" class="sm f-muted" text-anchor="middle">a real prescription</text>
+
+            <rect x="610" y="300" width="220" height="92" rx="4" class="dg-box dg-verify"></rect>
+            <text x="720" y="332" class="nm f-verify" text-anchor="middle">Verification</text>
+            <rect x="636" y="348" width="168" height="7" class="f-track"></rect>
+            <rect x="636" y="348" width="52" height="7" class="f-verify"></rect>
+            <text x="720" y="378" class="sm f-muted" text-anchor="middle">counts attendance</text>
+
+            <rect x="170" y="300" width="220" height="92" rx="4" class="dg-box dg-prog"></rect>
+            <text x="280" y="332" class="nm f-prog" text-anchor="middle">Progress</text>
+            <rect x="196" y="348" width="168" height="7" class="f-track"></rect>
+            <rect x="196" y="348" width="52" height="7" class="f-prog"></rect>
+            <text x="280" y="378" class="sm f-muted" text-anchor="middle">renders attendance</text>
+
+            <line x1="394" y1="126" x2="602" y2="126" class="dg-flow" marker-end="url(#af)"></line>
+            <text x="498" y="44" class="lbl f-muted" text-anchor="middle">01</text>
+            <text x="498" y="64" class="sm f-muted" text-anchor="middle" style="font-style:italic">is this about my finding?</text>
+
+            <line x1="720" y1="176" x2="720" y2="296" class="dg-flow" marker-end="url(#af)"></line>
+            <text x="748" y="228" class="lbl f-muted">02</text>
+            <text x="748" y="248" class="sm f-muted" style="font-style:italic">will I actually do it?</text>
+
+            <line x1="602" y1="346" x2="398" y2="346" class="dg-flow" marker-end="url(#af)"></line>
+            <text x="500" y="424" class="lbl f-muted" text-anchor="middle">03</text>
+            <text x="500" y="444" class="sm f-muted" text-anchor="middle" style="font-style:italic">did anything change?</text>
+
+            <path d="M 280 296 L 280 258" class="dg-break dash" fill="none" stroke-width="1.5"></path>
+            <path d="M 280 214 L 280 176" class="dg-break dash" fill="none" stroke-width="1.5" marker-end="url(#ab)"></path>
+            <line x1="268" y1="224" x2="292" y2="248" class="dg-break" stroke-width="1.5"></line>
+            <line x1="292" y1="224" x2="268" y2="248" class="dg-break" stroke-width="1.5"></line>
+            <text x="244" y="228" class="lbl f-break" text-anchor="end">04</text>
+            <text x="244" y="248" class="sm f-break" text-anchor="end" style="font-style:italic">why get measured again?</text>
+          </svg>
+        </div>
+        <figcaption>Fill levels are my judgment, not a measurement. Diagnosis and assignment are genuinely built. Verification and progress exist but only ever grade attendance. The three joins that exist are real but unattended. And the one that closes the loop &mdash; back to a new diagnosis &mdash; is missing from every product I looked at.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section>
+    <div class="rail"><span class="num">03</span>The joins</div>
+    <div class="body">
+      <h2>Three of them work better than I expected. The fourth doesn't exist.</h2>
+
+      <p>The evidence below is from three mobility apps I used for nine days &mdash; pliability, GOWOD and Bend. I wrote my predictions before reviewing any tape, so the products could correct me. They did, repeatedly, and mostly in their favor. That matters, because the argument isn't &ldquo;these apps are bad.&rdquo; They've built more than I gave them credit for, and it still doesn't close.</p>
+
+      <div class="joins">
+
+        <div class="join">
+          <div class="jhead">
+            <span class="jname">01 &nbsp;Diagnosis &rarr; Assignment</span>
+            <span class="jverdict">Built, and orphaned</span>
+          </div>
+          <p class="q">&ldquo;Does this plan have anything to do with what you just found in me?&rdquo;</p>
+          <p>Better than I predicted. A camera assessment names the compensation patterns, scores a key area, and builds a reviewable three-week program with the reason carried all the way through. The failure isn't the join &mdash; it's that nothing routes anyone to it. The most credible artifact in the category isn't on the path a new member walks.</p>
+          <p class="job">Job handed back &rarr; find the thing that makes this a service</p>
+        </div>
+
+        <div class="join">
+          <div class="jhead">
+            <span class="jname">02 &nbsp;Assignment &rarr; Verification</span>
+            <span class="jverdict">Built, wrong object</span>
+          </div>
+          <p class="q">&ldquo;Am I actually going to do this?&rdquo;</p>
+          <p>Also better than I predicted. There's a real commitment object &mdash; a goal you pick and a button that says <em>commit</em> &mdash; and even a forgiveness layer behind it. The mechanic is right. What you're committing to is time.</p>
+          <p class="job">Job handed back &rarr; decide what counts as success</p>
+        </div>
+
+        <div class="join">
+          <div class="jhead">
+            <span class="jname">03 &nbsp;Verification &rarr; Progress</span>
+            <span class="jverdict bad">Misallocated</span>
+          </div>
+          <p class="q">&ldquo;Did anything actually change?&rdquo;</p>
+          <p>Here it starts to go. One app renders a gauge named after the member's body that is a function of days completed. Another holds a composite mobility score and three named issues, and the meter it shows after every session is attendance. Compliance gets rendered as if it were capability.</p>
+          <p class="job">Job handed back &rarr; work out whether it's working</p>
+        </div>
+
+        <div class="join">
+          <div class="jhead">
+            <span class="jname">04 &nbsp;Progress &rarr; Diagnosis</span>
+            <span class="jverdict bad">Absent everywhere</span>
+          </div>
+          <p class="q">&ldquo;Why would I come back and get measured again?&rdquo;</p>
+          <p>Nobody has this. One app showed me a mobility score from March 2025 as my current state, after seven years of membership &mdash; while its own instructions ask for monthly retesting. For an assessment-led product a stale assessment is worse than none: it prescribes confidently against a body that has changed.</p>
+          <p class="job">Job handed back &rarr; remember to re-measure, and know when</p>
+        </div>
+
+      </div>
+
+      <p>Read the right-hand column on its own and you have the lease. Four jobs the customer performs, in a product they are paying monthly for precisely so they don't have to.</p>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section>
+    <div class="rail"><span class="num">04</span>The cause</div>
+    <div class="body">
+      <h2>The last join can't close because there's nothing to close against</h2>
+
+      <div class="pull">Every goal object in this category is made of time.</div>
+
+      <p>Streaks. Minutes this month. Hours in thirty days. Sessions completed out of seven. Two of the three products compute a composite mobility score, and <strong>neither one lets a member set a goal on it.</strong> Not one screen offered a target state for the body.</p>
+
+      <p>That single fact propagates through everything above. A product can only verify against a declared target, so attendance becomes the only thing verification can grade. The progress meter therefore renders attendance. And once the payoff is a streak, the streak is what you come back for &mdash; the reassessment becomes optional, nothing schedules it, and the loop closes on participation instead of returning to diagnosis.</p>
+
+      <p>The nodes being partial and the joins being broken turn out to be the same problem seen from two angles. You can't fill the verification node while the only thing it's allowed to measure is whether someone showed up.</p>
+
+      <h3>Why I expect to keep finding this</h3>
+
+      <p>The shape generalizes past mobility, and the tell is consistent: <strong>an assessment, a content library, and a subscription &mdash; in a category where the content has a free substitute.</strong> Sleep, nutrition, meditation, language, personal finance, skincare, strength training, dog training. Wherever the library is the product, the loop is the only thing left to charge for, and almost nobody has finished building it.</p>
+
+      <p>Duolingo is the counterexample worth studying, and it's instructive that language had an external capability ladder &mdash; CEFR &mdash; sitting there before the app existed. It could tell a user what a level <em>means</em>. Most categories have no such ladder, which is why their products fall back on counting.</p>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section>
+    <div class="rail"><span class="num">05</span>So what</div>
+    <div class="body">
+      <h2>A counter and a coach are different businesses</h2>
+
+      <p>The obvious objection is that participation loops work. They do &mdash; the app in my set with no diagnosis at all and nothing verified about the member's body has by far the best engagement trend. I'd be wrong to write that off.</p>
+
+      <div class="principle">
+        <p class="plabel">The reconciliation</p>
+        <p><strong>Participation mechanics move frequency. Verification mechanics move price.</strong> A product that proves you showed up can get you to show up more. It can't charge much, because what it proves isn't what you bought. The apps in my set that verify something about the member's body earn fourteen to nineteen times more per member than the one that doesn't.</p>
+      </div>
+
+      <p>So this is a pricing-power and renewal argument, not a DAU argument. Which also means the fix is smaller than it sounds. It isn't more content, better filters or a more accurate instrument &mdash; those are all more tool. It's a target on a real number and a date the claim gets settled &mdash; <em>Back/Core 53, retest October 13</em> &mdash; and then the sentence none of these products can currently write:</p>
+
+      <div class="pull">Back/Core went 53 to 68. Your new critical area is hips.</div>
+
+      <p>That sentence is the last join closing. It is also goal extension, a new chapter opening, and the answer to the renewal question &mdash; evidence the product generated that it is still working on the member's behalf. One line of copy, and nothing in the category can produce it.</p>
+
+      <p><strong>Finish the loop and the thing you're selling changes category.</strong> The features stay the same. What changes is that stopping costs the customer something, and that is the entire basis on which a subscription gets renewed.</p>
+    </div>
+  </section>
+
+  <div class="foot">
+    <span><b>MWG Advisory</b> &middot; mwgadvisory.com</span>
+    <span>Full teardown &mdash; pliability, GOWOD, Bend &mdash; forthcoming</span>
+  </div>
+
+<p style="margin-top:28px"><a href="/blog/" style="font-family:var(--mono);font-size:12px;color:var(--accent)">&larr; Back to all research</a></p>
+
+</div>
+
+
+</body></html>
