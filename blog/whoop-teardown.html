@@ -156,6 +156,19 @@ figure.shot img{display:block;width:100%;height:auto;border:1px solid var(--rule
 
 /* mechanic ledger */
 .mech{padding:24px 0 22px;border-bottom:1px solid var(--rule)}
+.abstract{max-width:var(--measure);margin:30px 0 4px;padding:22px 0 24px;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
+.abstract .k{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.abstract p{font-size:19px;line-height:1.55;color:var(--ink);margin:0}
+.ednote{max-width:var(--measure);margin:40px 0 0;padding:18px 0 0;border-top:1px solid var(--rule)}
+.ednote .k{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.ednote p{font-family:var(--mono);font-size:12.5px;line-height:1.65;color:var(--muted);margin:0}
+.mini{margin:18px 0 6px;border-top:1px solid var(--rule)}
+.mini article{padding:15px 0;border-bottom:1px solid var(--rule-soft);max-width:var(--measure)}
+.mini .mtop{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 10px;margin-bottom:6px}
+.mini h4{font-family:var(--grot);font-weight:600;font-size:16px;margin:0;letter-spacing:-.01em;color:var(--ink)}
+.mini .rank{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+.mini p{margin:0 0 5px;font-size:16px;line-height:1.5;color:var(--ink-2)}
+.mini p.w{font-family:var(--mono);font-size:12.5px;line-height:1.6;color:var(--muted)}
 .voices{margin:22px 0 20px;max-width:var(--measure);border-top:1px solid var(--rule)}
 .voices blockquote{margin:0;padding:14px 0;border-bottom:1px solid var(--rule-soft);display:grid;grid-template-columns:1fr 140px;gap:18px;align-items:baseline}
 .voices blockquote p{margin:0;font-family:var(--serif);font-size:17px;line-height:1.45;font-style:italic;color:var(--ink)}
@@ -244,7 +257,7 @@ td.guard{color:var(--sig-amber)}
 <div class="wrap">
 
 <header class="mast">
-  <p class="kicker">Product review &nbsp;·&nbsp; Thirty-six recorded sessions &nbsp;·&nbsp; Engagement, retention &amp; pricing power</p>
+  <p class="kicker">Product review &nbsp;·&nbsp; Forty recorded sessions &nbsp;·&nbsp; Engagement, retention &amp; pricing power</p>
   <h1>Falling Out and Back In Love With Whoop</h1>
   <p class="dek">Four rival bands now measure you for $99 to $199, with no subscription required. Whoop has already built the coach that should justify the difference — and scores me against a plan too vague to notice whether I followed it.</p>
   <div class="byline">
@@ -253,6 +266,11 @@ td.guard{color:var(--sig-amber)}
     <span>September 2026</span>
   </div>
 </header>
+
+<div class="abstract">
+  <span class="k">Abstract</span>
+  <p>Whoop has built every component of a coach but underdeveloped the links between some of them. Throughout September 2026, I recorded forty sessions of my own use. On day nine I committed to a workout activity in the app, was programmed it, ran it inside Whoop&#8217;s own guided player &#8212; and the commitment object sat open underneath the finished workout, unreconciled. Measurement is now commoditized, some with no subscription. So the premium can&#8217;t solely live in what the AI coach says. It has to live in what the product remembers you doing about it and reacting accordingly, both for accountability and progress. The encouraging part is that Whoop has already built this join well on another path &#8212; lab results in Health can become plan targets and then nightly questions and then a percentage. The ask is to run that same pipeline at the resolution the AI coach actually works at: this session, this target, tonight&#8217;s bedtime, and make accrued progress far more visible.</p>
+</div>
 
 <section>
   <div class="rail"><span class="num">01</span>Premise</div>
@@ -268,26 +286,8 @@ td.guard{color:var(--sig-amber)}
 
   </div>
 </section>
-
 <section>
-  <div class="rail"><span class="num">02</span>Method</div>
-  <div class="body">
-    <h2>Thirty-six recorded sessions, ten days</h2>
-    <p>Screen recordings of my real use, 3–12 September 2026: morning checks, workouts, evening sessions, notification sweeps, a Weekly Plan audit, a blood draw and the Advanced Labs report that followed it. Every claim below is observed rather than inferred.</p>
-    <p>I have been a Whoop member since April 2019 and have logged <strong>2,687 recoveries.</strong> Ten days of recording myself using it taught me more about the product than the seven years before them. There is far more here than a very good dashboard — it goes well past measuring and diagnosing into prescribing, guiding, checking and experimenting — and I found effectively all of it by trial and exploration, not by being shown.</p>
-    <h3>What has already been said</h3>
-    <p>None of the diagnosis in this piece is new, and it would be dishonest to present it as if it were. Patel, Asch and Volpp titled a 2015 <em>JAMA</em> paper <em>&#8220;Wearable Devices as Facilitators, Not Drivers, of Health Behavior Change&#8221;</em> &#8212; my thesis, eleven years ago. The <strong>IDEA</strong> randomized trial found worse than no benefit: 470 adults over two years, and the group that <em>added</em> a wearable to a behavioral program lost <strong>7.7 pounds against 13</strong> for counseling alone. An abandonment study the same year found roughly 80% of trackers put away within two months, one participant explaining, <em>&#8220;It gave me a lot of information, but I don&#8217;t know what to do with any of this information.&#8221;</em> And a month before I started, a framework in <em>Frontiers in Digital Health</em> proposed almost exactly the loop I use here, written for clinicians rather than product teams.</p>
-    <p>The commercial version is newer and just as prior. In April, Jason Stoffer wrote the sentence this whole document is a long footnote to: <em>&#8220;Scores without solutions become less interesting over time. You stop checking.&#8221;</em></p>
-    <p>So: measurement failing to change behavior is a decade-old finding, and measurement failing to sustain a valuation is a months-old one. What I have not found anywhere is the <strong>mechanism</strong> &#8212; what specifically, inside a shipping product, stops a diagnosis from becoming a completed action. That is what the recordings are for, and it is the only part of this I would claim as mine.</p>
-    <p>One disagreement worth naming. Stoffer&#8217;s answer is vertical integration into intervention hardware &#8212; buy the mattress, the device that does something to your physiology. Mine is that the intervention is already inside the app, and the software does not remember it. <strong>His path costs acquisitions. Mine costs a foreign key.</strong></p>
-
-    <p>The tape has corrected this document fifteen times, always in Whoop's favor. Earlier drafts claimed Whoop never writes a prescription, has no commitment objects, never pushes, never compares actual to target, never checks bedtimes, drops the plan at the START button, keeps bloodwork away from the plan, never verifies against a target, and doesn't run experiments. <strong>All false.</strong> Every one of those corrections is a capability I had been paying for and had never found — which is the finding, not a footnote to it.</p>
-    <p class="note">One member, ten days. A sharp instrument for finding mechanisms, a blunt one for sizing them. Every claim here should be checked against Whoop's own instrumentation before anyone funds a quarter against it.</p>
-  </div>
-</section>
-
-<section>
-  <div class="rail"><span class="num">03</span>Diagnosis</div>
+  <div class="rail"><span class="num">02</span>Diagnosis</div>
   <div class="body">
     <h2>Three records of one intention</h2>
     <p>Whoop runs a real coaching loop — diagnosis, assignment, verification, progress. It pushes a score on waking, offers activities with a COMMIT button, writes full sessions with sets and loads, drives a guided player, and debriefs afterwards. Every stage is built and shipping.</p>
@@ -335,7 +335,7 @@ td.guard{color:var(--sig-amber)}
         <path d="M 830 232 L 830 268 L 160 268 L 160 236" fill="none" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#j-ok)"></path>
         <text x="495" y="262" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--accent)">a settled promise &#8212; the row that means &#8220;I showed up&#8221;</text>
       </svg>
-      <figcaption>Observed 9 September. I committed to a session, was prescribed it, ran it inside Whoop's own guided player — and my commitment stayed open underneath the completed work like an unpaid invoice.</figcaption>
+      <figcaption>Observed September 9. I committed to a session, was prescribed it, ran it inside Whoop's own guided player — and my commitment stayed open underneath the completed work like an unpaid invoice.</figcaption>
     </figure>
 
     <p>Every symptom in this teardown is downstream of that one gap. Three of them matter most, and they need spelling out for anyone who hasn’t used this product, or who still thinks of a wearable as a measuring device.</p>
@@ -345,7 +345,7 @@ td.guard{color:var(--sig-amber)}
       <li><strong>And that exposes the missing end of the loop: progression, made visible and celebrated.</strong> Diagnosing, assigning, committing and verifying are all work, and work needs a payoff. Coming from games, I can’t imagine shipping an experience without one. Levels, streaks, leaderboards, trophies and career stats exist for exactly this reason, and they live in the most visible real estate in the product because their entire job is to tell the player: <em>you’re winning, keep going.</em> Whoop has the material for all of it and no surface that says it.</li>
     </ul>
     <h3>The join is real. It just points at the coarsest thing in the product.</h3>
-    <p>On 11 September my Advanced Labs panel came back, and I watched the product do the exact thing I had just finished saying it couldn&#8217;t. Every clinical insight carries quantified Recommended Actions &#8212; <em>omega-3 five days a week</em>, <em>7.5 hours of sleep a night</em>, <em>200 minutes a week in heart-rate zones 1&#8211;3</em> &#8212; and every one of them has a button underneath it: <strong>ADD TO WEEKLY PLAN</strong>, or, where the plan already holds that goal, <strong>UPDATE WEEKLY PLAN GOAL</strong>. I tapped them.</p>
+    <p>On September 11 my Advanced Labs panel came back, and I watched the product do the exact thing I had just finished saying it couldn&#8217;t. Every clinical insight carries quantified Recommended Actions &#8212; <em>omega-3 five days a week</em>, <em>7.5 hours of sleep a night</em>, <em>200 minutes a week in heart-rate zones 1&#8211;3</em> &#8212; and every one of them has a button underneath it: <strong>ADD TO WEEKLY PLAN</strong>, or, where the plan already holds that goal, <strong>UPDATE WEEKLY PLAN GOAL</strong>. I tapped them.</p>
     <figure class="shot">
       <img src="img/ev-labs.jpg" alt="A Whoop Advanced Labs Recommended Action: take an omega-3 supplement five days a week, with a plain-language rationale and a full-width ADD TO WEEKLY PLAN button beneath it." loading="lazy" width="1100" height="979">
       <figcaption>A clinical finding, a specific behavior with a dose and a frequency, and a button that writes it into the plan. This is the join working, on the one path where Whoop built it.</figcaption>
@@ -406,12 +406,11 @@ td.guard{color:var(--sig-amber)}
         <p class="mdesc">A weekly plan meter that genuinely moves, plus Healthspan years, tonnage and milestones underneath. But the meter resets every Sunday, the rest is two or three taps deep, none of it is rendered as a journey, and there is nobody to show it to.</p>
       </div>
     </div>
-    <p class="note">Fill levels are my judgment against thirty-six recorded sessions, not measured data.</p>
+    <p class="note">Fill levels are my judgment against forty recorded sessions, not measured data.</p>
   </div>
 </section>
-
 <section>
-  <div class="rail"><span class="num">04</span>Field notes</div>
+  <div class="rail"><span class="num">03</span>Field notes</div>
   <div class="body">
     <h2>Seven moments from the tape</h2>
 
@@ -445,7 +444,7 @@ td.guard{color:var(--sig-amber)}
     <p>I did exactly what I said I would, inside Whoop's own product, and the promise never closed.</p>
 
     <h3>6 &#183; &#8220;What would help you feel most supported today?&#8221;</h3>
-    <p>9:43am on 12 September. I had already committed to a Functional Fitness session in the Daily Outlook, already done it, and already logged 55 minutes at 13.0 strain. The coach opened with this:</p>
+    <p>9:43am on September 12. I had already committed to a Functional Fitness session in the Daily Outlook, already done it, and already logged 55 minutes at 13.0 strain. The coach opened with this:</p>
     <div class="pull">&#8220;Yesterday&#8217;s hard functional-fitness session and alcohol caught up with you overnight, Michael. Choose moderate effort today and keep the session controlled. What would help you feel most supported today?&#8221;</div>
     <figure class="shot">
       <img src="img/ev-outlook.jpg" alt="Whoop coach message at 9:43am telling Michael that yesterday's hard functional-fitness session and alcohol caught up with him overnight, and asking what would help him feel most supported today." loading="lazy" width="1100" height="1336">
@@ -479,9 +478,8 @@ td.guard{color:var(--sig-amber)}
     <p>This belongs in the Health tab, or in the Weekly Plan, as an object: two arms, a countdown, nightly assignment, automatic scoring, a result page. Whoop is one screen away from being the only consumer product that can run a controlled trial on a member&#8217;s own physiology &#8212; and it is currently asking that member to remember.</p>
   </div>
 </section>
-
 <section>
-  <div class="rail"><span class="num">05</span>The routine</div>
+  <div class="rail"><span class="num">04</span>The routine</div>
   <div class="body">
     <h2>What I&#8217;d tell a new member to do</h2>
     <p class="lede">Ten days in, I can write the routine that actually unlocks this product. It is five minutes a day and it turns a dashboard into a coach. None of it is in the onboarding, none of it is prompted, and I found every step by accident.</p>
@@ -599,12 +597,11 @@ td.guard{color:var(--sig-amber)}
       <li><strong>Nothing in the product ever tells you to do any of this.</strong> Which is the part that should bother Whoop most: this routine is the product working as intended, and it took me seven years and a research project to assemble it.</li>
     </ul>
     <div class="pull">A routine that lives in a chat log is one the member has to remember. A routine made of objects is one the product can run.</div>
-    <p>Every recommendation in section 09 is, in the end, a proposal to turn one step of this guide into something the product holds instead of something I do.</p>
+    <p>Every recommendation in section 08 is, in the end, a proposal to turn one step of this guide into something the product holds instead of something I do.</p>
   </div>
 </section>
-
 <section>
-  <div class="rail"><span class="num">06</span>Field</div>
+  <div class="rail"><span class="num">05</span>Field</div>
   <div class="body">
     <h2>Nobody in the wearable lane has closed the loop</h2>
     <p>Every serious competitor now ships an AI coach, so the differentiator isn't whether one exists — it's how much of the loop it holds. I went looking for hands-on accounts and product documentation for the two that matter most.</p>
@@ -646,16 +643,15 @@ td.guard{color:var(--sig-amber)}
       </table>
     </div>
     <p>Whoop invented this form factor and is now the only occupant charging rent for the sensor. Reviewers in the running world reached the same split independently: <em>"summarizing what happened is not the same as coaching what happens next."</em></p>
-    <p>Garmin is the one to watch, because it isn&#8217;t coming for the mass market. It has spent two decades as the serious athlete&#8217;s brand &#8212; which is Whoop&#8217;s audience &#8212; and in July it shipped into Whoop&#8217;s exact form factor, with &#8220;no subscription required&#8221; as the headline. In the r/whoop thread I quote in section 08, three members say they have already left for it. Whoop still has real advantages: DC Rainmaker&#8217;s month-long review found Whoop detected a three-hour ride &#8220;perfectly, to the minute&#8221; where the Cirqa split it into three, and that Whoop reliably got 14 days of battery against the Cirqa&#8217;s five to seven. But those are sensor and firmware wins, and they narrow with every Garmin release.</p>
+    <p>Garmin is the one to watch, because it isn&#8217;t coming for the mass market. It has spent two decades as the serious athlete&#8217;s brand &#8212; which is Whoop&#8217;s audience &#8212; and in July it shipped into Whoop&#8217;s exact form factor, with &#8220;no subscription required&#8221; as the headline. In the r/whoop thread I quote in section 07, three members say they have already left for it. Whoop still has real advantages: DC Rainmaker&#8217;s month-long review found Whoop detected a three-hour ride &#8220;perfectly, to the minute&#8221; where the Cirqa split it into three, and that Whoop reliably got 14 days of battery against the Cirqa&#8217;s five to seven. But those are sensor and firmware wins, and they narrow with every Garmin release.</p>
     <p>The more interesting move is what Garmin is doing with its subscription. Because the Cirqa has no screen, the phone <em>is</em> the product, and reviewers have called it the first Garmin device designed around Connect+ rather than sold with it as an extra. Whoop started subscription-first and bolted on hardware; Garmin started hardware-first and is backing into a subscription. Both arrive at the same question from opposite ends: <strong>what is the recurring fee actually for?</strong> Garmin&#8217;s current answer is a workout library and some structured plans. Whoop&#8217;s could be a coach that remembers what I promised &#8212; but only if the loop closes.</p>
   </div>
 </section>
-
 <section>
-  <div class="rail"><span class="num">07</span>Market</div>
+  <div class="rail"><span class="num">06</span>Market</div>
   <div class="body">
     <h2>Oura just priced the category</h2>
-    <p class="lede">Oura filed to go public on 8 September 2026, seeking $3B at a $16B valuation. Whoop will almost certainly follow. Scott Galloway's read of the S-1 puts a number on exactly the problem this review describes.</p>
+    <p class="lede">Oura filed to go public on September 8, 2026, seeking $3B at a $16B valuation. Whoop will almost certainly follow. Scott Galloway's read of the S-1 puts a number on exactly the problem this review describes.</p>
 
     <div class="inv">
       <table>
@@ -670,7 +666,7 @@ td.guard{color:var(--sig-amber)}
         </tbody>
       </table>
     </div>
-    <p class="note">Oura figures via Galloway's reading of the S-1, 11 September 2026. Whoop figures as previously published.</p>
+    <p class="note">Oura figures via Galloway's reading of the S-1, September 11, 2026. Whoop figures as previously published.</p>
 
     <h3>The number that should worry — and motivate — Whoop</h3>
     <p>Galloway does the arithmetic nobody else did. Oura is asking for an 11× revenue multiple on a business that earns 77% of its revenue from rings. Value the hardware at a hardware multiple — 2× revenue, roughly $2B — and <strong>the market is being asked to price Oura's subscription business at $14B, or about 43× revenue.</strong> Justifying that requires Oura to keep doubling subscribers toward roughly 25 million.</p>
@@ -689,16 +685,15 @@ td.guard{color:var(--sig-amber)}
     <p>A service gets bought repeatedly because it keeps doing something <em>for</em> you: prescribing, checking, adjusting, remembering. Whoop has more of that already built than anyone in the category — and presents itself, on the screen I open every morning, as an awareness product.</p>
   </div>
 </section>
-
 <section>
-  <div class="rail"><span class="num">08</span>Why it matters</div>
+  <div class="rail"><span class="num">07</span>Why it matters</div>
   <div class="body">
     <h2>Checking is a habit that ends. Engaging is one that renews.</h2>
     <p class="lede">My loop before this exercise was: wake, read a number, close the app. Forty-five seconds, once a day, for years. It is a good habit and it has a terminal property — <strong>it gets more predictable the longer it runs</strong>, and a member who can guess the number before opening the app has stopped buying anything.</p>
     <p>That is the churn mechanism, and it doesn't announce itself. Nobody cancels because the sensor got worse. They cancel because they finally answered "have I already got what I came for?" — and a product that gives the same answer the same way every morning is training them toward yes.</p>
 
     <h3>Members are saying the same thing</h3>
-    <p>On 20 September a longtime member on r/whoop asked what people want from the next Whoop, and admitted <em>&#8220;I&#8217;m starting to feel like I&#8217;m getting less value out of the device, especially considering the price doesn&#8217;t always feel justified.&#8221;</em> About ninety comments followed. Hardware and sensor accuracy come up, and those are outside the scope of this piece. But the dominant thread is the one I started with: the price, measured against what the product does with what it already knows.</p>
+    <p>On September 20 a longtime member on r/whoop asked what people want from the next Whoop, and admitted <em>&#8220;I&#8217;m starting to feel like I&#8217;m getting less value out of the device, especially considering the price doesn&#8217;t always feel justified.&#8221;</em> About ninety comments followed. Hardware and sensor accuracy come up, and those are outside the scope of this piece. But the dominant thread is the one I started with: the price, measured against what the product does with what it already knows.</p>
     <div class="voices">
       <blockquote><p>&#8220;After 4.5 years with Whoop, I already know too well all my trends and metrics, so there is very little added value after the first year or so.&#8221;</p><cite>Awareness runs out</cite></blockquote>
       <blockquote><p>&#8220;The data to say which is already on the wrist, they just show the score and skip the reason.&#8221;</p><cite>A number, no reason</cite></blockquote>
@@ -711,22 +706,15 @@ td.guard{color:var(--sig-amber)}
     <p class="note">One thread, self-selected, roughly ninety comments &#8212; directional, not representative. There are defenders too: one member argues that about $16 a month is cheap for a device that warned them they were chronically stressed before it became a problem. Which is the same argument from the other side. The subscription felt worth it at the moment it told them something they could act on.</p>
 
     <h3>The evidence sits in this study</h3>
-    <p>My own engagement rose sharply the moment I started recording myself. More time in the app, and far more <em>intentionality</em> in it — commitments taken deliberately, plans negotiated rather than scrolled past. The gap between my ordinary use and my observed use <strong>is</strong> the gap between checking and engaging, and the only thing that produced it was having a reason to be deliberate. Whoop supplies no such reason. An incentive system is the scalable version of what a camera did to me for one week.</p>
-
-    <p>There is decent evidence this is what people are actually buying. A 2025 randomized trial in the <em>Journal of Strength and Conditioning Research</em> put 79 trained adults through ten weeks of identical programming and varied only the support around it. The share clearing an 85% adherence bar: <strong>88% supervised in person, 81% with an app, 52% self-guided.</strong> Software captured nearly the whole gap. The structure is the product — not the presence of a human, and not the numbers on the dashboard.</p>
-
-    <h3>The objection this answers</h3>
-    <p>There is a real backlash building against exactly the thing I'm asking Whoop to do more of. Kara Swisher on the longevity-tracking boom: <em>"It's meaningless numbers without an actual instruction. It's just a lot of data, and I think they're confusing data with actual information."</em> Galloway calls the broader pattern metrics-maxxing, and borrows C. Thi Nguyen's idea of value capture — people optimize BMI instead of health, GPA instead of learning, because the number is what they're shown.</p>
-    <p>Both critiques are aimed squarely at the dashboard, and both are correct about it. Neither is aimed at a service that prescribes, checks and adjusts. <strong>A dashboard invites value capture; an instruction points past the metric at the behavior.</strong> Closing the join isn't more optimization — done right it's less metric-staring, because the member stops reading a score and starts executing something.</p>
-    <p>Swisher's specific example lands on a flaw I found: she notes 10,000 steps is a marketing number and the evidence better supports something nearer 7,500. Whoop's Feel Better plan set me a 17,500-step goal; its custom builder proposed 12,600, which is exactly my current average. Neither is grounded in what's good for <em>this</em> body. The one place Whoop holds an evidence-backed answer to "what should my target be" is the Healthspan attribution — and the plan ignores it.</p>
+    <p>My own engagement rose sharply the moment I started recording myself. More time in the app, and far more <em>intentionality</em> in it &#8212; commitments taken deliberately, plans negotiated rather than scrolled past. The gap between my ordinary use and my observed use <strong>is</strong> the gap between checking and engaging, and the only thing that produced it was having a reason to be deliberate. Whoop technically has it in data. Healthspan is the meta, individual behaviors affecting strain and recovery are goals. But the visibility from what&#8217;s measured to targets is far too buried.</p>
 
     <h3>What the premium has to be made of</h3>
     <p>Two assets don't commoditize, and Whoop already owns both.</p>
     <p><strong>Healthspan</strong> is the first, and I undervalued it for most of this exercise. It is Whoop's estimate of my biological age, updated weekly, built from my behavior and — since my blood draw — my bloodwork. Mine reads <strong>WHOOP Age 30.1: 10.7 years younger than my calendar age, aging at 0.8&#215; the normal rate.</strong></p>
     <p>Underneath sits the part that matters — an attribution of years to specific behaviors: sleep consistency worth <strong>&#8722;2.5 years</strong>, strength time <strong>&#8722;1.6</strong>, time in heart-rate zones 1&#8211;3 <strong>&#8722;1.2</strong>, zones 4&#8211;5 <strong>+0.1</strong>, with blood biomarkers folding into the same model. Behavior plus continuous physiology plus bloodwork, resolved into one legible number with a breakdown. A $99 band cannot assemble this, because the moat isn't the model — it's three data streams meeting in one member's record over years.</p>
-    <p>On 10 September my lab results landed and Whoop put <em>"Latest Labs in Healthspan — learn how your latest labs are impacting your sleep, Strain and fitness"</em> on the home screen. That is the vertical integration finally showing itself in the one place I actually look. It is also the exception that proves the rule about everything else being two taps deep.</p>
+    <p>On September 10 my lab results landed and Whoop put <em>"Latest Labs in Healthspan — learn how your latest labs are impacting your sleep, Strain and fitness"</em> on the home screen. That is the vertical integration finally showing itself in the one place I actually look. It is also the exception that proves the rule about everything else being two taps deep.</p>
     <p><strong>A settled record of showing up</strong> is the second. Three years of kept commitments, completed trials, verified bedtimes and closed plans is not a feature; it's a switching cost that grows every month you hold it, and the only asset here that a competitor cannot buy, copy or ship.</p>
-    <p>A bridge between them opened while I was writing this, and it is one bolt wide. When my labs landed, Whoop offered to write clinically derived targets straight into my plan — 7.5 hours of sleep, 200 minutes a week in zones 1–3 — and I took them. That is the right mechanism firing, and it is the most important thing the product did in ten days. But it fires only when a blood panel arrives, it is a toggle rather than a negotiation, and it arrives with the reason stripped off. The plan item reads <em>7:30 hours</em>. It does not read <em>this is the single behavior worth 2.5 years of your biological age, and it has slipped five points since June.</em></p>
+    <p>A bridge between them opened while I was writing this, and it is one bolt wide. When my labs landed, Whoop offered to write clinically derived targets straight into my plan — 7.5 hours of sleep, 200 minutes a week in zones 1–3 — and I took them. That is the right mechanism firing, and it is the most important thing the product did all month. But it fires only when a blood panel arrives, it is a toggle rather than a negotiation, and it arrives with the reason stripped off. The plan item reads <em>7:30 hours</em>. It does not read <em>this is the single behavior worth 2.5 years of your biological age, and it has slipped five points since June.</em></p>
     <div class="pull">Whoop computes exactly which behaviors buy years. Then it writes the number into the plan and throws the years away.</div>
 
     <h3>Making it a no-brainer</h3>
@@ -735,9 +723,8 @@ td.guard{color:var(--sig-amber)}
     <p>Every figure in that sentence is already computed or one join away, and none of it is visible to me anywhere today. That page is the subscription's argument for itself, and it is the cheapest thing on this list to build.</p>
   </div>
 </section>
-
 <section>
-  <div class="rail"><span class="num">09</span>Recommendations</div>
+  <div class="rail"><span class="num">08</span>Recommendations</div>
   <div class="body">
     <h2>Five moves the evidence supports, and five that follow</h2>
     <p>The first five come straight out of the recordings: each one closes a gap I watched happen, using capabilities Whoop has already shipped. The second five are hypotheses &#8212; things I believe from years of running live games, but that nothing in ten days of tape proves. They only become worth testing once the first five exist, because each of them needs something to count.</p>
@@ -803,64 +790,39 @@ td.guard{color:var(--sig-amber)}
       </div>
     </article>
     <h3 class="tier">Second order &#8212; once the loop exists</h3>
-    <p class="note">Hypotheses rather than findings. Each one is a way to reward, share or vary the loop above; none of them works on a product that can&#8217;t yet tell whether I kept a promise.</p>
+    <p class="note">Hypotheses rather than findings. Each one is a way to reward, share or vary the loop above; none of them works on a product that can&#8217;t yet tell whether I kept a promise. Kept short here on purpose &#8212; they are worth testing, not worth the same space as the evidence.</p>
 
-    <article class="mech">
-      <div class="mtop"><span class="rank">06</span><h3>The Morning Call</h3><span class="pill diag">Diagnosis</span><span class="pill assign">Assignment</span></div>
-      <p class="move">In the beat before the recovery score resolves, ask me to call it — red, yellow or green. Reveal, score the call, then hand me straight into the day's commit carousel.</p>
-      <p class="why"><strong>Why it matters:</strong> it converts the single session nearly every member already takes from a read into an act, with no new habit required and no stake placed on sleep. Calibration accuracy is the rarest thing available here — monotonic, entirely earned, impossible to fake, and at scale a measure of interoception across millions of nights that nobody else can assemble.</p>
-      <div class="specs">
-        <div class="spec"><span class="k">Metric</span><span class="v">Call rate; 30-day calibration; commit-rate after a call vs. without</span></div>
-        <div class="spec eff"><span class="k">Effort</span><span class="v">Small — one screen in a wait state that already exists</span></div>
-        <div class="spec"><span class="k">Risk</span><span class="v">Lock the score before the prompt; suppress on any health flag; permanently dismissible; rotate it rather than gating the score forever.</span></div>
-      </div>
-    </article>
-    <article class="mech">
-      <div class="mtop"><span class="rank">07</span><h3>An economy worth engaging for</h3><span class="pill prog">Progress</span></div>
-      <p class="move">A currency earned for <em>behavior, never physiology</em> — kept commitments, completed trials, calls made, journal consistency — redeemable against a ladder topped by an Advanced Labs panel ($299–599 retail, high margin, deepens the moat), with membership credit, bands, early access and donations beneath it.</p>
-      <p class="why"><strong>Why it matters:</strong> Whoop is structurally an annual-fee business with no statement of value. Amex justifies $895 by itemizing $1,500 of credits — and is currently running that play <em>on Whoop's behalf</em> with wellness credits. An economy is also what makes the unglamorous three-quarters of the loop worth doing, and without a currency a live-ops calendar has nothing to pay out.</p>
-      <div class="specs">
-        <div class="spec"><span class="k">Metric</span><span class="v">Earn/burn ratio; engagement with non-dashboard surfaces; renewal by tenure</span></div>
-        <div class="spec eff"><span class="k">Effort</span><span class="v">Medium — badges, levels, streaks and career stats already shipped in April</span></div>
-        <div class="spec"><span class="k">Risk</span><span class="v">Never pay for strain volume — the All-In 250 Challenge rewarded 250 minutes of activity, contradicting the product's own thesis. Never pay for disclosure.</span></div>
-      </div>
-    </article>
-    <article class="mech">
-      <div class="mtop"><span class="rank">08</span><h3>Own the whole wellness loop, not one integration</h3><span class="pill diag">Diagnosis</span><span class="pill verify">Verification</span></div>
-      <p class="move">Whoop went deep with Strava in May. Sleep, training and recovery are three legs of the loop — nutrition, weight and hydration are the rest of it, and they are where members are already improvising. Ship first-class two-way integrations with MyFitnessPal, Cronometer and the rest, and treat Apple Health as an inbound pipe rather than a checkbox.</p>
-      <p class="why"><strong>Why it matters:</strong> on 10 September I found myself typing "I've got some Normatec boots too that I'll probably use" into the chat — telling my coach what equipment I own, in free text, after it had already made its recommendation. Google Health asks that at onboarding. Whoop learns it if I happen to mention it. The <strong>Journal</strong> — the thirty-odd yes/no behavior questions Whoop asks me each morning about yesterday — is where it collects the one thing it can't sense — caffeine, protein, fibre, alcohol, supplements — and it is the missing variable in every recovery model it runs. That is thirty-five toggles of unpaid labor standing between Whoop and a complete picture of me. Members on YouTube and in Whoop's own forum are already reverse-engineering a fix: the Apple Health pipe exists, nutrition auto-fill is supposed to work, and the community workaround is to enable a <em>write</em> permission you don't want in order to make a <em>read</em> function. One thread calls it "a bug which is quite some time not fixed," with no official reply. When your most engaged members are building the integration themselves, that is a roadmap item wearing a support ticket.</p>
-      <p class="why">And it compounds with everything else here. Healthspan already attributes years to behavior; feed it real nutrition data and the attribution gets sharper and more defensible. Trials get a whole second axis to test on. The premium argument stops being "we measure your body better" and becomes <strong>"we are the only place your whole wellness picture resolves into one number"</strong> — which no single-purpose app and no $99 band can answer.</p>
-      <div class="specs">
-        <div class="spec"><span class="k">Metric</span><span class="v">Share of journal entries auto-populated; journal completion rate; correlation-engine confidence with vs. without nutrition data</span></div>
-        <div class="spec eff"><span class="k">Effort</span><span class="v">Medium — partner integrations; the Apple Health path is a bug fix</span></div>
-        <div class="spec"><span class="k">Risk</span><span class="v">Health data leaving and entering the app needs the same solemnity as the clinical surfaces. Never let an integration become a currency-earning lane.</span></div>
-      </div>
-    </article>
-    <article class="mech">
-      <div class="mtop"><span class="rank">09</span><h3>Give progress an audience</h3><span class="pill social">Social</span></div>
-      <p class="move">One-tap friend following and reactions — the interface spotted in testing in May — plus one scoring rule that makes everything else fair: <strong>compete on percentage-of-your-own-baseline, never on absolute values.</strong> Then let a Team run the same trial together.</p>
-      <p class="why"><strong>Why it matters:</strong> the morning check is currently solitary; making it observable turns a single-player ritual into a shared one at near-zero content cost. Baseline-normalizing dissolves the fairness objection that has kept Whoop out of leaderboards — a 58-year-old and a 24-year-old can honestly compete on consistency against themselves, which is Whoop's own philosophy made social.</p>
-      <div class="specs">
-        <div class="spec"><span class="k">Metric</span><span class="v">DAU/MAU; D30 for members with ≥3 follows vs. matched control; share-off rate</span></div>
-        <div class="spec eff"><span class="k">Effort</span><span class="v">Medium — already half-built</span></div>
-        <div class="spec"><span class="k">Risk</span><span class="v">Recovery is health-adjacent. Share the color band by default, not the number.</span></div>
-      </div>
-    </article>
-    <article class="mech">
-      <div class="mtop"><span class="rank">10</span><h3>A live-ops calendar, and modes for the coach</h3><span class="pill assign">Assignment</span><span class="pill prog">Progress</span></div>
-      <p class="move">A monthly themed challenge with a fixed start, tiered goals and a real payout. And rotate the coach's <em>format</em>, not just its wording: the check-in, the call, the debrief, a calibration quiz, a weekly retro, a lesson keyed to today's data, a trial verdict, you-versus-you-ninety-days-ago.</p>
-      <p class="why"><strong>Why it matters:</strong> across thirty-six recordings every coach interaction had the identical shape — a paragraph, bolded numbers, an emoji, three chips. Infinite variation in content, zero in form. Whoop owns the cheapest variety engine ever built and uses it as a paragraph generator. A feature launch reactivates a lapsed member once; an event does it monthly, forever, for a fraction of the engineering.</p>
-      <div class="specs">
-        <div class="spec"><span class="k">Metric</span><span class="v">Behavior change per format — did the member commit, change a bedtime, start a trial? Opens are vanity here.</span></div>
-        <div class="spec eff"><span class="k">Effort</span><span class="v">Medium–large; needs a standing owner, not a project</span></div>
-        <div class="spec"><span class="k">Risk</span><span class="v">An event that rewards volume contradicts the brand. Design every one around consistency or restraint.</span></div>
-      </div>
-    </article>
+    <div class="mini">
+      <article>
+        <div class="mtop"><span class="rank">06</span><h4>The Morning Call</h4><span class="pill diag">Diagnosis</span><span class="pill assign">Assignment</span></div>
+        <p>In the beat before the recovery score resolves, ask me to call it &#8212; red, yellow or green. Score the call, then hand me into the day&#8217;s commit carousel.</p>
+        <p class="w">Turns the one session nearly every member already takes from a read into an act, with no new habit and no stake placed on sleep. Calibration accuracy is the rarest thing available here and nobody else can assemble it at scale.</p>
+      </article>
+      <article>
+        <div class="mtop"><span class="rank">07</span><h4>An economy worth engaging for</h4><span class="pill prog">Progress</span></div>
+        <p>A currency earned for <em>behavior, never physiology</em> &#8212; kept commitments, trials completed, journal consistency &#8212; redeemable against a ladder topped by an Advanced Labs panel.</p>
+        <p class="w">Whoop is an annual-fee business with no statement of value; Amex justifies $895 by itemizing credits and nothing here itemizes anything. Never pay for strain volume &#8212; the All-In 250 Challenge did, and contradicted the product&#8217;s own thesis.</p>
+      </article>
+      <article>
+        <div class="mtop"><span class="rank">08</span><h4>Own the whole wellness loop</h4><span class="pill diag">Diagnosis</span><span class="pill verify">Verification</span></div>
+        <p>First-class two-way integrations for nutrition, weight and hydration, and Apple Health as an inbound pipe rather than a checkbox.</p>
+        <p class="w">Members are already improvising this with third-party tools. Feed real nutrition data into Healthspan and the attribution gets sharper and more defensible.</p>
+      </article>
+      <article>
+        <div class="mtop"><span class="rank">09</span><h4>Give progress an audience</h4><span class="pill social">Social</span></div>
+        <p>One-tap friend following and reactions, with one scoring rule: compete on <em>percentage of your own baseline,</em> never on absolute values.</p>
+        <p class="w">The morning check is solitary, and making it observable costs almost nothing. Baseline-normalizing keeps it fair between a 25-year-old and a 55-year-old, and keeps the raw health number out of the comparison.</p>
+      </article>
+      <article>
+        <div class="mtop"><span class="rank">10</span><h4>A live-ops calendar, and modes for the coach</h4><span class="pill assign">Assignment</span><span class="pill prog">Progress</span></div>
+        <p>A monthly themed challenge with a fixed start, tiered goals and a real payout &#8212; and rotation of the coach&#8217;s <em>format</em>, not just its wording.</p>
+        <p class="w">Across forty recordings every coach interaction had the identical shape: a paragraph, bolded numbers, an emoji, three chips. Infinite variation in content, none in form. Needs a standing owner, not a project.</p>
+      </article>
+    </div>
   </div>
 </section>
-
 <section>
-  <div class="rail"><span class="num">10</span>Guardrails</div>
+  <div class="rail"><span class="num">09</span>Guardrails</div>
   <div class="body">
     <h2>What not to build</h2>
     <p>Whoop's brand is a deliberate rejection of consumer fitness gamification, and that constraint is an asset — it's why everything above rests on physiology and commitment rather than points.</p>
@@ -875,9 +837,8 @@ td.guard{color:var(--sig-amber)}
     </ul>
   </div>
 </section>
-
 <section>
-  <div class="rail"><span class="num">11</span>Measurement</div>
+  <div class="rail"><span class="num">10</span>Measurement</div>
   <div class="body">
     <h2>How to know if it worked</h2>
     <p>Whoop's problem is not DAU — members wear the strap. It's <strong>depth per day and durability per year</strong>, so the scoreboard needs a mechanism variable in the middle and guardrails that can stop a ship.</p>
@@ -901,25 +862,38 @@ td.guard{color:var(--sig-amber)}
     <p>01 must ship before 02 and 04 mean anything. 06 and 09 are cheap enough to run as holdouts inside a quarter and read within weeks. 03, 05 and 07 need a 90-day read because their value lands in renewal. 10 needs a standing owner before it needs a design — a live-ops calendar without a permanent team becomes one good event and then silence, which is worse than never running it.</p>
   </div>
 </section>
+<section>
+  <div class="rail"><span class="num">11</span>Method</div>
+  <div class="body">
+    <h2>Forty recorded sessions, fourteen days</h2>
+    <p>Screen recordings of my real use, September 3–29, 2026: morning checks, workouts, evening sessions, notification sweeps, a Weekly Plan audit, a blood draw and the Advanced Labs report that followed it, and — from the 19th on — a new version of the coach. Every claim here is observed rather than inferred.</p>
+    <p>I have been a Whoop member since April 2019 and have logged <strong>2,687 recoveries.</strong> A month of recording myself using it taught me more about the product than the seven years before it. There is far more here than a very good dashboard — it goes well past measuring and diagnosing into prescribing, guiding, checking and experimenting — and I found effectively all of it by trial and exploration, not by being shown.</p>
+    <h3>What has already been said</h3>
+    <p>None of the diagnosis in this piece is new, and it would be dishonest to present it as if it were. Patel, Asch and Volpp titled a 2015 <em>JAMA</em> paper <em>&#8220;Wearable Devices as Facilitators, Not Drivers, of Health Behavior Change&#8221;</em> &#8212; my thesis, eleven years ago. The <strong>IDEA</strong> randomized trial found worse than no benefit: 470 adults over two years, and the group that <em>added</em> a wearable to a behavioral program lost <strong>7.7 pounds against 13</strong> for counseling alone. An abandonment study the same year found roughly 80% of trackers put away within two months, one participant explaining, <em>&#8220;It gave me a lot of information, but I don&#8217;t know what to do with any of this information.&#8221;</em> And a month before I started, a framework in <em>Frontiers in Digital Health</em> proposed almost exactly the loop I use here, written for clinicians rather than product teams.</p>
+    <p>The commercial version is newer and just as prior. In April, Jason Stoffer wrote the sentence this whole document is a long footnote to: <em>&#8220;Scores without solutions become less interesting over time. You stop checking.&#8221;</em></p>
+    <p>So: measurement failing to change behavior is a decade-old finding, and measurement failing to sustain a valuation is a months-old one. What I have not found anywhere is the <strong>mechanism</strong> &#8212; what specifically, inside a shipping product, stops a diagnosis from becoming a completed action. That is what the recordings are for, and it is the only part of this I would claim as mine.</p>
+    <p>One disagreement worth naming. Stoffer&#8217;s suggestion is vertical integration into intervention hardware &#8212; buy the mattress, the device that does something to your physiology. Mine is that the intervention is already inside the app, and the software needs to do more with it. <strong>His path costs acquisitions. Mine costs a foreign key.</strong></p>
 
+    <p>The tape has corrected this document nineteen times, always in Whoop's favor. Earlier drafts claimed Whoop never writes a prescription, has no commitment objects, never pushes, never compares actual to target, never checks bedtimes, drops the plan at the START button, keeps bloodwork away from the plan, never verifies against a target, and doesn't run experiments. Four more fell after v6.1 shipped mid-study: it can close a commitment without me starting it, recall a session before I mention it, build a programmed workout I can save, and repair its own activity log on request. <strong>All false.</strong> Every one of those corrections is a capability I had been paying for and had never found — which is the finding, not a footnote to it.</p>
+    <p class="note">One member, fourteen days. A sharp instrument for finding mechanisms, a blunt one for sizing them. Every claim here should be checked against Whoop's own instrumentation before anyone funds a quarter against it.</p>
+  </div>
+</section>
 <section>
   <div class="rail"><span class="num">12</span>Sources</div>
   <div class="body">
     <h2>What this is built on</h2>
-    <p>Thirty-six screen recordings of my own Whoop use across ten days, 3–12 September 2026, plus desk research against public sources. Figures are as published; stage assessments, category counts and all recommendations are mine.</p>
+    <p>Forty screen recordings of my own Whoop use across fourteen days, September 3–29, 2026, plus desk research against public sources. Figures are as published; stage assessments, category counts and all recommendations are mine.</p>
     <ul class="srcs">
-      <li>Primary: thirty-six screen recordings and five screenshots of my own WHOOP v6.0 use, 3–12 September 2026</li>
-      <li><a href="https://www.garmin.com/en-US/newsroom/press-release/wearables-health/meet-cirqa-smart-band-the-screen-free-health-and-fitness-tracker-from-garmin/">Garmin — CIRQA launch, 21 July 2026</a> · <a href="https://www.dcrainmaker.com/2026/08/garmin-cirqa-in-depth-review-one-month-later-expectations-reality.html">DC Rainmaker — Cirqa in-depth review, one month later</a> · <a href="https://the5krunner.com/2026/07/21/garmin-cirqa-connect-plus/">the5krunner — Cirqa as the first device built for Connect+</a></li>
+      <li>Primary: forty screen recordings and six screenshots of my own WHOOP use, v6.0 and v6.1, September 3–29, 2026</li>
+      <li><a href="https://www.garmin.com/en-US/newsroom/press-release/wearables-health/meet-cirqa-smart-band-the-screen-free-health-and-fitness-tracker-from-garmin/">Garmin — CIRQA launch, July 21, 2026</a> · <a href="https://www.dcrainmaker.com/2026/08/garmin-cirqa-in-depth-review-one-month-later-expectations-reality.html">DC Rainmaker — Cirqa in-depth review, one month later</a> · <a href="https://the5krunner.com/2026/07/21/garmin-cirqa-connect-plus/">the5krunner — Cirqa as the first device built for Connect+</a></li>
       <li>Prior art: <a href="https://pubmed.ncbi.nlm.nih.gov/25569175/">Patel, Asch &amp; Volpp, "Wearable Devices as Facilitators, Not Drivers, of Health Behavior Change," <em>JAMA</em> 2015</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/27654602/">Jakicic et al., IDEA randomized trial, <em>JAMA</em> 2016</a> (<a href="https://www.edc.pitt.edu/activity-trackers-ineffective-sustaining-weight-loss/">Pitt EDC summary</a>) · <a href="https://amandalazar.net/papers/2015_p635-lazar.pdf">Lazar et al., "Why we use and abandon smart devices," UbiComp 2015</a> · <a href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1871670/abstract">Malaikah, "From Data to Action: FRAME," <em>Frontiers in Digital Health</em>, August 2026</a> · <a href="https://ringingthebell.substack.com/p/whoop-vs-oura-the-10-billion-question">Jason Stoffer, "Whoop vs. Oura: The $10 Billion Question," April 2026</a></li>
-      <li><a href="https://www.reddit.com/r/whoop/comments/1wl8qvi/the_future_of_whoop/">r/whoop — "The Future Of Whoop," 20 September 2026 (member comments quoted anonymously)</a></li>
+      <li><a href="https://www.reddit.com/r/whoop/comments/1wl8qvi/the_future_of_whoop/">r/whoop — "The Future Of Whoop," September 20, 2026 (member comments quoted anonymously)</a></li>
       <li><a href="https://www.whoop.com/us/en/thelocker/2026-whats-new/">Whoop — 2026 What's New</a> · <a href="https://www.whoop.com/us/en/membership/">Membership tiers</a> · <a href="https://www.whoop.com/us/en/thelocker/join-the-all-in-250-challenge-complete-250-minutes-of-activity-with-whoop/">All-In 250 Challenge</a></li>
-      <li><a href="https://www.profgmedia.com/p/one-ring-to-rule-them-all">Scott Galloway, <em>No Mercy / No Malice</em> — "One Ring to Rule Them All," 11 September 2026: Oura S-1 analysis, the Share of Health Interface framing, and the 43× implied subscription multiple</a></li>
+      <li><a href="https://www.profgmedia.com/p/one-ring-to-rule-them-all">Scott Galloway, <em>No Mercy / No Malice</em> — "One Ring to Rule Them All," September 11, 2026: Oura S-1 analysis, the Share of Health Interface framing, and the 43× implied subscription multiple</a></li>
       <li><a href="https://www.medtechdive.com/news/5-takeaways-from-ouras-ipo-filing/829858/">MedTech Dive — five takeaways from Oura's IPO filing</a></li>
       <li><a href="https://www.androidauthority.com/oura-advisor-hands-on-3472107/">Android Authority — Oura Advisor hands-on (7-day data window; follow-up behavior)</a> · <a href="https://ouraring.com/blog/how-to-use-oura-advisor/">Oura — how to use Advisor</a></li>
       <li><a href="https://support.google.com/googlehealth/answer/16961408?hl=en">Google — Get started with the Google Health Coach (intake, plan object, plan adjustment, workout ratings)</a> · <a href="https://www.androidauthority.com/google-personal-health-coach-preview-launch-3610243/">Android Authority — hands-on with the coach preview</a></li>
-      <li><a href="https://www.usatoday.com/story/life/health-wellness/2026/04/08/tech-bros-longevity-kara-swisher/89438449007/">USA Today — Kara Swisher on the longevity-tracking boom</a> · <a href="https://www.profgmedia.com/p/optimization">Galloway, "Optimization"</a></li>
       <li><a href="https://sacra.com/c/whoop/">Sacra — Whoop revenue, members, valuation</a></li>
-      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12529976">JSCR 2025 RCT — in-person supervision vs. app vs. self-guided resistance training</a> (adherence clearing an 85% bar: 88.2% / 81.2% / 52.2%; supervision still won on lean mass and squat 1RM)</li>
       <li><a href="https://gadgetsandwearables.com/2026/07/26/best-screenless-fitness-tracker/">Gadgets &amp; Wearables — screenless trackers compared</a> · <a href="https://www.garmin.com/en-US/newsroom/press-release/wearables-health/meet-cirqa-smart-band-the-screen-free-health-and-fitness-tracker-from-garmin/">Garmin CIRQA</a> · <a href="https://techcrunch.com/2026/05/07/googles-9-99-per-month-ai-health-coach-launches-may-19/">TechCrunch — Google Health AI coach</a></li>
       <li><a href="https://gadgetsandwearables.com/2026/05/06/whoop-follow-friends/">Whoop friend-following in testing</a> · <a href="https://gadgetsandwearables.com/2026/04/07/whoop-achievements/">April 2026 achievements refresh</a></li>
       <li><a href="https://www.community.whoop.com/t/whoop-5-0-auto-log-nutrition/2279">Whoop Community — auto-log nutrition thread (Apple Health write-permission workaround)</a></li>
@@ -927,6 +901,11 @@ td.guard{color:var(--sig-amber)}
     </ul>
   </div>
 </section>
+
+<div class="ednote">
+  <span class="k">Update in progress</span>
+  <p>Whoop shipped v6.1 during this study, and its coach behaves differently enough that I am scoring both versions against the Loop Audit &#8212; my own rubric for whether a health product changes a user&#8217;s state and holds their attention while doing it. That companion piece runs v6.0 against v6.1 on eight weighted dimensions, from the same recordings this review is built on. It publishes once two remaining protocol tests are complete.</p>
+</div>
 
 <div class="foot">
   <span><b>MWG Advisory</b> · mwgadvisory.com · mike@mwgadvisory.com</span>
