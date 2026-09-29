@@ -1,0 +1,432 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Loop Audit — MWG Advisory</title>
+<meta name="description" content="A reusable rubric for health and fitness apps. It scores whether a product actually changes the user's state — and whether it holds their attention while doing it.">
+<meta property="og:title" content="The Loop Audit — MWG Advisory">
+<meta property="og:description" content="Does the product make the user measurably better — and make that improvement legible and worth returning to, at a friction cost the user will keep paying?">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mwgadvisory.com/blog/loop-audit.html">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+
+<style>
+:root{
+  --ground:#F1F2F0; --surface:#FFFFFF; --surface-2:#E9EBE8;
+  --ink:#14181A; --ink-2:#3C4447; --muted:#5F6A6C;
+  --rule:#D5D9D4; --rule-soft:#E3E6E1;
+  --accent:#0E7C66; --accent-soft:#D6E8E2; --sig-red:#B33A2B; --sig-amber:#B87E00;
+  --s-diag:#3A6EA5; --s-assign:#B25C2E; --s-verify:#6B4E9E; --s-prog:#0E7C66;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --grot:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --measure:64ch;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1413; --surface:#161C1B; --surface-2:#1E2624;
+    --ink:#E9ECE9; --ink-2:#C3CAC7; --muted:#939E9A;
+    --rule:#2A3331; --rule-soft:#212927;
+    --accent:#45C6A6; --accent-soft:#17322C; --sig-red:#E0705E; --sig-amber:#D9A526;
+    --s-diag:#7FAEDD; --s-assign:#E0925F; --s-verify:#A98BD8; --s-prog:#45C6A6;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1413; --surface:#161C1B; --surface-2:#1E2624;
+  --ink:#E9ECE9; --ink-2:#C3CAC7; --muted:#939E9A;
+  --rule:#2A3331; --rule-soft:#212927;
+  --accent:#45C6A6; --accent-soft:#17322C; --sig-red:#E0705E; --sig-amber:#D9A526;
+  --s-diag:#7FAEDD; --s-assign:#E0925F; --s-verify:#A98BD8; --s-prog:#45C6A6;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-left:28px;padding-right:28px;padding-block:0 96px}
+
+.mast{border-bottom:2px solid var(--ink);padding-block:44px 22px;margin-bottom:8px}
+.kicker{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 20px}
+h1{font-family:var(--grot);font-weight:700;font-size:clamp(40px,7vw,74px);line-height:.99;letter-spacing:-.032em;margin:0 0 20px;text-wrap:balance;max-width:14ch}
+.dek{font-size:clamp(19px,2.3vw,23px);line-height:1.45;color:var(--ink-2);max-width:52ch;margin:0 0 30px;font-weight:300}
+.byline{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:baseline;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+.byline b{color:var(--ink);font-weight:600}
+
+section{display:grid;grid-template-columns:100px minmax(0,1fr);gap:0 36px;padding-block:52px 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.rail{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;padding-top:9px}
+.rail .num{display:block;font-family:var(--grot);font-weight:700;font-size:26px;letter-spacing:-.02em;color:var(--rule);line-height:1;margin-bottom:8px}
+.body{min-width:0}
+h2{font-family:var(--grot);font-weight:700;font-size:clamp(26px,3.6vw,36px);line-height:1.08;letter-spacing:-.024em;margin:0 0 18px;text-wrap:balance;max-width:24ch}
+h3{font-family:var(--grot);font-weight:600;font-size:19px;letter-spacing:-.012em;margin:32px 0 10px}
+p{margin:0 0 17px;max-width:var(--measure)}
+strong{font-weight:500;color:var(--ink);background:linear-gradient(transparent 62%,var(--accent-soft) 62%)}
+em{font-style:italic}
+.lede{font-size:21px;line-height:1.5;color:var(--ink);max-width:54ch;font-weight:300}
+.pull{margin:30px 0;padding:0 0 0 22px;border-left:3px solid var(--accent);font-family:var(--grot);font-weight:500;font-size:clamp(19px,2.5vw,24px);line-height:1.3;letter-spacing:-.018em;color:var(--ink);max-width:36ch}
+.note{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:12px;max-width:64ch}
+
+ul.plain{list-style:none;padding:0;margin:0 0 17px;max-width:var(--measure)}
+ul.plain li{position:relative;padding:0 0 11px 22px;font-size:17px;line-height:1.55;color:var(--ink-2)}
+ul.plain li::before{content:"";position:absolute;left:2px;top:.72em;width:8px;height:1.5px;background:var(--accent)}
+ul.plain b{font-family:var(--grot);font-weight:600;font-size:16px;color:var(--ink);letter-spacing:-.006em}
+
+figure{margin:28px 0 10px;padding:0}
+.figscroll{overflow-x:auto}
+figure svg{width:100%;height:auto;display:block;color:var(--ink)}
+.figscroll svg{min-width:660px}
+figcaption{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:12px;max-width:64ch}
+.dg-box{fill:none;stroke-width:1.5}
+.dg-diag{stroke:var(--s-diag)} .f-diag{fill:var(--s-diag)}
+.dg-assign{stroke:var(--s-assign)} .f-assign{fill:var(--s-assign)}
+.dg-verify{stroke:var(--s-verify)} .f-verify{fill:var(--s-verify)}
+.dg-prog{stroke:var(--s-prog)} .f-prog{fill:var(--s-prog)}
+.dg-mute{stroke:var(--muted)} .f-muted{fill:var(--muted)}
+.dg-flow{stroke:var(--muted);stroke-width:1.5;fill:none}
+.dg-rule{stroke:var(--rule);stroke-width:1}
+.f-ink{fill:var(--ink)} .f-accent{fill:var(--accent)} .f-soft{fill:var(--accent-soft)} .f-red{fill:var(--sig-red)} .f-amber{fill:var(--sig-amber)} .f-track{fill:var(--surface-2)}
+.dash{stroke-dasharray:5 4}
+.lbl{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em}
+.sm{font-family:"IBM Plex Mono",monospace;font-size:11px}
+.nm{font-family:"Archivo",sans-serif;font-size:13.5px;font-weight:600}
+.qn{font-family:"Archivo",sans-serif;font-size:15px;font-weight:700}
+
+.tablewrap{overflow-x:auto;margin:22px 0 8px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-family:var(--mono);font-size:12.5px}
+th,td{text-align:left;padding:11px 16px 11px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top;line-height:1.5}
+th{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom:1px solid var(--rule)}
+td{color:var(--ink-2)}
+td:first-child{color:var(--ink);font-weight:500}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+td.stage{font-weight:600}
+.s1{color:var(--s-diag)} .s2{color:var(--s-assign)} .s3{color:var(--s-verify)} .s4{color:var(--s-prog)}
+
+.principle{margin:26px 0 10px;padding:20px 24px 22px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.principle .plabel{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+.principle p{color:var(--ink-2);font-size:16.5px;line-height:1.55;max-width:62ch}
+.principle p:last-child{margin-bottom:0}
+.principle strong{background:none;font-weight:500;color:var(--ink)}
+
+.days{margin:22px 0 8px;border-top:2px solid var(--ink)}
+.day{display:grid;grid-template-columns:118px minmax(0,1fr);gap:0 22px;padding-block:13px;border-bottom:1px solid var(--rule-soft)}
+.day .when{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);padding-top:3px}
+.day .what{font-size:16.5px;color:var(--ink-2);line-height:1.5}
+.day .what b{font-family:var(--grot);font-weight:600;font-size:16px;color:var(--ink);letter-spacing:-.006em}
+@media (max-width:700px){.day{grid-template-columns:minmax(0,1fr);gap:4px}}
+
+.foot{margin-top:52px;padding-top:22px;border-top:2px solid var(--ink);font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.foot b{color:var(--ink);font-weight:600}
+
+@media (max-width:760px){
+  body{font-size:17px}
+  .wrap{padding-left:20px;padding-right:20px;padding-block:0 72px}
+  section{grid-template-columns:minmax(0,1fr);gap:0;padding-block:38px 6px}
+  .rail{display:flex;align-items:baseline;gap:12px;padding:0 0 14px}
+  .rail .num{margin:0;font-size:20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media print{
+  body{font-size:10.8pt;line-height:1.5}
+  .wrap{max-width:none;padding:0}
+  section{padding-block:24px 4px}
+  figure,.principle,.tablewrap,.day{break-inside:avoid}
+  h2,h3,.rail{break-after:avoid}
+  h1{font-size:32pt} h2{font-size:16pt} .dek,.lede{font-size:12.5pt}
+  .figscroll{overflow:visible} .figscroll svg{min-width:0}
+}
+</style>
+
+<div class="wrap">
+
+  <header class="mast">
+    <p class="kicker">MWG Advisory &middot; Method</p>
+    <h1>The Loop Audit</h1>
+    <p class="dek">A reusable rubric for health and fitness apps. It scores whether a product actually changes the user's state &mdash; and whether it holds their attention while doing it.</p>
+    <div class="byline">
+      <span><b>Michael Wong</b> &middot; Principal / Advisor</span>
+      <span>Working framework &middot; September 2026</span>
+    </div>
+  </header>
+
+  <div class="principle">
+    <p class="plabel">The core test</p>
+    <p>Does the product make the user measurably better &mdash; and make that improvement legible and worth returning to, at a friction cost the user will keep paying?</p>
+  </div>
+
+  <!-- 01 -->
+  <section>
+    <div class="rail"><span class="num">01</span>Thesis</div>
+    <div class="body">
+      <h2>Improvement and attention, not one or the other</h2>
+
+      <p class="lede">A retentive loop creates value only when both things are true: the user's state improves &mdash; more capability, less pain, better wellbeing &mdash; and the loop is engaging and low-friction enough that they keep running it.</p>
+
+      <div class="pull">Improvement without attention goes unnoticed and unrenewed. Attention without improvement is ineffective.</div>
+
+      <figure>
+        <div class="figscroll">
+          <svg viewBox="0 0 860 470" role="img" aria-label="A two-by-two of improvement against attention. High improvement with low attention is the quiet-gain failure, where real change goes unseen and unrenewed. Low improvement with high attention is engagement theater. High on both is the compounding loop. Low on both is not yet a product.">
+            <defs>
+              <marker id="ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" class="f-muted"></path></marker>
+            </defs>
+
+            <rect x="120" y="40" width="330" height="170" rx="3" class="f-track"></rect>
+            <rect x="454" y="40" width="330" height="170" rx="3" class="f-soft"></rect>
+            <rect x="120" y="214" width="330" height="170" rx="3" class="f-track"></rect>
+            <rect x="454" y="214" width="330" height="170" rx="3" class="f-track"></rect>
+
+            <text x="140" y="72" class="lbl f-amber">QUIET GAIN</text>
+            <text x="140" y="104" class="qn f-ink">They get better and leave</text>
+            <text x="140" y="130" class="sm f-muted">Real but invisible, unclaimed at renewal.</text>
+            <text x="140" y="150" class="sm f-muted">Slow measurement, nothing in between.</text>
+            <text x="140" y="180" class="sm f-amber">The assessment-led failure.</text>
+
+            <text x="474" y="72" class="lbl f-accent">COMPOUNDING LOOP</text>
+            <text x="474" y="104" class="qn f-ink">Better, and they can see it</text>
+            <text x="474" y="130" class="sm f-muted">Improvement produced, made visible,</text>
+            <text x="474" y="150" class="sm f-muted">and converted into the next cycle.</text>
+            <text x="474" y="180" class="sm f-accent">The target state.</text>
+
+            <text x="140" y="246" class="lbl f-muted">NOT YET A PRODUCT</text>
+            <text x="140" y="278" class="qn f-muted">Neither happens</text>
+            <text x="140" y="304" class="sm f-muted">No change, no reason to return.</text>
+
+            <text x="474" y="246" class="lbl f-red">ENGAGEMENT THEATER</text>
+            <text x="474" y="278" class="qn f-ink">Busy, and no better</text>
+            <text x="474" y="304" class="sm f-muted">The mechanics work. The state doesn't move.</text>
+            <text x="474" y="324" class="sm f-muted">The meter records showing up.</text>
+            <text x="474" y="344" class="sm f-muted">Duolingo draws some criticism here.</text>
+            <text x="474" y="370" class="sm f-red">What most critiques catch.</text>
+
+            <line x1="100" y1="400" x2="800" y2="400" class="dg-flow" marker-end="url(#ax)"></line>
+            <line x1="100" y1="400" x2="100" y2="30" class="dg-flow" marker-end="url(#ax)"></line>
+            <text x="450" y="428" class="lbl f-muted" text-anchor="middle">ATTENTION &mdash; DO THEY KEEP RUNNING THE LOOP?</text>
+            <text x="140" y="418" class="sm f-muted">low</text>
+            <text x="760" y="418" class="sm f-muted">high</text>
+            <text x="86" y="60" class="sm f-muted" text-anchor="end">high</text>
+            <text x="86" y="390" class="sm f-muted" text-anchor="end">low</text>
+            <text x="-215" y="72" class="lbl f-muted" text-anchor="middle" transform="rotate(-90)">IMPROVEMENT &mdash; DOES THEIR STATE CHANGE?</text>
+          </svg>
+        </div>
+        <figcaption>Both axes have to be positive. A product can be honest and still fail, by producing change the user never sees.</figcaption>
+      </figure>
+
+      <p>One correction this forces: dependence on <em>prompts</em> may fall over time, but engagement with <em>the loop</em> should not. A working loop keeps producing new targets and may evolve habits, so the user keeps having a reason to run it. Graduating the user out of the product is not the goal; graduating them out of one objective and into the next one is.</p>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section>
+    <div class="rail"><span class="num">02</span>The loop</div>
+    <div class="body">
+      <h2>The loop, not the layer</h2>
+
+      <p>Games did not win retention by adding points. They connected a clear objective, appropriately scaled challenge, legible feedback, and a reason to attempt the next cycle. Health and fitness apps often copy the visible layer &mdash; streaks, badges, notifications &mdash; and leave the loop underneath incomplete.</p>
+
+      <p>The Loop Audit tests two things at once: whether the product changes the user's state, and whether it holds attention while doing it. The unit of analysis is not a feature. It is the complete cycle from &ldquo;what is true?&rdquo; to &ldquo;what should I do next?&rdquo; &mdash; and the friction the user pays to run it.</p>
+
+      <h3>The canonical loop</h3>
+
+      <figure>
+        <div class="figscroll">
+          <svg viewBox="0 0 1000 300" role="img" aria-label="The seven-stage loop: diagnose, assign, enable, verify, coach, progress and re-enter, running left to right with a return arrow from re-enter back to diagnose. Brackets underneath group the seven into the four published stage names: diagnosis, assignment, verification and progress.">
+            <defs>
+              <marker id="lf" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" class="f-muted"></path></marker>
+              <marker id="lp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" class="f-prog"></path></marker>
+            </defs>
+
+            <g>
+              <rect x="14" y="78" width="126" height="58" rx="4" class="dg-box dg-diag"></rect>
+              <text x="77" y="103" class="nm f-diag" text-anchor="middle">Diagnose</text>
+              <text x="77" y="122" class="sm f-muted" text-anchor="middle">what&rsquo;s true?</text>
+
+              <rect x="154" y="78" width="126" height="58" rx="4" class="dg-box dg-assign"></rect>
+              <text x="217" y="103" class="nm f-assign" text-anchor="middle">Assign</text>
+              <text x="217" y="122" class="sm f-muted" text-anchor="middle">what now?</text>
+
+              <rect x="294" y="78" width="126" height="58" rx="4" class="dg-box dg-assign"></rect>
+              <text x="357" y="103" class="nm f-assign" text-anchor="middle">Enable</text>
+              <text x="357" y="122" class="sm f-muted" text-anchor="middle">can I do it?</text>
+
+              <rect x="434" y="78" width="126" height="58" rx="4" class="dg-box dg-verify"></rect>
+              <text x="497" y="103" class="nm f-verify" text-anchor="middle">Verify</text>
+              <text x="497" y="122" class="sm f-muted" text-anchor="middle">did it happen?</text>
+
+              <rect x="574" y="78" width="126" height="58" rx="4" class="dg-box dg-verify"></rect>
+              <text x="637" y="103" class="nm f-verify" text-anchor="middle">Coach</text>
+              <text x="637" y="122" class="sm f-muted" text-anchor="middle">what changed?</text>
+
+              <rect x="714" y="78" width="126" height="58" rx="4" class="dg-box dg-prog"></rect>
+              <text x="777" y="103" class="nm f-prog" text-anchor="middle">Progress</text>
+              <text x="777" y="122" class="sm f-muted" text-anchor="middle">am I better?</text>
+
+              <rect x="854" y="78" width="126" height="58" rx="4" class="dg-box dg-prog"></rect>
+              <text x="917" y="103" class="nm f-prog" text-anchor="middle">Re-enter</text>
+              <text x="917" y="122" class="sm f-muted" text-anchor="middle">why return?</text>
+            </g>
+
+            <g class="dg-flow" marker-end="url(#lf)">
+              <line x1="141" y1="107" x2="150" y2="107"></line>
+              <line x1="281" y1="107" x2="290" y2="107"></line>
+              <line x1="421" y1="107" x2="430" y2="107"></line>
+              <line x1="561" y1="107" x2="570" y2="107"></line>
+              <line x1="701" y1="107" x2="710" y2="107"></line>
+              <line x1="841" y1="107" x2="850" y2="107"></line>
+            </g>
+
+            <path d="M 917 76 L 917 40 L 77 40 L 77 74" class="dg-prog dash" fill="none" stroke-width="1.5" marker-end="url(#lp)"></path>
+            <text x="497" y="33" class="lbl f-prog" text-anchor="middle">THE CYCLE ONLY COMPOUNDS IF THE OUTPUT OF ONE STAGE CHANGES THE NEXT</text>
+
+            <g class="dg-rule">
+              <path d="M 14 156 L 14 166 L 140 166 L 140 156" fill="none"></path>
+              <path d="M 154 156 L 154 166 L 420 166 L 420 156" fill="none"></path>
+              <path d="M 434 156 L 434 166 L 700 166 L 700 156" fill="none"></path>
+              <path d="M 714 156 L 714 166 L 980 166 L 980 156" fill="none"></path>
+            </g>
+            <text x="77" y="187" class="lbl f-diag" text-anchor="middle">DIAGNOSIS</text>
+            <text x="287" y="187" class="lbl f-assign" text-anchor="middle">ASSIGNMENT</text>
+            <text x="567" y="187" class="lbl f-verify" text-anchor="middle">VERIFICATION</text>
+            <text x="847" y="187" class="lbl f-prog" text-anchor="middle">PROGRESS</text>
+            <text x="497" y="213" class="sm f-muted" text-anchor="middle">the four stage names used in the published teardowns</text>
+
+            <rect x="14" y="238" width="966" height="44" rx="3" class="f-track"></rect>
+            <text x="497" y="256" class="lbl f-muted" text-anchor="middle">FRICTION LEDGER &mdash; SCORE 0 TO 3 PER STAGE: TIME, EQUIPMENT, ANOTHER PERSON,</text>
+            <text x="497" y="272" class="lbl f-muted" text-anchor="middle">COGNITIVE LOAD, EMOTIONAL COST. REPORTED BESIDE THE SCORE, NOT INSIDE IT.</text>
+          </svg>
+        </div>
+        <figcaption>The friction ledger runs underneath all of them, because friction suppresses both axes at once and shows up in none of the dimensions on its own.</figcaption>
+      </figure>
+
+      <p>Seven stages for scoring; four for publishing. Diagnosis maps to Diagnose. Assignment covers Assign and Enable. Verification covers Verify and Coach. Progress covers Progress and Re-enter.</p>
+
+      <p>The value compounds only when the output of one stage changes the next. A dashboard that does not alter the prescription is reporting. A plan that ignores performance is content. A streak that rewards opening the app is attendance, not progress.</p>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section>
+    <div class="rail"><span class="num">03</span>Score</div>
+    <div class="body">
+      <h2>Score the loop in eight parts</h2>
+
+      <p>Rate each dimension from 0 to 5, multiply by its weight, and total to 100. Keep both the weighted score and the raw profile: two products can earn 72 for entirely different reasons.</p>
+
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th style="width:23%">Dimension</th><th class="num">Weight</th><th>The test</th><th>Failure mode</th></tr></thead>
+          <tbody>
+            <tr><td class="stage s1">Diagnosis</td><td class="num">10%</td><td>Which input actually alters the plan?</td><td>An absent or long intake that produces a generic home screen</td></tr>
+            <tr><td class="stage s2">Assignment</td><td class="num">15%</td><td>Is today's choice obvious, and the reason legible?</td><td>A library or dashboard posing as a plan</td></tr>
+            <tr><td class="stage s2">Action enablement</td><td class="num">10%</td><td>Can the user start in 30 seconds and finish unaided?</td><td>High production value, poor fit to time or ability</td></tr>
+            <tr><td class="stage s3">Verification</td><td class="num">15%</td><td>Does the product know the behavior occurred, and how well?</td><td>Logging activity instead of measuring the target</td></tr>
+            <tr><td class="stage s3">Coaching &amp; adaptation</td><td class="num">15%</td><td>Can the user point to evidence that yesterday changed today?</td><td>Static tips, generic praise, hidden logic</td></tr>
+            <tr><td class="stage s4">Progression &amp; mastery</td><td class="num">15%</td><td>What can the user do now that they could not before?</td><td>Streak length as the only durable progress</td></tr>
+            <tr><td class="stage s4">Re-entry &amp; cadence</td><td class="num">10%</td><td>What happens after three missed days?</td><td>Push frequency substituted for relevance</td></tr>
+            <tr><td class="stage">Trust, agency &amp; safety</td><td class="num">10%</td><td>Can users override, export, recover, understand?</td><td>Incentives that reward anxiety or overtraining</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>A scoring scale that travels across categories</h3>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th class="num" style="width:8%">Score</th><th style="width:20%">Meaning</th><th>Observable standard</th></tr></thead>
+          <tbody>
+            <tr><td class="num">0</td><td>Absent</td><td>The product does not attempt the job.</td></tr>
+            <tr><td class="num">1</td><td>Cosmetic</td><td>A label or generic prompt exists, using no meaningful context.</td></tr>
+            <tr><td class="num">2</td><td>Functional</td><td>The job works, largely through static rules or manual input.</td></tr>
+            <tr><td class="num">3</td><td>Contextual</td><td>The experience responds to goals, state, or recent behavior.</td></tr>
+            <tr><td class="num">4</td><td>Adaptive</td><td>The system changes difficulty, dose, timing or guidance from observed outcomes.</td></tr>
+            <tr><td class="num">5</td><td>Compounding</td><td>The loop improves both the user and its own model; progress survives novelty.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Read the score as a system</h3>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th class="num" style="width:14%">Total</th><th style="width:26%">Interpretation</th><th>What it usually means</th></tr></thead>
+          <tbody>
+            <tr><td class="num">85&ndash;100</td><td>Compounding loop</td><td>Evidence changes action; mastery and trust deepen with use.</td></tr>
+            <tr><td class="num">70&ndash;84</td><td>Strong but leaky</td><td>A credible loop with one or two material breaks.</td></tr>
+            <tr><td class="num">50&ndash;69</td><td>Useful tool</td><td>Delivers value, but retention relies on user motivation.</td></tr>
+            <tr><td class="num">30&ndash;49</td><td>Feature stack</td><td>Several jobs exist without causal connection.</td></tr>
+            <tr><td class="num">0&ndash;29</td><td>Engagement theater</td><td>The visible mechanics exceed the behavior-change value.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="principle">
+        <p class="plabel">Minimum evidence standard</p>
+        <p>Do not infer adaptation from changing content alone. Require a visible or testable connection between user state or performance and the next prescription. Mark every score <strong>O</strong>, <strong>I</strong> or <strong>X</strong> &mdash; observed in use, inferred from behavior or documentation, or not testable in the observation window. Only observed scores get published as firm conclusions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section>
+    <div class="rail"><span class="num">04</span>Friction</div>
+    <div class="body">
+      <h2>Friction is a tax on both axes</h2>
+
+      <p>Friction suppresses improvement and attention at the same time, and it hides from the eight dimensions because it isn't a job the product does &mdash; it's a cost the user pays. Score it separately: for each stage, rate what the user pays to run it &mdash; time, equipment, another person, cognitive load, emotional cost &mdash; from 0 (negligible) to 3 (blocks the stage for most users).</p>
+
+      <p><strong>Measurement friction deserves particular attention.</strong> An objective test that needs a second person, or a ten-minute setup, will risk being run rarely &mdash; which caps verification and progression however good the instrument is. A product can hold the best measurement in its category and still show the user nothing, because the measurement is too expensive to repeat.</p>
+
+      <p>Report the ledger beside the score. Two products with the same weighted total behave very differently when one costs three minutes a day and the other costs an afternoon.</p>
+
+      <h3>Three cuts that matter more than the headline score</h3>
+      <ul class="plain">
+        <li><b>The broken-link test.</b> Any core stage below 2 caps the practical loop. A brilliant diagnosis cannot rescue an absent assignment.</li>
+        <li><b>The causality test.</b> Can the product explain why an input changed a recommendation? Correlation dashboards are not coaching.</li>
+        <li><b>The graduation test.</b> After 30 days, has the user gained capability, insight or self-efficacy &mdash; or only accumulated usage?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section>
+    <div class="rail"><span class="num">05</span>Metrics</div>
+    <div class="body">
+      <h2>Metrics that match the loop</h2>
+
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th style="width:20%">Metric</th><th style="width:40%">Operational definition</th><th>Why it matters</th></tr></thead>
+          <tbody>
+            <tr><td>Activation</td><td>First personalized action completed</td><td>Replaces signup or first open</td></tr>
+            <tr><td>Loop completion</td><td>Diagnose &rarr; action &rarr; evidence &rarr; next plan</td><td>Separates use from value</td></tr>
+            <tr><td>Adaptive yield</td><td>Share of cycles where evidence changes the next action</td><td>Tests whether personalization is real</td></tr>
+            <tr><td>Progress velocity</td><td>Change in outcome per completed cycle</td><td>Connects retention to efficacy</td></tr>
+            <tr><td>Recovery rate</td><td>Return after lapse without downgrade or churn</td><td>Measures humane re-entry</td></tr>
+            <tr><td>Friction cost</td><td>Median time and inputs per completed cycle</td><td>The tax that suppresses both axes</td></tr>
+            <tr><td>Trust</td><td>Use of correction, override, export, explanation</td><td>Surfaces agency and confidence</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Five questions worth carrying into every teardown</h3>
+      <ul class="plain">
+        <li>What does the product know now that it did not know last cycle?</li>
+        <li>What did that knowledge change for the user today?</li>
+        <li>How does it distinguish completion from quality?</li>
+        <li>What compounds after the novelty and the streak anxiety fade?</li>
+        <li>Does the system create capability, or dependence on prompts?</li>
+      </ul>
+
+      <div class="principle">
+        <p class="plabel">The sharpest closing move</p>
+        <p>Don't end a teardown with &ldquo;add more gamification.&rdquo; End with the missing causal link: <strong>use [evidence] to change [assignment], explain [why], and make [progress] visible at [cadence].</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="foot">
+    <span><b>MWG Advisory</b> &middot; mwgadvisory.com</span>
+    <span>Good retention is repeated value, made legible</span>
+  </div>
+
+<p style="margin-top:28px"><a href="/blog/" style="font-family:var(--mono);font-size:12px;color:var(--accent)">&larr; Back to all research</a></p>
+
+</div>
+
+
+</body></html>
