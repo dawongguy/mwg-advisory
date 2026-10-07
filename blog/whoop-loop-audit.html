@@ -1,0 +1,436 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Whoop, Scored Against the Rubric — MWG Advisory</title>
+<meta name="description" content="Whoop's coaching loop scored before and after its v6.1 upgrade, across eight weighted dimensions of the Loop Audit: 56.0 to 68.0, held two points short by Progress.">
+<meta property="og:title" content="Whoop, Scored Against the Rubric — MWG Advisory">
+<meta property="og:description" content="Twelve points in five weeks, and still two short of the next band. Every node in the loop has a presence in the app. The joins between them less so — and the weakest are on either side of Progress.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mwgadvisory.com/blog/whoop-loop-audit.html">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+/* Layout: single measure column with a numbered rail; the scorecard is the one full-bleed object. Tokens inherited from the MWG Advisory method system. */
+:root{
+  --ground:#F1F2F0;
+  --surface:#FFFFFF;
+  --surface-2:#E9EBE8;
+  --ink:#14181A;
+  --ink-2:#3C4447;
+  --muted:#5F6A6C;
+  --rule:#D5D9D4;
+  --rule-soft:#E3E6E1;
+  --accent:#0E7C66;
+  --accent-soft:#D6E8E2;
+  --sig-amber:#B87E00;
+  --sig-red:#B33A2B;
+  --sig-null:#8A9491;
+  --sig-red-soft:#F6E2DE;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --grot:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --measure:66ch;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1413; --surface:#161C1B; --surface-2:#1E2624;
+    --ink:#E9ECE9; --ink-2:#C3CAC7; --muted:#8E9A97;
+    --rule:#2C3634; --rule-soft:#232B2A;
+    --accent:#4FBFA0; --accent-soft:#17312B;
+    --sig-amber:#D9A43A; --sig-red:#D9705F; --sig-null:#6A7674; --sig-red-soft:#33211E;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1413; --surface:#161C1B; --surface-2:#1E2624;
+  --ink:#E9ECE9; --ink-2:#C3CAC7; --muted:#8E9A97;
+  --rule:#2C3634; --rule-soft:#232B2A;
+  --accent:#4FBFA0; --accent-soft:#17312B;
+  --sig-amber:#D9A43A; --sig-red:#D9705F; --sig-null:#6A7674; --sig-red-soft:#33211E;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.62;margin:0;padding-inline:20px;padding-block:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding-block:52px 70px}
+
+.mast{border-bottom:2px solid var(--ink);padding-bottom:26px;margin-bottom:6px}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin:0 0 20px}
+h1{font-family:var(--grot);font-weight:700;font-size:clamp(34px,6vw,58px);line-height:1.02;letter-spacing:-.025em;margin:0 0 18px;text-wrap:balance}
+.dek{font-size:20px;line-height:1.5;color:var(--ink-2);max-width:60ch;margin:0 0 24px}
+.byline{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:baseline;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+.byline b{color:var(--ink);font-weight:600}
+
+section{display:grid;grid-template-columns:100px 1fr;gap:0 34px;padding:38px 0 8px;border-bottom:1px solid var(--rule-soft)}
+section:last-of-type{border-bottom:none}
+.rail{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:8px}
+.rail .num{display:block;font-family:var(--grot);font-size:26px;font-weight:700;color:var(--ink);letter-spacing:-.02em;margin-bottom:5px}
+.body{min-width:0}
+h2{font-family:var(--grot);font-weight:700;font-size:clamp(23px,3.4vw,31px);line-height:1.14;letter-spacing:-.02em;margin:0 0 16px;text-wrap:balance}
+h3{font-family:var(--grot);font-weight:600;font-size:17px;letter-spacing:-.005em;margin:30px 0 10px;color:var(--ink)}
+p{margin:0 0 15px;max-width:var(--measure)}
+.lede{font-size:19.5px;color:var(--ink-2)}
+.note{font-family:var(--mono);font-size:12px;line-height:1.62;color:var(--muted);max-width:62ch;border-left:2px solid var(--rule);padding-left:14px;margin:20px 0}
+.body>ul{margin:0 0 16px;padding-left:20px;max-width:var(--measure)}
+.body>ul li{margin-bottom:9px}
+strong{font-weight:600}
+em{font-style:italic}
+.pull{font-family:var(--grot);font-weight:600;font-size:clamp(18px,2.4vw,22px);line-height:1.34;letter-spacing:-.015em;color:var(--ink);border-top:2px solid var(--accent);border-bottom:1px solid var(--rule);padding:16px 0;margin:24px 0;max-width:62ch;text-wrap:balance}
+
+/* exhibits */
+.shot{margin:24px 0 22px;max-width:var(--measure)}
+.shot img{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:3px;background:#0B0F0E}
+.shot.narrow{max-width:420px}
+.shotpair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0 22px;max-width:var(--measure)}
+.shotpair figure{margin:0}
+.shotpair img{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:3px;background:#0B0F0E}
+.shotlab{font-family:var(--mono);font-size:11px;line-height:1.55;letter-spacing:.02em;color:var(--muted);margin:8px 0 0}
+.shotlab b{display:block;color:var(--ink);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:10px;margin-bottom:3px}
+
+/* scorecard */
+.sheet{margin:22px 0 10px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:660px;font-family:var(--grot);font-size:13.5px}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);text-align:left;font-weight:500;padding:0 12px 9px 0;border-bottom:1.5px solid var(--ink);vertical-align:bottom}
+td{padding:13px 12px 13px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top;color:var(--ink-2)}
+td:first-child,th:first-child{padding-left:0}
+.dim{font-weight:600;color:var(--ink);white-space:nowrap}
+.wt{font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.why{font-family:var(--serif);font-size:15px;line-height:1.5}
+tr.moved td{background:var(--accent-soft)}
+tr.weak td{background:var(--sig-red-soft)}
+tr.weak td:first-child{box-shadow:inset 3px 0 0 var(--sig-red)}
+tr.weak .dim{color:var(--sig-red)}
+.pip.low{background:var(--sig-red);border-color:var(--sig-red)}
+.flag{display:inline-block;font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--sig-red);border:1px solid var(--sig-red);padding:1px 5px;border-radius:2px;margin-left:7px;vertical-align:1px}
+tr.total td{border-bottom:none;border-top:1.5px solid var(--ink);font-weight:600;color:var(--ink);padding-top:14px}
+
+/* 0-5 score bar: ghost = v6.0, filled = v6.1 */
+.sc{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.pips{display:flex;gap:2px}
+.pip{width:9px;height:17px;border:1px solid var(--rule);background:transparent;border-radius:1px}
+.pip.was{background:var(--sig-null);border-color:var(--sig-null);opacity:.4}
+.pip.now{background:var(--accent);border-color:var(--accent)}
+.pip.up{background:var(--accent);border-color:var(--accent);box-shadow:inset 0 0 0 2px var(--surface)}
+.num2{font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums;color:var(--ink)}
+.delta{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--accent)}
+.delta.flat{color:var(--muted);font-weight:400}
+.mark{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.06em;border:1px solid var(--rule);color:var(--muted);padding:1px 5px;border-radius:2px}
+.mark.o{border-color:var(--accent);color:var(--accent)}
+.mark.x{border-color:var(--sig-red);color:var(--sig-red)}
+
+.band{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);margin:26px 0 8px}
+.band div{padding:16px 20px 18px 0;font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--ink-2)}
+.band div+div{padding-left:22px;border-left:1px solid var(--rule-soft)}
+.band .k{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.band b{display:block;font-family:var(--grot);font-size:30px;font-weight:700;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+
+/* friction */
+.fr{margin:20px 0 6px;border-top:1px solid var(--rule)}
+.frow{display:grid;grid-template-columns:132px 74px 1fr;gap:16px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--rule-soft)}
+.frow .st{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink);font-weight:500}
+.dots{display:flex;gap:4px;align-items:center}
+.dot{width:8px;height:8px;border-radius:50%;border:1px solid var(--rule)}
+.dot.on{background:var(--sig-amber);border-color:var(--sig-amber)}
+.frow .ft{font-family:var(--serif);font-size:15px;line-height:1.48;color:var(--ink-2)}
+
+.cuts{margin:18px 0 6px;padding:0;list-style:none;max-width:var(--measure)}
+.cuts li{padding:14px 0 14px 78px;border-bottom:1px solid var(--rule-soft);position:relative;font-size:16.5px;line-height:1.52;color:var(--ink-2)}
+.cuts .v{position:absolute;left:0;top:15px;font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:2px}
+.v.pass{background:var(--accent-soft);color:var(--accent)}
+.v.fail{background:transparent;border:1px solid var(--sig-red);color:var(--sig-red)}
+.v.hold{background:transparent;border:1px solid var(--sig-amber);color:var(--sig-amber)}
+
+.foot{margin-top:52px;padding-top:20px;border-top:2px solid var(--ink);display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+.foot b{color:var(--ink);font-weight:600}
+
+@media (max-width:760px){
+  body{font-size:17px}
+  .wrap{padding-block:34px 52px}
+  section{grid-template-columns:1fr;gap:0}
+  .rail{padding-top:0;margin-bottom:12px}
+  .rail .num{display:inline-block;font-size:19px;margin:0 9px 0 0}
+  .band div+div{padding-left:0;border-left:none;border-top:1px solid var(--rule-soft)}
+  .frow{grid-template-columns:1fr;gap:5px;padding:13px 0}
+  .cuts li{padding-left:0;padding-top:34px}
+  .cuts .v{top:10px}
+  .shotpair{grid-template-columns:1fr;gap:20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* verdict block */
+.verdict{max-width:var(--measure);margin:34px 0 6px;padding:22px 0 24px;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
+.verdict .k{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.verdict p{font-size:19px;line-height:1.55;color:var(--ink);margin:0 0 13px}
+.verdict p:last-child{margin-bottom:0}
+.verdict strong{font-weight:600}
+/* goal tree */
+.tree{margin:24px 0 8px;max-width:var(--measure);border-top:1px solid var(--rule)}
+.tier{display:grid;grid-template-columns:118px 1fr;gap:18px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--rule-soft)}
+.tier .lv{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tier .has{font-family:var(--grot);font-size:15px;font-weight:600;color:var(--ink);display:block;margin-bottom:3px;letter-spacing:-.01em}
+.tier .where{font-family:var(--mono);font-size:11.5px;line-height:1.55;color:var(--muted)}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <p class="kicker">MWG Advisory &nbsp;·&nbsp; The Loop Audit &nbsp;·&nbsp; First run</p>
+  <h1>Whoop, scored against the rubric</h1>
+  <p class="dek">Whoop shipped a coaching upgrade mid-study, v6.0 to v6.1. I had been recording my own use since September, so instead of asking whether the upgrade is good, I scored before against after.</p>
+  <div class="byline">
+    <span><b>Mike Wong</b> · MWG Advisory</span>
+    <span>Eight dimensions · 56.0 &#8594; 68.0</span>
+    <span>October 6, 2026</span>
+  </div>
+</header>
+
+<div class="verdict">
+  <span class="k">The finding</span>
+  <p><strong>56.0 at v6.0, 68.0 at v6.1</strong> &#8212; twelve points in five weeks, and still two short to move categories from &#8220;Useful tool&#8221; to &#8220;Strong but leaky&#8221; in my rubric. Every node in the loop has a presence in the app. The joins between them less so, and the weakest links are on either side of one node: <strong>Progress</strong>, the lowest score on the card and unmoved by the release.</p>
+  <p>Whoop already holds every layer of a progression hierarchy &#8212; a Healthspan estimate in years, Strain and Recovery, zone minutes, strength volume load, individual lift records. But my lived in-app experience sees them far too often in silos. No &#8220;progress&#8221; layer rolls up into the one above it, and nothing rolls back down into tomorrow's assignment. That is data, not a progression system.</p>
+  <p>So the ask is not more measurement, and not a better coach. It is <strong>a goal structure the rest of the loop can write to and read from.</strong></p>
+</div>
+
+<section>
+  <div class="rail"><span class="num">01</span>Scope</div>
+  <div class="body">
+    <h2>An instrument, pointed at a moving target</h2>
+    <p class="lede">The Loop Audit scores whether a health product actually changes the user's state, and whether it holds their attention while doing it. Both axes have to be positive. This is its first complete run, and the subject changed underneath me.</p>
+    <p>I recorded thirty-six sessions of v6.0 between September 3rd and 12th. By the 19th the app read <strong>v6.1</strong>, with a visibly different coach. So this is a <strong>before and after</strong> &#8212; the one thing a store listing, a press release and a launch review all cannot produce. Forty-seven recordings and twelve screenshots in total, across seventeen dated days ending October 6th. Every score is marked <span class="mark o">O</span>, observed in use.</p>
+    <p class="note">One member, one body, five weeks. Sharp for mechanisms, blunt for sizing. Eleven recordings cover v6.1 &#8212; enough to establish that a capability exists and to catch it failing, not enough to say how often it fails. One session behind the scores was lived rather than recorded, and I flag it where it is used.</p>
+  </div>
+</section>
+
+<section>
+  <div class="rail"><span class="num">02</span>Scorecard</div>
+  <div class="body">
+    <h2>Eight dimensions</h2>
+    <p>Rated 0&#8211;5: 0 absent, 1 cosmetic, 2 functional, 3 contextual, 4 adaptive, 5 compounding. Pale bar is v6.0; solid bar is v6.1.</p>
+
+    <div class="sheet">
+      <table>
+        <thead>
+          <tr><th>Dimension</th><th>Wt</th><th>v6.0 &#8594; v6.1</th><th>&#916;</th><th>What decided it</th></tr>
+        </thead>
+        <tbody>
+          <tr class="moved">
+            <td class="dim">Diagnosis</td><td class="wt">10%</td>
+            <td><span class="sc"><span class="pips"><span class="pip was"></span><span class="pip was"></span><span class="pip was"></span><span class="pip was"></span><span class="pip up"></span></span><span class="num2">4 &#8594; 5</span></span></td>
+            <td><span class="delta">+1</span></td>
+            <td class="why">A constraint its sensors cannot detect entered the model from one sentence, became an anatomical rule rather than an activity blacklist, survived five days, and was applied to a session type we never discussed &#8212; alongside recovery and a 100&#176;F forecast, in the same breath. A model of me getting richer with use.</td>
+          </tr>
+          <tr>
+            <td class="dim">Assignment</td><td class="wt">15%</td>
+            <td><span class="sc"><span class="pips"><span class="pip now"></span><span class="pip now"></span><span class="pip now"></span><span class="pip"></span><span class="pip"></span></span><span class="num2">3 &#8594; 3</span></span></td>
+            <td><span class="delta flat">&#8212;</span></td>
+            <td class="why">Delivery improved &#8212; the coach writes its own commitment cards and they land on the home screen. But the thing that <em>generates</em> those cards runs on my stated goals, my weekly rhythm and last night's physiology, and reads no constraint the coach has accepted. See section 06.</td>
+          </tr>
+          <tr>
+            <td class="dim">Action enablement</td><td class="wt">10%</td>
+            <td><span class="sc"><span class="pips"><span class="pip now"></span><span class="pip now"></span><span class="pip now"></span><span class="pip now"></span><span class="pip"></span></span><span class="num2">4 &#8594; 4</span></span></td>
+            <td><span class="delta flat">&#8212;</span></td>
+            <td class="why">Guided player with loads and rest timers, live tracking, workout capture from a photo, a generator, a library of programmed sessions. Enablement is not the problem. Not 5 because the abundance is: a prescribed session, a committed activity and a saved template are three objects reached by three paths.</td>
+          </tr>
+          <tr class="moved">
+            <td class="dim">Verification</td><td class="wt">15%</td>
+            <td><span class="sc"><span class="pips"><span class="pip was"></span><span class="pip was"></span><span class="pip up"></span><span class="pip"></span><span class="pip"></span></span><span class="num2">2 &#8594; 3</span></span></td>
+            <td><span class="delta">+1</span></td>
+            <td class="why">At v6.0 a session run in Whoop's own player left its commitment open underneath it. At v6.1 the logged activity carries the <em>Recommended Activity</em> tag and the link survives a manual log. The ceiling is what it reports: <em>&#8220;Stretching: your performance is calculated and ready for review.&#8221;</em> The activity is processed. The commitment is never reported as kept, and nothing is credited anywhere.</td>
+          </tr>
+          <tr class="moved">
+            <td class="dim">Coaching &amp; adaptation</td><td class="wt">15%</td>
+            <td><span class="sc"><span class="pips"><span class="pip was"></span><span class="pip was"></span><span class="pip was"></span><span class="pip up"></span><span class="pip"></span></span><span class="num2">3 &#8594; 4</span></span></td>
+            <td><span class="delta">+1</span></td>
+            <td class="why">Reasons across days by number, runs a multi-week variable test, retires one variable and promotes another, owns its errors. Capped at 4 by the asymmetry this audit is about: it reaches me brilliantly in conversation and reaches no other surface at all.</td>
+          </tr>
+          <tr class="weak">
+            <td class="dim">Progression &amp; mastery<span class="flag">Binding</span></td><td class="wt">15%</td>
+            <td><span class="sc"><span class="pips"><span class="pip low"></span><span class="pip low"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></span><span class="num2">2 &#8594; 2</span></span></td>
+            <td><span class="delta flat">&#8212;</span></td>
+            <td class="why">The lowest score and the binding constraint. Every readout a progression system would need exists and none of them are connected to each other or to the loop. Functional, not contextual. Section 05.</td>
+          </tr>
+          <tr class="moved">
+            <td class="dim">Re-entry &amp; cadence</td><td class="wt">10%</td>
+            <td><span class="sc"><span class="pips"><span class="pip was"></span><span class="pip was"></span><span class="pip up"></span><span class="pip"></span><span class="pip"></span></span><span class="num2">2 &#8594; 3</span></span></td>
+            <td><span class="delta">+1</span></td>
+            <td class="why">At v6.0, reliable pushes that referenced my physiology. At v6.1 the coach reopened a specific experiment it had set up days earlier, unprompted and by name. Capped at 3: that is the only long-horizon re-entry it performs, and only for commitments it made to itself.</td>
+          </tr>
+          <tr class="moved">
+            <td class="dim">Trust, agency &amp; safety</td><td class="wt">10%</td>
+            <td><span class="sc"><span class="pips"><span class="pip was"></span><span class="pip was"></span><span class="pip was"></span><span class="pip up"></span><span class="pip"></span></span><span class="num2">3 &#8594; 4</span></span></td>
+            <td><span class="delta">+1</span></td>
+            <td class="why">Clinical surfaces stay solemn. Told its log was wrong, it named the conflict, said <em>&#8220;that overlap error is on me,&#8221;</em> and repaired it. It discloses against its own interest, offers to stop collecting data it judges to be noise, answers the export question straight, and escalates to a doctor when an injury warrants it. Not 5 only because I never walked the cancellation path.</td>
+          </tr>
+          <tr class="total">
+            <td class="dim">Total</td><td class="wt">100%</td>
+            <td><span class="num2">56 &#8594; 68</span> <span class="wt">of 100</span></td>
+            <td><span class="delta">+12</span></td>
+            <td class="why">Both in <strong>Useful tool</strong> (50&#8211;69). <strong>Strong but leaky</strong> opens at 70.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="band">
+      <div><span class="k">v6.0 &#8212; early September</span><b>56.0</b>Useful tool</div>
+      <div><span class="k">v6.1 &#8212; early October</span><b>68.0</b>Useful tool</div>
+      <div><span class="k">Distance to the next band</span><b>2.0</b>Strong but leaky begins at 70</div>
+    </div>
+
+    <p>Twelve point increase but not enough to cross category bands. Progression carries 15% and sits at 2 &#8212; moving it one level is worth three points on its own and clears the band. Nothing else on the card is that close to the line, and nothing else failed to move.</p>
+    <p class="note">One score rests heavily on a single episode: Diagnosis at 5. If you want to be hard on this card, be hard there &#8212; knock it to 4 and v6.1 reads 66. I think 5 is right, and I would rather state the sensitivity than pretend the total is sturdier than it is.</p>
+  </div>
+</section>
+
+<section>
+  <div class="rail"><span class="num">03</span>Friction</div>
+  <div class="body">
+    <h2>The ledger, scored per stage</h2>
+    <p>Friction suppresses improvement and attention at once, and it hides from the eight dimensions because it is not a job the product does &#8212; it is a cost I pay. Scored 0 (negligible) to 3 (blocks the stage), at v6.1.</p>
+
+    <div class="fr">
+      <div class="frow"><span class="st">Diagnose</span><span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span><span class="ft">Zero. It happens on my wrist while I sleep. The stage Whoop has genuinely solved.</span></div>
+      <div class="frow"><span class="st">Assign</span><span class="dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></span><span class="ft">Down from 2. Cards now appear without my constructing them. I still have to open the coach to find out what today is for.</span></div>
+      <div class="frow"><span class="st">Enable</span><span class="dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></span><span class="ft">The player is excellent. The cost is choosing between three places a session can live.</span></div>
+      <div class="frow"><span class="st">Verify</span><span class="dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></span><span class="ft">Down from 2. Auto-detection removed the manual start; self-reported plan items still need the journal every morning.</span></div>
+      <div class="frow"><span class="st">Coach</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></span><span class="ft">The debrief only happens if I start it. Three hard failures: a response that never generated, a plan write that errored, and a morning where I had to restate a constraint I had already given.</span></div>
+      <div class="frow"><span class="st">Progress</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></span><span class="ft">The worst line on the ledger. Every readout is two or three taps deep, none of them reachable from a coach message, and assembling them into an answer about whether I am improving is work only I can do. Friction here is not a tax on the stage. It is the stage.</span></div>
+      <div class="frow"><span class="st">Re-enter</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></span><span class="ft">Daily re-entry is free and reliable. Anything longer than a day costs me the work of remembering it myself, which is the one cost a coaching product exists to remove.</span></div>
+    </div>
+    <p class="note">The pattern is one-directional. Every stage the sensor owns costs nothing; every stage that needs me to carry state between screens or between days costs two or three.</p>
+  </div>
+</section>
+
+<section>
+  <div class="rail"><span class="num">04</span>Strengths</div>
+  <div class="body">
+    <h2>Where it scores 4 and 5</h2>
+    <p class="lede">Four dimensions sit at the top of this card, and they share a property: each is something the coach does inside a conversation. The intelligence is not the constraint. It has never been the constraint.</p>
+
+    <h3>Diagnosis &#8212; 5</h3>
+    <p>This week I hyperextended an elbow playing tennis and told the coach. It re-scoped the <strong>whole week</strong> &#8212; no tennis, no golf, and it told me bluntly: this week I am a lower-body and conditioning athlete. It set the exclusion rule in <strong>anatomical terms</strong> rather than by activity (nothing that extends or flexes the elbow joint), which generalizes to movements neither of us had named. It read <strong>my gym's own planned workouts</strong> for substitutions that fit. And it set <strong>escalation criteria</strong>: watch recovery and pain, see a doctor if either moves the wrong way.</p>
+    <p>The constraint was invisible to the sensor. Whoop has no idea my elbow is hurt and no way to find out. It handled it because I said it out loud, and was able to reference it in chat later in the week.</p>
+    <p class="note">That exchange is the one session behind this scorecard I did not record, so there is no frame of it here. The rule it produced is on tape five days later, in section 06.</p>
+
+    <h3>Coaching &amp; adaptation &#8212; 4</h3>
+    <p>It reasons across days by number, and it runs real experiments. Days after setting up a supplement trial it opened with <em>&#8220;You'd asked me to keep an eye on creatine, so I wanted to check in,&#8221;</em> reviewed the result, judged the variable low-signal, promoted a different one, wrote a seven-day structure and set a review date. That is the strongest single stretch of coaching in five weeks of tape.</p>
+
+    <h3>Assignment delivery &#8212; the half that improved</h3>
+    <p>At v6.0 the only way to make a commitment was to take a pre-written chip from the Daily Outlook. At v6.1 the coach writes its own.</p>
+
+    <div class="shot">
+      <img src="img/ev-commit.jpg" alt="Whoop coach message reading: that 49:33 strength session had real bite, especially with the heavy squat work in the mix. You put in enough today that the recovery step matters for less soreness tomorrow. I lined up two options below, pick the one you'll actually do and let the legs come back ready. Below it, a dashed-border card headed STRETCHING with the instruction to spend 15 minutes stretching hips, quads and upper back with slow holds and easy breathing, and a second card beginning HOT TUB.">
+      <p class="shotlab"><b>September 30, 2:10 PM</b>Each card carries a <em>Commit</em> button, and committed items render on the home screen in a dashed row beside finished work. The product now has a visual grammar for &#8220;intended but not yet done.&#8221;</p>
+    </div>
+
+    <h3>Trust, agency &amp; safety &#8212; 4</h3>
+    <p>The quiet strength of the product, and the one I expected least. It owns its errors, offers to stop collecting data it judges to be noise, and answers the question it has no commercial reason to answer.</p>
+
+    <div class="shot">
+      <img src="img/ev-export.jpg" alt="Whoop coach thread. A member message reads: Can I export my data? The coach replies: Yes, you can export your WHOOP data, Michael. Here's how to do it in the app. On iOS: open WHOOP, tap More in the bottom navigation, go to App Settings then Data Export, confirm your email and tap Create Export. On Android: open WHOOP, tap More, tap Data Export, confirm your email and tap Create Export. You'll get an email within about 24 hours with download links, CSV files, covering your full WHOOP history: sleep, strain, recovery.">
+      <p class="shotlab"><b>October 6, 10:24 AM</b>No deflection, no routing to support, no retention save. For a subscription built on accumulated personal data, a straight answer here is not nothing.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="rail"><span class="num">05</span>Weakness</div>
+  <div class="body">
+    <h2>Progress is data, not a node</h2>
+    <p class="lede">Whoop measures progression at every level a coaching product would need. It has no visible structure that relates those levels to each other, and no path by which any of them reaches the rest of the loop outside of the Weekly Plan. That is the difference between a set of readouts and a progression system, and it is the lowest score on the card.</p>
+
+    <p>A working progression node warehouses the member's goals in a hierarchy and connects that hierarchy back to the other nodes. Here is the hierarchy Whoop could assemble today, entirely from things it already holds &#8212; and where each layer actually lives.</p>
+
+    <div class="tree">
+      <div class="tier"><span class="lv">Meta-goal</span><span><span class="has">Healthspan, in years of biological age</span><span class="where">Health tab. Priced in years, evidence-backed, sets nothing and is referenced by no coach message.</span></span></div>
+      <div class="tier"><span class="lv">Sub-goals</span><span><span class="has">Strain and Recovery</span><span class="where">Home screen, as two daily scores. Never framed as the two axes the meta-goal decomposes into.</span></span></div>
+      <div class="tier"><span class="lv">Objectives</span><span><span class="has">Zone minutes &#183; sleep consistency &#183; strength activity time</span><span class="where">Split across the Weekly Plan and the Sleep tab, as weekly buckets and thresholds that reset every Sunday.</span></span></div>
+      <div class="tier"><span class="lv">Measures</span><span><span class="has">Total volume load &#8594; individual lift progression</span><span class="where">Strength Trainer, three taps deep behind an unlabeled icon. Durable, personal, and connected to nothing.</span></span></div>
+    </div>
+
+    <p>Every row of that table exists and works. Not one of them actively rolls up into the row above it, and not one rolls back down into an assignment outside of chat. Ask the product the question a progression system exists to answer &#8212; <em>did this week's work move me toward the thing I actually care about?</em> You might get the answer in chat on one day, but there is no visual path from a finished session to a volume-load trend, from a volume-load trend to a strength sub-goal, or from a strength sub-goal to a year of Healthspan.</p>
+
+    <div class="shotpair">
+      <figure>
+        <img src="img/ev-volume.jpg" alt="Whoop Strength Trainer Progress tab showing Total Volume Load, average volume load of 12,461 lb, a marker reading 9% down versus prior month, a date range of September 7 to October 6 2026, and a bar chart of sessions across those weeks.">
+        <p class="shotlab"><b>Strength Trainer &#8250; Progress</b>A month-over-month trend with a direction on it. Today it reads nine percent down &#8212; a fact about my training that no coach message has ever raised.</p>
+      </figure>
+      <figure>
+        <img src="img/ev-prs.jpg" alt="Whoop personal records list showing Bench Press Barbell 205 lbs, Pull Up 40 reps, Back Squat Barbell 305 lbs, Deadlift Barbell 325 lbs, Bent Over Row Barbell 95 lbs, Overhead Press Barbell 115 lbs, Front Squat Barbell 245 lbs.">
+        <p class="shotlab"><b>Personal records</b>Durable, specific, and it does not reset on Sunday. The raw material of a mastery system, filed where nothing can reach it.</p>
+      </figure>
+    </div>
+
+    <div class="pull">Five readouts and no tree. Whoop can tell me every number in my progression and doesn't show me whether I am progressing.</div>
+
+    <p>I found the records board on the <em>last day</em> of a five-week study in which I recorded forty-seven sessions and was actively hunting for exactly this. That is not a discoverability footnote. A surface that a motivated reviewer cannot find is not performing a job in the product, however good it is.</p>
+
+    <h3>Both joins into Progress are broken</h3>
+    <p>The node scores 2 because it is functional in isolation. The reason it is the binding constraint is that the two joins on either side of it are the weakest in the loop.</p>
+    <p><strong>Verification does not credit it.</strong> A committed, completed act produces a notification &#8212; <em>&#8220;Stretching: your performance is calculated and ready for review&#8221;</em> &#8212; and then stops. The act is processed; nothing accrues. The same break shows up at the finest resolution the product has, where it asks me for the one number only I can supply and then rules it out of the system it feeds.</p>
+
+    <div class="shot narrow">
+      <img src="img/ev-rpe.jpg" alt="Whoop modal dialog headed HOW WAS YOUR WORKOUT? with the text: Estimate your rate of perceived exertion (RPE) for this workout on a scale of 1-20. This will not affect your Strain score. A slider is set to RPE 8, labeled Somewhat easy. A checked box reads SAVE CHANGES TO ROUTINE, above buttons for END WORKOUT and CANCEL.">
+      <p class="shotlab"><b>The guided player, on ending a session</b>&#8220;This will not affect your Strain score.&#8221; The checkbox below it writes my real loads back into the workout file &#8212; the one write-back in the product, and it points at a template rather than at a goal.</p>
+    </div>
+
+    <p><strong>And it does not restart the loop.</strong> Nothing accumulated ever becomes the reason for tomorrow's assignment. The clearest instance is the experiment the coach designed itself, with a horizon and a review date attached.</p>
+
+    <div class="shot">
+      <img src="img/ev-ping.jpg" alt="Whoop coach message reading: Perfect. Stick with the daily hydration structure we outlined and keep creatine on autopilot in the background. We'll use next week's check-in to look at how your Recovery and tennis/fitness sessions felt across the stretch, just ping me when you're ready to review.">
+      <p class="shotlab"><b>October 1, 12:23 PM</b>&#8220;Just ping me when you're ready to review.&#8221; It set the horizon and agreed the review, then handed me the job of coming back for it &#8212; because there was no object holding the progress to come back to.</p>
+    </div>
+
+    <p>Meanwhile the one progression artifact the product pushes to the front of the experience is a full-screen celebration of a day streak. Mine passed 2,200 during the study, top 0.4% of members. It counts days the strap was on my wrist. It counts nothing I agreed to do and then did.</p>
+  </div>
+</section>
+
+<section>
+  <div class="rail"><span class="num">06</span>Close</div>
+  <div class="body">
+    <h2>The nodes work. Tighten the joins.</h2>
+    <p class="lede">Twelve points in five weeks is a real release, and it bought exactly what it should have: four nodes moved and none of them is now weak. What the scorecard points at is the wiring between them, and the clearest proof of that arrived on the last day of recording.</p>
+
+    <p>October 6th, the morning after the elbow. On the left is what the Daily Outlook opened with. On the right is the same coach, one tap later, after I picked one of its own suggestions.</p>
+
+    <div class="shotpair">
+      <figure>
+        <img src="img/ev-tenniscard.jpg" alt="Whoop Daily Outlook headed Today's best moves. First bullet: Tennis, Tuesday tennis fits your weekly rhythm and this is a good day to work on footwork and court movement. Second: Functional Fitness, a medium session can build strength and endurance without overdoing it after yesterday's strength work. Third: Walking. Below, a dashed-border card headed TENNIS reading: Tuesday tennis practice builds your footwork and court movement toward your tennis goal, with a Commit button.">
+        <p class="shotlab"><b>10:43 AM &#8212; the card generator</b>Top pick, one tap from committed, the day after &#8220;no tennis.&#8221; Justified by my weekly rhythm and my tennis goal. The elbow is not mentioned, because this surface has never heard of it.</p>
+      </figure>
+      <figure>
+        <img src="img/ev-elbow.jpg" alt="Whoop coach response after the member chose a functional fitness session. It reads: Nice. With 78% green Recovery and 100 degree heat outside, the smart play is: keep it indoors, well-hydrated, and cap strain around 11 to 13 today, you're at 10.4 average for the week. Bias toward mixed cardio and strength, not a pure smash-fest: think breathing heavy but never redlining. Protect the elbow: avoid heavy presses or hanging work that loads full extension; favor rows, goblet squats, hinges, core, bike or rower.">
+        <p class="shotlab"><b>10:44 AM &#8212; the coach</b><em>&#8220;Protect the elbow: avoid heavy presses or hanging work that loads full extension.&#8221;</em> Five days on, unprompted, applied to a session we never discussed. It remembered everything.</p>
+      </figure>
+    </div>
+
+    <div class="pull">Nothing here is forgotten. It is held in one place and read in another.</div>
+
+    <p>I had this backwards for most of the study. I assumed declarations expired overnight; they do not. The same split explains the Daily Outlook offering tennis on a declared rest day, a week I built on a Monday going uncited every morning after it, and a coach that had my finished session the whole time opening by coaching me toward it. All of it looks like forgetting from the outside. None of it is.</p>
+
+    <h3>Three joins, ranked</h3>
+    <p>Which puts the whole scorecard in one frame. Eight nodes, all functional. Three joins between them that a member has to carry by hand &#8212; and two of the three are the ones on either side of Progress.</p>
+    <ul>
+      <li><strong>Verify &#8594; Progress.</strong> The worst of the three. A completed, verified commitment credits nothing that persists. Fixing it is the difference between a scorecard that reads 68 and one that reads 71.</li>
+      <li><strong>Progress &#8594; Re-enter.</strong> Nothing accumulated becomes the reason to come back, so the coach asks me to remember for it.</li>
+      <li><strong>Diagnose &#8594; Assign.</strong> The card generator cannot see a constraint the coach has accepted, which is a wiring problem with a safety edge: it offered me a committable tennis session twenty-four hours after its own coach ruled out tennis and told me to watch for signs I should see a doctor.</li>
+    </ul>
+
+    <div class="pull">Whoop does not need a better coach. It needs a goal structure the coach can write to, verification can credit, and tomorrow's assignment can read.</div>
+
+    <p>That is one object, not four features, and it is upstream of everything still unresolved on this card. Give the member a hierarchy that holds a meta-goal, its sub-goals and their measures; let a kept commitment credit a measure; let a measure roll up; let the coach read the whole thing before it writes tomorrow. Progression stops being a filing cabinet. Verification gets somewhere to put its answer. Re-entry gets a reason that is not a reminder.</p>
+    <p>Twelve points came from making the nodes more capable. The next twelve are in the joins between them.</p>
+  </div>
+</section>
+
+<div class="foot">
+  <span><b>MWG Advisory</b> · mwgadvisory.com · mike@mwgadvisory.com</span>
+  <span>Scored with the Loop Audit rubric · Independent analysis · Not affiliated with Whoop</span>
+</div>
+
+
+<p style="margin-top:28px"><a href="/blog/" style="font-family:var(--mono);font-size:12px;color:var(--accent)">&larr; Back to all research</a></p>
+</div>
+
+</body></html>
