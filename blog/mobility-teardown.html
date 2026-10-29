@@ -1,0 +1,562 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Nobody Will Let Me Set the Right Goal — MWG Advisory</title>
+<meta name="description" content="Six weeks inside pliability, GOWOD and Bend. Every goal in the category is made of time — and the re-measurement that would fix it turns out to be built, and hidden.">
+<meta property="og:title" content="Nobody Will Let Me Set the Right Goal — MWG Advisory">
+<meta property="og:description" content="Two of these three measure my body and score it. Neither will let me aim at one. The missing half was built all along, behind a door nothing points at.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mwgadvisory.com/blog/mobility-teardown.html">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --ground:#F1F2F0;
+  --surface:#FFFFFF;
+  --surface-2:#E9EBE8;
+  --ink:#14181A;
+  --ink-2:#3C4447;
+  --muted:#5F6A6C;
+  --rule:#D5D9D4;
+  --rule-soft:#E3E6E1;
+  --accent:#0E7C66;
+  --accent-soft:#D6E8E2;
+  --sig-amber:#B87E00;
+  --sig-red:#B33A2B;
+  --sig-null:#8A9491;
+
+  --s-diag:#3A6EA5;
+  --s-assign:#B25C2E;
+  --s-verify:#6B4E9E;
+  --s-prog:#0E7C66;
+
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --grot:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+
+  --measure:66ch;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1413; --surface:#161C1B; --surface-2:#1E2624;
+    --ink:#E9ECE9; --ink-2:#C3CAC7; --muted:#939E9A;
+    --rule:#2A3331; --rule-soft:#212927;
+    --accent:#45C6A6; --accent-soft:#17322C;
+    --sig-amber:#D9A526; --sig-red:#E0705E; --sig-null:#6E7A77;
+    --s-diag:#7FAEDD; --s-assign:#E0925F; --s-verify:#A98BD8; --s-prog:#45C6A6;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1413; --surface:#161C1B; --surface-2:#1E2624;
+  --ink:#E9ECE9; --ink-2:#C3CAC7; --muted:#939E9A;
+  --rule:#2A3331; --rule-soft:#212927;
+  --accent:#45C6A6; --accent-soft:#17322C;
+  --sig-amber:#D9A526; --sig-red:#E0705E; --sig-null:#6E7A77;
+  --s-diag:#7FAEDD; --s-assign:#E0925F; --s-verify:#A98BD8; --s-prog:#45C6A6;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-left:28px;padding-right:28px;padding-block:0 96px}
+
+.mast{border-bottom:2px solid var(--ink);padding-block:44px 22px;margin-bottom:8px}
+.kicker{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 20px}
+h1{font-family:var(--grot);font-weight:700;font-size:clamp(40px,7vw,74px);line-height:.99;letter-spacing:-.032em;margin:0 0 20px;text-wrap:balance;max-width:16ch}
+.dek{font-size:clamp(19px,2.3vw,23px);line-height:1.45;color:var(--ink-2);max-width:48ch;margin:0 0 30px;font-weight:300}
+.byline{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:baseline;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+.byline b{color:var(--ink);font-weight:600}
+
+section{display:grid;grid-template-columns:100px minmax(0,1fr);gap:0 36px;padding-block:52px 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.rail{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;padding-top:9px}
+.rail .num{display:block;font-family:var(--grot);font-weight:700;font-size:26px;letter-spacing:-.02em;color:var(--rule);line-height:1;margin-bottom:8px}
+.body{min-width:0}
+h2{font-family:var(--grot);font-weight:700;font-size:clamp(26px,3.6vw,36px);line-height:1.08;letter-spacing:-.024em;margin:0 0 18px;text-wrap:balance;max-width:22ch}
+h3{font-family:var(--grot);font-weight:600;font-size:19px;letter-spacing:-.012em;margin:34px 0 10px}
+p{margin:0 0 17px;max-width:var(--measure)}
+.body>ul,.body>ol{margin:0 0 17px;padding-left:22px;max-width:var(--measure)}
+.body>ul li,.body>ol li{margin-bottom:9px}
+.body>ol{counter-reset:step;list-style:none;padding-left:0}
+.body>ol>li{position:relative;padding-left:38px;margin-bottom:13px}
+.body>ol>li::before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:0;top:2px;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.02em}
+strong{font-weight:500;color:var(--ink);background:linear-gradient(transparent 62%,var(--accent-soft) 62%)}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.lede{font-size:21px;line-height:1.5;color:var(--ink);max-width:52ch;font-weight:300}
+.pull{margin:30px 0;padding:0 0 0 22px;border-left:3px solid var(--accent);font-family:var(--grot);font-weight:500;font-size:clamp(20px,2.6vw,25px);line-height:1.28;letter-spacing:-.018em;color:var(--ink);max-width:34ch}
+.note{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:14px;max-width:62ch}
+
+figure{margin:30px 0 8px;padding:0}
+figure svg{width:100%;height:auto;display:block;color:var(--ink)}
+figcaption{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:14px;max-width:62ch}
+figure.shot{margin:30px 0 10px;max-width:420px}
+figure.shot img{display:block;width:100%;height:auto;max-width:100%;border:1px solid var(--rule);border-radius:5px;background:#12161A}
+.shotpair{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;max-width:var(--measure)}
+.shotpair img{display:block;width:100%;height:auto;max-width:100%;border:1px solid var(--rule);border-radius:5px;background:#12161A}
+figure.pair{max-width:var(--measure)}
+.shotlab{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0 0 7px}
+@media (max-width:700px){.shotpair{grid-template-columns:1fr;gap:22px}}
+
+.meters{margin:24px 0 8px;border-top:1px solid var(--rule)}
+.meter{display:grid;gap:7px;padding-block:18px;border-bottom:1px solid var(--rule-soft)}
+.mhead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mname{font-family:var(--grot);font-weight:600;font-size:17px;letter-spacing:-.012em;display:flex;align-items:baseline;gap:10px}
+.mstage{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;font-weight:500}
+.mverdict{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.02em}
+.mtrack{height:8px;background:var(--surface-2)}
+.mfill{height:100%;display:block}
+.m-diag .mfill{background:var(--s-diag)}.m-diag .mstage{color:var(--s-diag)}
+.m-assign .mfill{background:var(--s-assign)}.m-assign .mstage{color:var(--s-assign)}
+.m-verify .mfill{background:var(--s-verify)}.m-verify .mstage{color:var(--s-verify)}
+.m-prog .mfill{background:var(--s-prog)}.m-prog .mstage{color:var(--s-prog)}
+.mdesc{font-size:16px;color:var(--ink-2);margin:0;max-width:60ch;line-height:1.5}
+
+.tablewrap{overflow-x:auto;margin:22px 0 8px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-family:var(--mono);font-size:12.5px}
+th,td{text-align:left;padding:11px 16px 11px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top;line-height:1.5}
+th{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom:1px solid var(--rule)}
+td:first-child{color:var(--ink);font-weight:500}
+td.bad{color:var(--sig-red)}
+td.good{color:var(--accent)}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.nope{margin:22px 0 8px;padding:0;list-style:none;max-width:var(--measure)}
+.nope li{padding:14px 0 14px 30px;border-bottom:1px solid var(--rule-soft);position:relative;font-size:16.5px;color:var(--ink-2);line-height:1.5}
+.nope li::before{content:"\00d7";position:absolute;left:2px;top:12px;font-family:var(--grot);font-weight:700;font-size:19px;color:var(--sig-red);line-height:1}
+.nope b{font-family:var(--grot);font-weight:600;font-size:16px;color:var(--ink);letter-spacing:-.008em}
+
+.inv{overflow-x:auto;margin:24px 0 8px}
+.inv table{border-collapse:collapse;width:100%;min-width:620px;font-family:var(--mono);font-size:12px}
+.inv th{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500;text-align:left;padding:0 18px 9px 0;border-bottom:1px solid var(--rule);vertical-align:bottom}
+.inv td{padding:13px 18px 13px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top;line-height:1.5;color:var(--ink-2)}
+.inv td.sfc{color:var(--ink);font-weight:500}
+.inv td.gap{color:var(--sig-red)}
+
+.principle{margin:26px 0 10px;padding:22px 26px 24px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.principle .plabel{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+.principle h3{margin:0 0 12px;font-size:clamp(20px,2.5vw,24px);letter-spacing:-.018em;color:var(--ink)}
+.principle p{color:var(--ink-2);font-size:16.5px;line-height:1.55;max-width:62ch}
+.principle p:last-child{margin-bottom:0}
+.principle strong{background:none;font-weight:500;color:var(--ink)}
+
+.cad{margin:24px 0 8px;border-top:2px solid var(--ink)}
+.cadrow{display:grid;grid-template-columns:110px minmax(0,1fr);gap:0 24px;padding-block:16px;border-bottom:1px solid var(--rule-soft)}
+.cadrow .when{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);padding-top:4px}
+.cadrow .what{font-size:16.5px;color:var(--ink-2);line-height:1.5}
+.cadrow .what b{font-family:var(--grot);font-weight:600;font-size:16px;color:var(--ink);display:block;letter-spacing:-.008em;margin-bottom:3px}
+@media (max-width:700px){.cadrow{grid-template-columns:minmax(0,1fr);gap:6px}}
+
+.acts{overflow-x:auto;margin:24px 0 8px}
+.acts table{border-collapse:collapse;width:100%;min-width:840px;font-family:var(--mono);font-size:11.5px}
+.acts th{font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:500;text-align:left;padding:0 14px 9px 0;border-bottom:1px solid var(--rule);vertical-align:bottom}
+.acts th.clin{color:var(--accent)}
+.acts td{padding:12px 14px 12px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top;line-height:1.5;color:var(--ink-2)}
+.acts td.act{color:var(--ink);font-weight:500;white-space:nowrap}
+.acts td.clin{color:var(--ink-2);border-right:1px solid var(--rule);padding-right:18px}
+.acts td.none{color:var(--sig-red)}
+.acts tr.built td.act{color:var(--accent)}
+.acts tr.built td.act::after{content:" \25CF";font-size:9px;vertical-align:middle}
+
+.quad{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:26px 0 8px;max-width:var(--measure)}
+.qcell{background:var(--surface-2);padding:18px 20px 20px;min-height:132px}
+.qcell .qlab{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 9px}
+.qcell .qwho{font-family:var(--grot);font-weight:700;font-size:17px;letter-spacing:-.015em;color:var(--ink);margin:0 0 7px}
+.qcell .qnote{font-family:var(--mono);font-size:11px;line-height:1.55;color:var(--ink-2);margin:0}
+.qcell.open{background:var(--accent-soft);outline:2px solid var(--accent);outline-offset:-2px}
+.qcell.open .qwho{color:var(--accent)}
+@media (max-width:620px){.quad{grid-template-columns:1fr}}
+
+.ladder{margin:26px 0 8px;border-top:2px solid var(--ink);max-width:var(--measure)}
+.rung{display:grid;grid-template-columns:96px minmax(0,1fr);gap:0 22px;padding-block:18px;border-bottom:1px solid var(--rule-soft)}
+.rung .tier{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);padding-top:5px}
+.rung .rname{font-family:var(--grot);font-weight:700;font-size:17px;letter-spacing:-.015em;color:var(--ink);margin:0 0 8px}
+.rung ul{margin:0;padding-left:18px;list-style:none}
+.rung li{position:relative;font-size:15.5px;line-height:1.5;color:var(--ink-2);margin-bottom:5px;padding-left:2px}
+.rung li::before{content:"";position:absolute;left:-14px;top:9px;width:5px;height:5px;background:var(--accent);border-radius:50%}
+@media (max-width:620px){.rung{grid-template-columns:minmax(0,1fr);gap:8px}}
+
+.srcs{margin:20px 0 0;padding:0;list-style:none;max-width:var(--measure)}
+.srcs li{font-family:var(--mono);font-size:12px;line-height:1.55;padding-block:8px;border-bottom:1px solid var(--rule-soft);color:var(--muted)}
+.foot{margin-top:52px;padding-top:22px;border-top:2px solid var(--ink);font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.foot b{color:var(--ink);font-weight:600}
+
+@media (max-width:760px){
+  body{font-size:17px}
+  .wrap{padding-left:20px;padding-right:20px;padding-block:0 72px}
+  section{grid-template-columns:minmax(0,1fr);gap:0;padding-block:38px 6px}
+  .rail{display:flex;align-items:baseline;gap:12px;padding:0 0 14px}
+  .rail .num{margin:0;font-size:20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+
+<div class="wrap">
+
+<header class="mast">
+  <p class="kicker">Product review &nbsp;·&nbsp; pliability · GOWOD · Bend &nbsp;·&nbsp; Diagnosis, progression &amp; pricing power</p>
+  <h1>Nobody Will Let Me Set the Right Goal</h1>
+  <p class="dek">Two of these three measure my body and score it. Neither will let me aim at one. Six weeks later I found the missing half built and hidden &mdash; which turns out to be the whole story.</p>
+  <div class="byline">
+    <span><b>Mike Wong</b> · MWG Advisory</span>
+    <span>Product Teardown</span>
+    <span>October 2026</span>
+  </div>
+</header>
+
+<section>
+  <div class="rail"><span class="num">01</span>Premise</div>
+  <div class="body">
+    <p class="lede">I installed three mobility apps on the same day and ran them side by side for six weeks: pliability, GOWOD and Bend. I wanted to know whether any had built a coaching loop, or whether they were content libraries with a stretch timer attached.</p>
+    <p>A mobility subscription runs $20 a month at the top of this market, and the substitute isn't a cheaper app — it's free. The same stretches sit on YouTube at a price of zero. So a paid app has to sell something a video can't, and there's only one candidate: <strong>the service around the content.</strong> Somebody who looks at my body, decides what I should do about it, and then checks.</p>
+    <p>That's what people pay a trainer for. Not exercise knowledge, which has been free for fifteen years — the removal of a decision under uncertainty.</p>
+    <p>The answer I came in expecting was that none of them had built it. The answer I left with is more interesting: <strong>most of it is built, and almost none of it is routed.</strong> By week six I had found, in one of these apps, a working re-measurement that attributes a change in my body to the work I did. I found it by going and looking. Nothing in the product ever pointed at it.</p>
+    <p class="note"><b>Method.</b> Fifteen screen recordings of my own use, 15 September – 27 October 2026 — cold installs, both mobility assessments, first and second sessions, the AI routine builder, sport-specific protocols, widgets, two deliberate lapses, a three-week program completed start to finish, and a self-initiated re-test. I've been a GOWOD member since 2019, which mattered: the reactivation case produced one of the sharpest findings. <b>The tape corrected this document ten times, and nine of those corrections went in the apps' favor</b> — including the two that landed last and changed the headline. One tester, six weeks: sharp for finding mechanisms, blunt for sizing them. Market figures in section 06 are Sensor Tower estimates, not company actuals.</p>
+  </div>
+</section>
+
+<section>
+  <div class="rail"><span class="num">02</span>The goal</div>
+  <div class="body">
+    <h2>Every goal in this category is made of time</h2>
+    <p>Here is every goal object I could commit to across three apps.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>App</th><th>What I can commit to</th><th>What it measures</th><th>What a missed day does to it</th></tr></thead>
+        <tbody>
+          <tr><td>Bend</td><td>A streak goal — 3, 7, 14 or 30 days</td><td class="bad">Days completed</td><td>Breaks. Intact or broken is the whole vocabulary</td></tr>
+          <tr><td>pliability</td><td>A named-day sequence — three weeks, Monday to Sunday</td><td class="bad">Routines, minutes, % of days</td><td>Nothing. The sequence waits</td></tr>
+          <tr><td>GOWOD</td><td>"Reach this 4 hours goal before 30 days"</td><td class="bad">Hours accumulated</td><td>Not even expressible. The number only goes up</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>pliability and GOWOD both compute a mobility score. Neither lets me set a goal on it.</strong> Not one screen in the study offered a target state for my body — only targets for my attendance.</p>
+    <p>The purest artifact of it is Bend's progress meter, which is named after the user's body.</p>
+    <figure class="shot">
+      <img src="/blog/img/mob-bend-meter.jpg" alt="Bend's dashboard showing a gauge labelled BENDOMETER reading 1 percent, with Next Day plus 2 percent underneath, and stats showing active streak 1 day, longest streak 1 day." loading="lazy">
+      <figcaption>The Bendometer after one session. <em>1%</em>, and <em>Next Day: +2%.</em> Bend never measures my body, so the meter that sounds like a flexibility score is a rendering of days elapsed.</figcaption>
+    </figure>
+    <div class="pull">A progress meter is only honest if the member can say out loud what 100% means.</div>
+    <p>By that test, "5% complete" of a defined three-week program is honest — twenty-one known days, a start and an end. "Last 30 days: 3%" is a ratio with no target, which is a scold. And 1% of a Bendometer is 1% of nothing anyone can name.</p>
+    <h3>Which is why nobody can price a missed day</h3>
+    <p>I broke the habit deliberately, twice. The complete re-entry response in the category: pliability keeps the missed routines available and otherwise does nothing; Bend lets me spend a <em>Streak Restore</em>, a currency earned every seven consecutive posted days. Two mechanics, both bookkeeping. Neither tells me what the lapse cost, because neither goal object can carry a cost.</p>
+    <p>pliability's case is the subtle one. Its routines <em>are</em> day-named — the program overview lists all seven weekdays — but the names aren't binding. Week 3 showed "Monday done, Tuesday cued" on a Sunday, and showed exactly that again two days later. The sequence advances with me, not with the calendar.</p>
+    <div class="pull">A plan you cannot fall behind on is a plan you cannot be ahead of.</div>
+    <p>That's a real trade, and forgiveness matters in a recovery product where a rigid calendar turns a rest day into a failure. But forgiveness implemented as <em>silence</em> gives up the only thing a schedule is for.</p>
+    <p><strong>A target made of time can only express an absence. A target made of a measurement expresses a consequence.</strong> Against <em>Back/Core 53 → 65 by October 20</em>, exactly one of two sentences is always available: the date holds and the target moves, or the target holds and the date moves. Both are things a coach says out loud. Neither needs a new feature — only a goal with a denominator.</p>
+    <p>And pliability is already holding every number it would need. One screen carries 71% complete, one week left, six routines left, Back/Core at 53, and a next test two weeks away.</p>
+    <div class="principle">
+      <p class="plabel">The sentence it could already write</p>
+      <p>You've done 15 of 21. Six routines left and one week to do them in — and your re-test is two weeks out either way. Finish the six and you'll test having completed the program.</p>
+    </div>
+    <p>So the missing join isn't <em>lapse → nudge</em>; Bend has a nudge and it defends a counter. It's <strong>lapse → goal</strong>, and it can only be built on a goal worth lapsing against.</p>
+  </div>
+</section>
+
+<section>
+  <div class="rail"><span class="num">03</span>The service</div>
+  <div class="body">
+    <h2>What would a physio actually do?</h2>
+    <p class="lede">Not "is this a good stretch library" — it plainly is — but: a clinician performs a sequence of distinct acts, in order, over weeks. Which of them show up here at all?</p>
+    <div class="acts">
+      <table>
+        <thead><tr><th>Act</th><th class="clin">What a clinician does</th><th>Bend</th><th>pliability</th><th>GOWOD</th></tr></thead>
+        <tbody>
+          <tr><td class="act">1 · Intake</td><td class="clin">History, work, sport, what's been tried, goals in the patient's words</td><td>Nine multiple-choice screens; a free-text box that's never stored</td><td>Three interest chips</td><td>Sport, level and <strong>equipment on hand</strong> — the only intake field in the study that changes what gets prescribed</td></tr>
+          <tr class="built"><td class="act">2 · Objective exam</td><td class="clin">Measured findings — range, strength, movement screen</td><td class="none">None</td><td>Camera, 3 min, compensation patterns, composite score</td><td>Ten self-graded tests, per side, 12 min</td></tr>
+          <tr class="built"><td class="act">3 · Explanation</td><td class="clin">Names the cause, separates it from the symptom</td><td>A rationale under every exercise — best in the set</td><td>Names the patterns and the key area</td><td>Six bars, no narrative</td></tr>
+          <tr><td class="act">4 · Negotiated goal</td><td class="clin">Functional, jointly agreed, written into the record</td><td>A streak length</td><td>120 minutes in September</td><td>Four hours in thirty days</td></tr>
+          <tr><td class="act">5 · Plan of care</td><td class="clin">Frequency, progression criteria, <em>discharge criteria</em></td><td>Three-day series</td><td>Three-week day-by-day program</td><td>Daily protocols, no arc</td></tr>
+          <tr class="built"><td class="act">6 · The session</td><td class="clin">Warm-up, the work, cueing, in-session progression</td><td>Timer and illustration; the live demo pauses the timer</td><td>Filmed coaching, narration, modifications shown</td><td>Functional and familiar</td></tr>
+          <tr><td class="act">7 · Homework</td><td class="clin">Work between visits, asked about next time</td><td colspan="3" class="none">The session <em>is</em> the homework. Nothing sits between sessions in any of the three</td></tr>
+          <tr class="built"><td class="act">8 · Re-assessment</td><td class="clin">Re-measure against the original findings. Revise the plan</td><td class="none">Not possible</td><td>Fully built — delta, most-improved, new program off the new score. Nothing routes to it; I ran it myself</td><td class="none">Prompted on cadence, but showed my 18-month-old score as current on return</td></tr>
+          <tr><td class="act">9 · Debrief</td><td class="clin">What changed, what to expect, what to watch for</td><td>"Congrats!" and a streak</td><td>"Strong finish, Michael! Your joints are thrilled."</td><td class="none">—</td></tr>
+          <tr><td class="act">10 · Discharge</td><td class="clin">The goal is met. You graduate</td><td class="none">None</td><td>A full completion ceremony — and it graduates you on hours, routines and days attended</td><td class="none">None</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Marked acts (●) are the ones at least one product genuinely delivers.</p>
+    <p>Four of ten — and <em>which</em> four is the finding. Act 8 only joined the list in the last week of the study, only for pliability, and only for a member who goes and finds it.</p>
+    <div class="pull">Every act these products put in front of me can be performed without remembering anything.</div>
+    <p>An objective exam, an explanation and a session are all <strong>pre-producible</strong>. The assessment runs the same logic on every body; the rationale is generated on demand; the session is a video. None require the product to hold anything from one day to the next.</p>
+    <p>Every missing act — intake that informs a later decision, a goal that can be met, a plan with a stopping condition, a debrief that references last time, a graduation — <strong>requires memory.</strong> The product has to carry something across a gap and act on it later. Which is why act 8 is the one worth watching: pliability <em>does</em> carry the baseline across the gap and act on it. It just never tells anyone.</p>
+    <h3>Two loops, and the daily one is emptier</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th>Program scale · weeks</th><th>Day scale · 24 hours</th></tr></thead>
+        <tbody>
+          <tr><td>Diagnosis</td><td class="good">Real — a camera scan, a scored zone</td><td class="bad">Absent. Nothing asks what I did yesterday or what hurts today</td></tr>
+          <tr><td>Assignment</td><td class="good">Real — a dated, day-by-day program</td><td class="bad">Performed by me, in the catalog</td></tr>
+          <tr><td>Verification</td><td class="good">Built, unprompted — see section 05</td><td class="bad">Missing — nothing asks how it went</td></tr>
+          <tr><td>Progress</td><td class="bad">Attendance</td><td class="bad">Attendance</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The daily loop decides whether I open the app tomorrow, and only the session in the middle of it is real. Look at who performs assignment there: in Bend I type what I want, in GOWOD I search the workout I already did, in pliability I sort <em>Tennis → Hips</em> and reason my own way to a session.</p>
+    <div class="pull">That last move is the diagnosis, and I'm the one doing it.</div>
+    <p>I know tennis loads my hips, so I pick hips. The app supplied a filing system for a conclusion I reached myself. That locates the real damage the catalog does: it isn't that the library is hard to navigate — <strong>it's that the library is where the member does the product's job.</strong></p>
+  </div>
+</section>
+
+<section>
+  <div class="rail"><span class="num">04</span>The three</div>
+  <div class="body">
+    <h2>One act each, done very well</h2>
+    <p class="lede">The session is the one act all three deliver, and the only part of these products that's genuinely differentiated. Each is also strongest at a different stage — and between them they hold a complete product that none of them is.</p>
+    <h3>Bend — a complete loop, closed around the wrong variable</h3>
+    <p>Bend is the biggest app in the category by an order of magnitude and the easiest to underestimate. Its loop isn't shallow; it's <em>finished</em> — every stage built, wired and shipping — and every stage is about showing up.</p>
+    <p>Onboarding is a conversion funnel and very good at being one. Mission, then the thesis stated outright on screen three — <em>"Consistency is key"</em> — then the single best question in the study: <strong>"When is a good time for your daily stretch?"</strong> After waking, after coffee, after exercising, before bed. That's an implementation intention, neither competitor asks anything like it, and it's the one move I'd steal outright. Then a paywall at 2:20, purchase at 2:44, account creation at 3:00. Bend monetizes before the member has done one stretch.</p>
+    <figure class="shot">
+      <img src="/blog/img/mob-bend-goal.jpg" alt="Bend screen headed Choose your streak goal, offering 3 day streak Good, 7 day streak Great, 14 day streak Incredible and 30 day streak Outstanding, with a COMMIT TO MY GOAL button." loading="lazy">
+      <figcaption>A goal, four tiers, and a literal <em>COMMIT TO MY GOAL</em> button. Bend is the only app in the study with a real commitment object — and the variable running through all four stages is days.</figcaption>
+    </figure>
+    <p>That's not a shallow loop. It's a complete one pointed at the wrong thing, which is exactly why Bend's engagement is rising and its revenue per user is a fifteenth of its competitors'. The member gets precisely what the loop verifies: evidence they showed up.</p>
+    <p>The exception is Bend AI. I typed a paragraph about tight hips, thoracic tightness and wanting a better tennis serve; ninety seconds later it produced a named routine with a rationale under every exercise tied to what I asked for. Best single act of personalization in the category.</p>
+    <figure class="shot">
+      <img src="/blog/img/mob-bend-ai.jpg" alt="Bend AI output titled Overhead Squat Mobility, listing Lunge, Lizard Pose, Seated Twist and Child's Pose, each with a paragraph explaining how it serves overhead squats and tennis serve mechanics." loading="lazy">
+      <figcaption>Every exercise carries a why, tied to what I asked for — and it's gone the moment it happens. <strong>The goal I typed is a prompt, not a record.</strong> Nothing will ever ask whether my overhead squat improved.</figcaption>
+    </figure>
+    <p>I pushed it harder a week later: same prompt style, difficulty set to Advanced, after a heavy lifting session. It returned arm circles and leg swings with an excellent rationale attached. <strong>Bend AI reasons about a selection it cannot improve.</strong> Setting the profile to Expert later produced near-identical content in a different wrapper. Difficulty is a label on one library.</p>
+    <p>Which is the line between the second and third tiers of this business. Explaining a decision is cheap now. <strong>Having a decision worth explaining is the part that isn't.</strong></p>
+    <h3>pliability — the best instrument, two taps from nowhere</h3>
+    <p>pliability has built the best diagnosis in this category and one of the best prescriptions I've seen in any coaching product. I found both by accident, in an app I'd already been using for two days.</p>
+    <p>The assessment is camera-based: real-time skeletal tracking, live cues, three minutes, fully automatic. What comes out isn't a range-of-motion number — it's named movement compensations, a scored key area, and recommended zones.</p>
+    <figure class="pair">
+      <div class="shotpair">
+        <div>
+          <p class="shotlab">The diagnosis</p>
+          <img src="/blog/img/mob-pl-result.jpg" alt="pliability result screen reading Your personalized mobility program is ready, with identified patterns Low Arms, Head Tilt and Shoulder Shrug, a key area of Back slash Core scored 53, and a Build My Program button." loading="lazy">
+        </div>
+        <div>
+          <p class="shotlab">The prescription</p>
+          <img src="/blog/img/mob-pl-program.jpg" alt="pliability Review Program screen explaining the program is structured around a preference for mostly passive poses, starting Tuesday September 15, with Week 1, Week 2 and Week 3 each showing seven days of named routines." loading="lazy">
+        </div>
+      </div>
+      <figcaption>Left: <em>Low Arms · Head Tilt · Shoulder Shrug. Key area: Back/Core, 53.</em> The product telling me something about my body I didn't know. Right: three weeks, day by day, with the reasoning intact — better than Whoop, whose plan items arrive as bare numbers with the evidence stripped off.</figcaption>
+    </figure>
+    <p>pliability's in-session narration is also the best thing in the category and sits outside every framework here. A timer tells me how long; a cue tells me what to do with the time. In a two-minute passive hold there are a hundred seconds of unfilled attention — exactly when form degrades and I bail early. pliability fills it. Bend's equivalent is a tell: tapping the live demo <strong>pauses the timer</strong>, so instruction costs you progress.</p>
+    <h3>GOWOD — the right questions, the worst memory</h3>
+    <p>I opened GOWOD on 15 September as a member of seven years. This is what it showed me.</p>
+    <figure class="shot">
+      <img src="/blog/img/mob-gowod-score.jpg" alt="GOWOD mobility score screen headed Global, dated March 26 2025, showing 65 percent with zone bars for Shoulders 58, Overhead 53, Thorax 75, Hips 63, Postchain 52 and Ankles 100, above a Test your mobility button and a score history chart." loading="lazy">
+      <figcaption><em>Global · March 26, 2025 · 65%.</em> Eighteen months old, displayed as my current state. Nothing flagged it as stale. I found "Test your mobility" by navigating there myself.</figcaption>
+    </figure>
+    <p>GOWOD otherwise has the most complete measurement apparatus in the set — six zones scored per side, so it catches left-right imbalance, plus a score history chart. It also has the crudest instrument: ten tests, twelve minutes, and a slider I drag against reference photos to grade myself.</p>
+    <div class="pull">The better instrument has the worse memory.</div>
+    <p>pliability measures me automatically and forgets. GOWOD makes me grade myself and keeps a chart. Between them they hold every part needed to close the loop.</p>
+    <p>GOWOD also asks what a clinician asks. Before a protocol it wants to know how much time I have and what equipment is with me, and builds the session around the answers. On the CrossFit flow I could <em>search</em> my workout — typing three letters surfaced both movements and named benchmarks, and the app already knew THE CHIEF means power cleans, push-ups and air squats. That's the endemic-community advantage made into a feature, and the closest thing in the category to a clinician asking what you actually did. Then the equipment step undercuts it: <strong>it's single-select.</strong> A real recovery session uses a roller, a ball and a band at once, and the choice isn't cosmetic — picking the percussion gun changed the session from passive stretches to massage work.</p>
+    <p>The best intake in the set, and the input is a radio button.</p>
+  </div>
+</section>
+
+<section>
+  <div class="rail"><span class="num">05</span>Routing</div>
+  <div class="body">
+    <h2>Everything is built. Almost nothing routes.</h2>
+    <p class="lede">This is the section that changed in the last week of the study, and it changed in the apps' favor.</p>
+    <p>Across all three the recurring failure isn't a missing feature. It's a screen with nothing routing to it, or prime real estate spent on the wrong number.</p>
+    <div class="inv">
+      <table>
+        <thead><tr><th>Failure mode</th><th>What it means</th><th>On tape</th></tr></thead>
+        <tbody>
+          <tr><td class="sfc">No surface</td><td>The capability doesn't exist</td><td>Bend has no diagnosis of any kind</td></tr>
+          <tr><td class="sfc">Orphaned surface</td><td>The screen exists and nothing routes to it</td><td class="gap">pliability's assessment, program builder and re-test</td></tr>
+          <tr><td class="sfc">Misallocated surface</td><td>Prime real estate rendering the wrong variable</td><td class="gap">The Bendometer — a body's name on an attendance meter</td></tr>
+          <tr><td class="sfc">Competing surfaces</td><td>Several entry points at one stage, cancelling each other</td><td class="gap">pliability: Daily Sessions <em>and</em> Paths <em>and</em> Build Your Program <em>and</em> Find a Session <em>and</em> Start a Goal <em>and</em> Challenges</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The clearest instance is a single minute of tape. These two screens are one tab apart.</p>
+    <figure class="pair">
+      <div class="shotpair">
+        <div>
+          <p class="shotlab">Home — what greets me</p>
+          <img src="/blog/img/mob-pl-home.jpg" alt="pliability home screen showing a Today card for Total Back 22 min, a Daily Sessions counter reading 0 of 7 complete, a My Interests row and a Challenges section." loading="lazy">
+        </div>
+        <div>
+          <p class="shotlab">You — what's one tab away</p>
+          <img src="/blog/img/mob-pl-you.jpg" alt="pliability You tab showing a WHOOP card with 12.8 strain and 57 percent recovery, the note that HRV is lower than average and a recommendation to spend time down regulating, followed by two named recovery sessions." loading="lazy">
+        </div>
+      </div>
+      <figcaption>Left: a generic daily session and a participation counter. Right, one tab over: a diagnosis that changed overnight — <em>"Your HRV is lower than average… let's spend some time down regulating"</em> — and two sessions prescribed because of it. The screen that changes daily and states its reasoning is the one nobody sees.</figcaption>
+    </figure>
+    <div class="principle">
+      <p class="plabel">The rule I'd hold a team to</p>
+      <h3>One home surface per stage, and the home screen shows at most one element from each</h3>
+      <p>Anything more is a catalog. And a catalog teaches the member which mode they're in: browsing is the mode where you program yourself, which is the exact job you paid to outsource.</p>
+      <p><strong>Three things above the fold:</strong> the next action (today's prescribed routine, named, with its duration) · where I am (Week 1, day 3 of 7) · where I'm going (Back/Core 53, retest 20 October — the target and the date the claim gets settled).</p>
+    </div>
+    <h3>I finished the program, and graduation counted attendance</h3>
+    <p>On 10 October I completed the twenty-first routine and recorded what happened — the payoff event, the highest-attention screen in the product. It's a good ceremony: a tap-to-start card, <em>"Way to go Michael, you finished the program!"</em>, then six shareable full-screen cards reporting <strong>5h 1m · 21 routines · 53 poses · most-frequent pose · 17 of 30 days · a Vidal Sassoon quote.</strong></p>
+    <figure class="pair">
+      <div class="shotpair">
+        <div>
+          <p class="shotlab">The final card</p>
+          <img src="/blog/img/mob-pl-recap.jpg" alt="pliability completion card showing a grid of thirty dots with seventeen filled, headline 17 out of 30, and the line in the last month you completed routines on 57 percent of the days." loading="lazy">
+        </div>
+        <div>
+          <p class="shotlab">My profile, one minute later</p>
+          <img src="/blog/img/mob-pl-after.jpg" alt="pliability profile for Michael Wong showing Mobility Score 66 and Needs Attention Back slash Core, with an October calendar of completed days, week streak 4 and streak sessions 3." loading="lazy">
+        </div>
+      </div>
+      <figcaption>Twenty-one routines against a scored body, and not one number in the ceremony is about the body. <em>Needs Attention: Back/Core</em> — the same critical area the program was built to fix, because nothing re-measured it. The app had said four days earlier that my next test was two weeks away; the ceremony never mentions it.</figcaption>
+    </figure>
+    <p>The next step offered is <em>Create New Program</em>: assignment without diagnosis, the loop restarting at stage two. I declined, tapped through, and landed on a Find a Path catalog of forty-odd templates — the member finishing the prescription and falling back into the catalog.</p>
+    <h3>Then I ran the re-test myself, and found the loop closed</h3>
+    <p>No prompt ever arrived. Five days later I went and found the test, ran it, and discovered that most of what I'd spent this teardown calling missing is built.</p>
+    <figure class="pair">
+      <div class="shotpair">
+        <div>
+          <p class="shotlab">The score, re-measured</p>
+          <img src="/blog/img/mob-pl-retest.jpg" alt="pliability Mobility Score screen reading 73 out of 100 with an upward arrow and plus 7, above two bars labelled Sep 15 at 66 and Oct 15 at 73, and a Create a custom program card listing identified patterns Low Arms and Shoulder Shrug and key area Back slash Core at 65." loading="lazy">
+        </div>
+        <div>
+          <p class="shotlab">The delta, attributed</p>
+          <img src="/blog/img/mob-pl-delta.jpg" alt="pliability Your progress screen reading you have improved by 12 points in a key area, with Most improved Back slash Core plus 12 at 65, Needs attention Back slash Core plus 12 at 65, recurring issues Shoulder Shrug and Low Arms, and an empty state reading we currently do not have any recommended videos that match your needs." loading="lazy">
+        </div>
+      </div>
+      <figcaption>Composite <em>66 → 73, +7.</em> Back/Core <em>53 → 65, +12</em>, with a tooltip on the bar. Head Tilt is gone from the identified patterns. A new custom program is offered off the new numbers.</figcaption>
+    </figure>
+    <p><strong>This is the join I spent six weeks saying the category hadn't built.</strong> Measured, re-measured, delta rendered in plain language, a compensation pattern retired, next plan offered from the new reading. It's the only causal claim about a body anywhere in this study, and pliability makes it well.</p>
+    <div class="pull">The most valuable screen in the category sits behind a door nobody knocks on.</div>
+    <p>Everything wrong with it is routing. Nothing prompted the test; the completion ceremony didn't mention it; the home screen doesn't carry it. I reached it by going to my own profile and tapping <em>New Test</em> — the same orphaned-surface pattern as the assessment and the program builder, except here it's the payoff rather than the setup.</p>
+    <p>Two things on that screen are the last real gaps.</p>
+    <ul>
+      <li><strong>"Most improved: Back/Core +12" and "Needs attention: Back/Core +12."</strong> Same area, same number, both slots. My biggest win is still my stated problem. The surface for <em>Back/Core graduated — your new critical area is Hips</em> is drawn, labelled, and filled with the old answer. Nothing closes, so no new goal opens.</li>
+      <li><strong>"We currently don't have any recommended videos that match your needs."</strong> An empty state served directly beneath a fresh score, two named patterns and a scored key area — the diagnosis→assignment join firing into nothing at the moment the product knows the most it has ever known about this body.</li>
+    </ul>
+    <p>GOWOD holds the other half of the correction: in October it pushed me to re-test. The only notification I received in six weeks aimed at an instrument rather than a streak or a session. The reminder exists; it just doesn't fire for the member who's been gone long enough to need it.</p>
+    <p>One detail I didn't plan. Earlier in this document I invented a target sentence to illustrate what a real goal would look like: <em>Back/Core 53 → 65.</em> I picked 65 as plausible. The re-test came back at 65. <strong>The target wasn't just settable — it was accurate.</strong> No app offered it, I hit it anyway, and I had to go look up whether I had.</p>
+  </div>
+</section>
+
+<section>
+  <div class="rail"><span class="num">06</span>Market</div>
+  <div class="body">
+    <h2>The paradox, and what resolves it</h2>
+    <p>Twelve months to 14 September 2026, all countries, all devices.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>App</th><th>Downloads</th><th>MAU</th><th>MAU YoY</th><th>Revenue</th><th>Rev / MAU</th></tr></thead>
+        <tbody>
+          <tr><td>GOWOD</td><td class="num">301,992 <span style="color:var(--accent)">+93.0%</span></td><td class="num">56,515</td><td class="num good">+36.6%</td><td class="num">$4.84M</td><td class="num">$85.72</td></tr>
+          <tr><td>pliability</td><td class="num">87,594 <span style="color:var(--sig-red)">−59.5%</span></td><td class="num">15,344</td><td class="num bad">−44.8%</td><td class="num">$0.99M</td><td class="num">$64.33</td></tr>
+          <tr><td>Bend</td><td class="num">4,250,353 <span style="color:var(--accent)">+4.2%</span></td><td class="num">2,335,078</td><td class="num good">+26.5%</td><td class="num">$10.59M</td><td class="num">$4.54</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Bend has the shallowest loop and the best engagement trend</strong> — daily actives up 44% on downloads up only 4.2%. Taken naively that's evidence against everything above. <strong>And Bend monetizes at $4.54 per monthly active user against GOWOD's $85.72 and pliability's $64.33.</strong></p>
+    <div class="pull">Participation mechanics move frequency. Verification mechanics move price.</div>
+    <p>Those two facts are the same fact. Bend optimizes how many people open the app; GOWOD optimizes what an opening is worth. The loop argument is a <em>pricing-power</em> argument, not a DAU argument.</p>
+    <h3>Frequency and intensity</h3>
+    <p>In games I described engagement with two variables. <strong>Frequency</strong> is the regularity of the habit. <strong>Intensity</strong> is what that time is made of. All three compete on frequency and Bend is winning outright. Nobody competes on intensity — because intensity is being measured wrong.</p>
+    <p>A mobility session is productive; that's not in dispute. But <strong>in a coaching product, intensity isn't the quality of the session. It's how many acts of the service that time contains.</strong> By that measure a daily Bend session is one act out of ten, performed very well.</p>
+    <div class="quad">
+      <div class="qcell">
+        <p class="qlab">High frequency · one act</p>
+        <p class="qwho">Bend</p>
+        <p class="qnote">DAU +44% on downloads +4%. A daily habit made of a single act. $4.54 per MAU.</p>
+      </div>
+      <div class="qcell open">
+        <p class="qlab">High frequency · several acts</p>
+        <p class="qwho">Unbuilt</p>
+        <p class="qnote">A daily return made of a check-in, a prescribed session and a debrief, against a goal that can be met.</p>
+      </div>
+      <div class="qcell">
+        <p class="qlab">Lower frequency · one act</p>
+        <p class="qwho">A free video library</p>
+        <p class="qnote">The substitute. Price: zero. Every app here has to beat this, and content alone doesn't.</p>
+      </div>
+      <div class="qcell">
+        <p class="qlab">Lower frequency · several acts</p>
+        <p class="qwho">pliability &amp; GOWOD</p>
+        <p class="qnote">More of the service present, less reliably returned to. $64–$86 per MAU.</p>
+      </div>
+    </div>
+    <p><strong>Frequency is bought with participation mechanics, and it's cheap</strong> — streaks, reminders, widgets, a rotating daily card. Bend proves it works and proves what it's worth alone: $4.54 a year per active user. <strong>Intensity is bought with memory, and that's where the price is.</strong></p>
+    <h3>How each one finds its users</h3>
+    <p>The scale gap isn't a product gap, it's an acquisition-model gap. <strong>GOWOD and pliability acquire through a community</strong> — GOWOD has been Official Mobility Partner of the CrossFit Games since 2022; pliability came out of ROMWOD and became HYROX's first Official Stretching Partner in 2025. Both have reached beyond functional fitness and neither has built a second channel doing it: pliability's outside moves are individual athletes, not organizations, and of the three non-CrossFit teams on GOWOD's homepage, only Groupama-FDJ lists it back, in its lowest tier. <strong>Bend acquires through an ad account</strong> — a two-person company producing 600+ creatives across Facebook and TikTok, aimed at users 35 and older.</p>
+    <p>Each model caps on a different axis. Community is cheap and converts into sticky, high-value members — and is capped at the size of the community. Paid creative against a general audience produces lower-value members and has no ceiling: fifteen million downloads.</p>
+    <p>The onboarding follows the channel. GOWOD asks <em>what sport I play</em> — an identity, a narrow funnel. Bend asks <em>what hurts and when I'll stretch</em> — a condition, and almost everyone over 35 has one.</p>
+    <p class="note">On pliability's decline: downloads −59.5% and actives −44.8%, but its percentage of active days is flat and its WAU/MAU is the highest of the three. What collapsed is intake, not retention. Two explanations compound — a demand-side story and a loop story — and this data can't separate them. Sensor Tower figures are modeled estimates.</p>
+  </div>
+</section>
+
+<section>
+  <div class="rail"><span class="num">07</span>What to build</div>
+  <div class="body">
+    <h2>Three things, and a list of what not to do</h2>
+    <h3>1 · Route what already exists</h3>
+    <p>The cheapest, largest fix in the study costs nothing structural. pliability's assessment, program builder and re-test are all built and all orphaned. Put the re-test where the member already is; put the program on the home screen instead of two taps down; send the notification that names the body area instead of the streak. <strong>The category is one routing layer away from being a service, not one platform away.</strong></p>
+    <h3>2 · Make the goal a measurement, and let it graduate</h3>
+    <p>Every goal object here is made of time, which is why nothing can be met and nothing can be lost. Give the target a measurement and a date and both become possible. Then close it: <em>Back/Core went 53 to 65. Your new critical area is Hips.</em> That sentence is a new chapter opening, the surface for it is already drawn in pliability, and it currently contains the old answer.</p>
+    <p>The map that supports it isn't a winding path — it's <strong>a body diagram with zones lit by score, one marked as the current node, a target on it, and a retest date.</strong> GOWOD's six zone bars are the closest anyone gets, and they're a bar chart: no target, no next, no "you are here."</p>
+    <p>And the number has to mean something. A score of 66 tells me nothing; neither does 307 hours. Duolingo solved this with CEFR — its level screen says what level 24 <em>lets you do</em>. Mobility has no consumer-facing ladder, and that's the opportunity rather than the obstacle: the raw material exists in clinical and strength work (the sitting-rising test, the overhead squat assessment, the deep squat hold), and none of it has been assembled into one ladder a normal person can see themselves on. Every rung would be camera-verifiable in under a minute, and unlike language it has to run in both directions and be age-aware.</p>
+    <div class="pull">Whoever writes the ladder owns the vocabulary of the category.</div>
+    <h3>3 · Build smaller units, not more content</h3>
+    <p>This is where I'd put the effort, and it's the conclusion six weeks actually produced. The library, the camera, per-side measurement, AI rationale and a working re-test <strong>all already ship.</strong> The missing layer is <strong>small, frequent units of engagement that make a member feel attended to</strong>, each producing or spending a piece of state.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Unit</th><th>Duration</th><th>Produces or spends</th></tr></thead>
+        <tbody>
+          <tr><td>Check-in scoped to the diagnosed area</td><td class="num">5s</td><td>Produces a daily series on the thing the program targets</td></tr>
+          <tr><td>Single-movement spot-check, camera</td><td class="num">15s</td><td>Produces one tracked signal, far more often than a full battery</td></tr>
+          <tr><td>Prescribed session</td><td class="num">10–20 min</td><td>Spends the prescription</td></tr>
+          <tr><td>One-question debrief — "did that help?"</td><td class="num">5s</td><td>Produces tomorrow's adjustment</td></tr>
+          <tr><td>Weekly adjustment that cites last week</td><td class="num">30s read</td><td>Spends the week's data</td></tr>
+          <tr><td>Full re-test</td><td class="num">3 min</td><td>Produces the capability claim</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">The test for whether a unit earns its place: does it produce data or spend it? A unit that does neither is content.</p>
+    <p><strong>The spot-check is the one I'd build first</strong>, because it breaks the cadence deadlock. You can't re-run a composite battery weekly without wrecking test–retest reliability — but you can measure <em>one movement</em> every few days, because you're tracking a signal rather than re-scoring a composite. pliability already ships the skeletal tracking and spends it on a three-minute battery once a month. It's the highest-leverage unused capability in the category, by a distance.</p>
+    <p>And the daily unit needs a <strong>state</strong> input, not an attribute. These apps personalize on sport, body area and experience level — attributes that change once a year. State changes daily: what I trained yesterday, how hard, what's sore. All three already connect to Apple Health, Strava, WHOOP or Garmin and use those connections to <em>log</em> a session rather than <em>choose</em> one. Add ten seconds of self-report and you get the sentence nobody in this category can currently write:</p>
+    <div class="pull">Your hamstrings are sore, but your test says the restriction is in your hips. So today is hip work, not hamstring stretching.</div>
+    <p>Diagnosis, prescription and education in one notification — possible only because the product holds a scan from four weeks ago and a tap from this morning at once.</p>
+    <h3>What not to build</h3>
+    <ul class="nope">
+      <li><b>A streak that punishes rest.</b> Bend's Streak Restore is locked until a two-day streak — unavailable at exactly the moment most members break. Forgiveness you have to earn first isn't forgiveness.</li>
+      <li><b>A body metric that measures attendance.</b> If the meter carries the member's body in its name, it has to be computed from the member's body.</li>
+      <li><b>A graduation ceremony that counts attendance.</b> The most expensive screen a coaching product owns, and the one place a product holding a baseline has no excuse not to re-measure.</li>
+      <li><b>A goal set to the member's own average</b>, or rewards for volume in a product whose thesis is restraint.</li>
+      <li><b>A diagnosis with no expiry.</b> A stale assessment is worse than none — it prescribes confidently against a body that has changed.</li>
+      <li><b>Sharing consistency when you could share improvement.</b> pliability's share card offers a motivational quote, in an app holding a score, named issues and a critical zone.</li>
+    </ul>
+    <h3>The gap is the product</h3>
+    <p>Physical therapy in the US without insurance runs roughly <strong>$80–$150 a session</strong>, and a course of care is six to eight weeks at two to three visits a week. One session costs about what a year of pliability costs.</p>
+    <p>Software can't take palpation, manual therapy, or the clinical judgment that separates a mobility restriction from a red flag needing referral. <strong>It can take almost everything else</strong> at close to zero marginal cost: the intake that informs later decisions, the goal in functional terms, the plan with stopping criteria, the daily check-in, the spot-check, the debrief that references last session, the plan revision, the graduation. Not one needs a person in the room. Every one needs the product to remember.</p>
+    <p>And the people in these apps are overwhelmingly people who will never book a clinician — for cost, for time, or because nothing hurts badly enough yet. That's not a market being served worse than professional care. <strong>It's a market being served instead of nothing.</strong></p>
+    <p>Which reframes the whole teardown. The finding isn't that pliability, GOWOD and Bend are bad products — they're all better than I expected, and nine of my ten corrections ran in their favor. The finding is that the category has built the content layer and most of the instruments to a high standard, has barely started on the layer that routes a member through them, and that layer is where both the price and the reach are.</p>
+  </div>
+</section>
+
+<section>
+  <div class="rail"><span class="num">08</span>Sources</div>
+  <div class="body">
+    <h2>What this is built on</h2>
+    <ul class="srcs">
+      <li>Primary: fifteen screen recordings and home-screen captures of my own use of pliability, GOWOD and Bend, 15 September – 27 October 2026 — cold installs, both mobility assessments, the AI routine builder, a sport-specific GOWOD protocol, widgets, two deliberate lapses, a three-week program completed start to finish with its end-of-program flow, and a self-initiated re-test</li>
+      <li>Sensor Tower — Compare report, pliability / GOWOD / Bend, twelve months to 14 September 2026 and Jan 2022–Sep 2026, all countries, all devices. Modeled estimates, not company actuals</li>
+      <li>Apple App Store listings — pliability, GOWOD, Bend: pricing, ratings, release notes and user reviews</li>
+      <li>GOWOD — pricing page and FAQ, including mobility test protocol and retest cadence; pliability support — Mobility Test documentation and the WHOOP integration announcement</li>
+      <li>Duolingo streak mechanics teardown (Deconstructor of Fun) — commitment targets, streak freeze distribution and milestone structure</li>
+      <li>Thervo — physical therapy cost guide, 2026: per-session and course-of-care pricing without insurance</li>
+      <li>Kovalee — "How Kovalee helped Bend become a global Top 10 health &amp; fitness app." Agency's own figures, not independently verified</li>
+      <li>pliability press page; Athletech News on the HYROX partnership; GOWOD homepage partner list; CrossFit Games; partner pages of Groupama-FDJ, LOU Rugby and BWT Alpine F1</li>
+      <li>de Brito et al., <em>Ability to sit and rise from the floor as a predictor of all-cause mortality</em>, European Journal of Preventive Cardiology</li>
+      <li>Framework carried forward from <em>Falling Out and Back In Love With Whoop</em>, MWG Advisory, September 2026</li>
+    </ul>
+    <div class="foot">
+      <span><b>MWG Advisory</b> · mwgadvisory.com · mike@mwgadvisory.com</span>
+      <span>Independent analysis · Not affiliated with pliability, GOWOD or Bend</span>
+    </div>
+  </div>
+</section>
+
+
+<p style="margin-top:28px;font-family:var(--mono);font-size:12px;color:var(--muted)">Also: <a href="/blog/mobility-loop-audit.html" style="color:var(--accent)">the scored audit of all three apps against the Loop Audit rubric</a>.</p>
+<p style="margin-top:28px"><a href="/blog/" style="font-family:var(--mono);font-size:12px;color:var(--accent)">&larr; Back to all research</a></p>
+</div>
+
+</body></html>
